@@ -1,0 +1,106 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=CSPro 7.1 Feature Showcase Dictionary
+Name=CSPRO71_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=CSPro 7.1 Feature Showcase Level
+Name=CSPRO71_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Unused ID
+Name=UNUSED_ID
+Start=2
+Len=1
+
+[Record]
+Label=CSPro 7.1 Feature Showcase Record
+Name=CSPRO71_REC
+RecordTypeValue='1'
+RecordLen=8
+
+[Item]
+Label=Action
+Name=ACTION
+Start=3
+Len=1
+
+[ValueSet]
+Label=Action
+Name=ACTION_VS1
+Value=1;Multiple Language Messages
+Value=2;External Message Files
+Value=3;Paradata Collection
+Value=4;Querying SQLite Files
+Value=5;Templated Reports
+Value=6;Quit
+
+[Item]
+Label=Multiple Language Messages
+Name=MULTIPLE_LANGUAGE_MESSAGES
+Start=4
+Len=1
+
+[ValueSet]
+Label=Multiple Language Messages
+Name=MULTIPLE_LANGUAGE_MESSAGES_VS1
+Value=1;View the message in English
+Value=2;View the message in Spanish
+Value=3;View the message in French
+Value=4;Return
+
+[Item]
+Label=External Message Files
+Name=EXTERNAL_MESSAGE_FILES
+Start=5
+Len=1
+
+[ValueSet]
+Label=External Message Files
+Name=EXTERNAL_MESSAGE_FILES_VS1
+Value=1;Return
+
+[Item]
+Label=Paradata Collection
+Name=PARADATA_COLLECTION
+Start=6
+Len=1
+
+[ValueSet]
+Label=Paradata Collection
+Name=PARADATA_COLLECTION_VS1
+Value=1;Return
+
+[Item]
+Label=Querying SQLite Files
+Name=QUERYING_SQLITE_FILES
+Start=7
+Len=1
+
+[ValueSet]
+Label=Querying SQLite Files
+Name=QUERYING_SQLITE_FILES_VS1
+Value=1;Execute Scalar Query
+Value=2;Fill Array Result Set
+Value=3;Fill Record Result Set
+Value=4;Return
+
+[Item]
+Label=Templated Reports
+Name=TEMPLATED_REPORTS
+Start=8
+Len=1
+
+[ValueSet]
+Label=Templated Reports
+Name=TEMPLATED_REPORTS_VS1
+Value=1;Error Messages Report
+Value=2;Device State Report
+Value=3;Return

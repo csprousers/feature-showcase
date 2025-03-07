@@ -1,0 +1,81 @@
+﻿[Dictionary]
+Version=CSPro 7.1
+Label=Working Storage Dictionary
+Name=WS_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Working Storage Level
+Name=WS_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Dummy ID
+Name=DUMMY_ID
+Start=2
+Len=1
+
+[Record]
+Label=Paradata Query Record
+Name=PARADATA_QUERY_REC
+RecordTypeValue='1'
+RecordLen=117
+
+[Item]
+Label=Username
+Name=USERNAME
+Start=3
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Memory RAM
+Name=MEMORY_RAM
+Start=53
+Len=15
+
+[Item]
+Label=Device Model
+Name=DEVICE_MODEL
+Start=68
+Len=50
+DataType=Alpha
+
+[Record]
+Label=Entered Fields Record
+Name=ENTERED_FIELDS_REC
+RecordTypeValue='2'
+MaxRecords=25
+RecordLen=71
+
+[Item]
+Label=Field Name
+Name=FIELD_NAME
+Start=3
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Date Entered
+Name=DATE_ENTERED
+Start=53
+Len=8
+
+[Item]
+Label=Time Entered
+Name=TIME_ENTERED
+Start=61
+Len=6
+
+[Item]
+Label=Display Duration
+Name=DISPLAY_DURATION
+Start=67
+Len=5
+Decimal=1
+DecimalChar=Yes

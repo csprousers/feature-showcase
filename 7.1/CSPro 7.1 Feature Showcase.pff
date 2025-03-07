@@ -1,0 +1,17 @@
+﻿[Run Information]
+Version=CSPro 7.1
+AppType=Entry
+
+[DataEntryInit]
+StartMode=Add
+FullScreen=YES
+Interactive=Ask
+
+[Files]
+Application=.\CSPro 7.1 Feature Showcase.ent
+InputData=|NONE
+Paradata=.\CSPro 7.1 Feature Showcase.cslog
+
+
+[Parameters]
+
