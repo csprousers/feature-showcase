@@ -1,0 +1,42 @@
+﻿[Dictionary]
+Version=CSPro 7.0
+Label=Simple Application
+Name=SIMPLE_APPLICATION_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=Simple Application Level
+Name=SIMPLE_APPLICATION_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Simple Application ID 1
+Name=SIMPLE_APPLICATION_ID_1
+Start=2
+Len=5
+ZeroFill=Yes
+
+[Item]
+Label=Simple Application ID 2
+Name=SIMPLE_APPLICATION_ID_2
+Start=7
+Len=5
+ZeroFill=Yes
+
+[Record]
+Label=Simple Application Record
+Name=SIMPLE_APPLICATION_REC
+RecordTypeValue='1'
+RecordLen=16
+
+[Item]
+Label=Simple Application Value
+Name=SIMPLE_APPLICATION_VALUE
+Start=12
+Len=5
+ZeroFill=Yes

@@ -1,0 +1,147 @@
+﻿[FormFile]
+Version=CSPro 7.0
+Name=SHOWCASE70_FF
+Label=CSPro New Features Showcase 7.0
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\CSPro New Features Showcase 7.0.dcf
+  
+[Form]
+Name=FORM000
+Label=CSPro New Features Showcase 7
+QuestionTextHeight=312
+Level=1
+Size=662,272
+CapturePos=650,15
+  
+Item=MENU
+Item=SHOW_OPERATOR_ID
+Item=SHOW_ENHANCED_NOTES
+Item=SHOW_CASE_LABELS
+Item=SHOW_DATA_SOURCES
+Item=SHOW_SYNCHRONIZATION_FROM_LOGIC
+Item=SHOW_OTHER_FEATURES
+Item=SHOW_CONFIG_SETTINGS
+  
+[EndForm]
+  
+[Level]
+Name=SHOWCASE70_LEVEL
+Label=CSPro New Features Showcase 7 questionnaire
+  
+[Group]
+Required=Yes
+Name=MENU_FORM
+Label=CSPro New Features Showcase 7
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=MENU
+Position=250,14,265,34
+Item=MENU,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=16,17,51,33
+Text=Menu
+ 
+  
+[Field]
+Name=SHOW_OPERATOR_ID
+Position=250,44,637,64
+Item=SHOW_OPERATOR_ID,SHOWCASE70_DICT
+UseUnicodeTextBox=Yes
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=16,49,129,65
+Text=Show Operator ID
+ 
+  
+[Field]
+Name=SHOW_ENHANCED_NOTES
+Position=250,75,265,95
+Item=SHOW_ENHANCED_NOTES,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=16,78,158,94
+Text=Show Enhanced Notes
+ 
+  
+[Field]
+Name=SHOW_CASE_LABELS
+Position=250,105,279,125
+Item=SHOW_CASE_LABELS,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=ComboBox
+Form=1
+  
+[Text]
+Position=16,108,133,124
+Text=Show Case Labels
+ 
+  
+[Field]
+Name=SHOW_DATA_SOURCES
+Position=250,135,265,155
+Item=SHOW_DATA_SOURCES,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=16,138,140,154
+Text=Show Data Sources
+ 
+  
+[Field]
+Name=SHOW_SYNCHRONIZATION_FROM_LOGIC
+Position=250,165,265,185
+Item=SHOW_SYNCHRONIZATION_FROM_LOGIC,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=16,168,231,184
+Text=Show Synchronization from Logic
+ 
+  
+[Field]
+Name=SHOW_CONFIG_SETTINGS
+Position=250,196,265,216
+Item=SHOW_CONFIG_SETTINGS,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=16,199,197,215
+Text=Show Configuration Settings
+ 
+  
+[Field]
+Name=SHOW_OTHER_FEATURES
+Position=250,227,265,247
+Item=SHOW_OTHER_FEATURES,SHOWCASE70_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=16,230,150,246
+Text=Show Other Features
+ 
+[EndGroup]
+  

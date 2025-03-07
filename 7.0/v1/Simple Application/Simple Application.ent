@@ -1,0 +1,18 @@
+﻿[CSPro Application]
+Version=CSPro 7.0
+Label=SIMPLE_APPLICATION
+Name=SIMPLE_APPLICATION
+AppType=DataEntry
+OperatorID=No
+CreateListing=No
+CreateLog=No
+[AppCode]
+File=.\Simple Application.ent.apc
+[Message]
+File=.\Simple Application.ent.mgf
+[Help]
+File=.\Simple Application.ent.qsf
+[Forms]
+File=.\Simple Application.fmf
+[Dictionary Types]
+Dict-Type=.\Simple Application.dcf,Input,.\Simple Application.fmf
