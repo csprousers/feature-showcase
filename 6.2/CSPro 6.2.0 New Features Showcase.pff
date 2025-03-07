@@ -1,0 +1,10 @@
+﻿[Run Information]
+Version=CSPro 6.2
+AppType=Entry
+
+[DataEntryInit]
+StartMode=Add
+FullScreen=Yes
+
+[Files]
+Application=.\CSPro 6.2.0 New Features Showcase.ent

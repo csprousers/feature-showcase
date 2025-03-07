@@ -1,0 +1,360 @@
+﻿[Dictionary]
+Version=CSPro 6.2
+Label=CSPro 6.2.0 New Features Showcase|CSPro 6.2.0 Nouvelles fonctionnalités Showcase|CSPROは、新機能のショーケースを6.2.0
+Name=SHOWCASE_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Languages]
+EN=English
+FR=French
+JP=Japanese
+
+[Level]
+Label=CSPro 6.2.0 New Features Showcase|CSPro 6.2.0 Nouvelles fonctionnalités Showcase|CSPROは、新機能のショーケースを6.2.0
+Name=SHOWCASE_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Showcase ID||ショーケースID
+Name=SHOWCASE_ID
+Start=2
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=CSPro 6.2.0 New Features Showcase|CSPro 6.2.0 Nouvelles fonctionnalités Showcase|CSPROは、新機能のショーケースを6.2.0
+Name=SHOWCASE_REC
+RecordTypeValue='1'
+RecordLen=11
+
+[Item]
+Label=Connection Function|Fonction de connexion|接続機能
+Name=CONNECTION_FUNCTION
+Start=3
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Connection Function|Fonction de connexion|接続機能
+Name=CONNECTION_FUNCTION_VS1
+Value=1;Continue|Continuer|続けます
+
+[Item]
+Label=Prompt Function|Fonction Prompt|プロンプト機能
+Name=PROMPT_FUNCTION
+Start=4
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Prompt Function|Fonction Prompt|プロンプト機能
+Name=PROMPT_FUNCTION_VS1
+Value=1;Password Protected|Mot de passe protégé|パスワード保護
+Value=2;Numeric|Numérique|数値の
+Value=3;Multiline|Multiligne|複数行
+Value=4;Continue|Continuer|続けます
+
+[Item]
+Label=Custom Error Message|Message d'erreur personnalisé|カスタムエラーメッセージ
+Name=CUSTOM_ERROR_MESSAGE
+Start=5
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Custom Error Message|Message d'erreur personnalisé|カスタムエラーメッセージ
+Name=CUSTOM_ERROR_MESSAGE_VS1
+Value=0 2 4 6 8;Valid Values|Valeurs valides|有効な値
+
+[Item]
+Label=Enhanced Extended Controls|Contrôles étendus améliorées|強化された拡張コントロール
+Name=ENHANCED_EXTENDED_CONTROLS
+Start=6
+Len=3
+ZeroFill=Yes
+
+[ValueSet]
+Label=Enhanced Extended Controls|Contrôles étendus améliorées|強化された拡張コントロール
+Name=ENHANCED_EXTENDED_CONTROLS_VS1
+Value=1;Armenia: Goris|Arménie: Goris|アルメニア：ゴリス
+Value=2;Armenia: Yerevan|Arménie: Erevan|アルメニア：エレバン
+Value=3;Austria: Schwechat|Autriche: Schwechat|オーストリア：シュベッヒャート
+Value=4;Austria: Spitz|Autriche: Spitz|オーストリア：スピッツ
+Value=5;Austria: Traunkirchen|Autriche: Traunkirchen|オーストリア：トロンカーシェン
+Value=6;Austria: Vienna|Autriche: Vienne|オーストリア：ウィーン
+Value=7;Bangladesh: Dhaka||バングラデシュ：ダッカ
+Value=8;Bangladesh: Srimongol||バングラデシュ：Srimongol
+Value=9;Belgium: Brussels|Belgique: Bruxelles|ベルギー：ブリュッセル
+Value=10;Bosnia and Herzegovina: Mostar|Bosnie-Herzégovine: Mostar|ボスニア·ヘルツェゴビナ：モスタル
+Value=11;Bosnia and Herzegovina: Sarajevo|Bosnie-Herzégovine: Sarajevo|ボスニア·ヘルツェゴビナ：サラエボ
+Value=12;Brazil: Belo Horizonte|Brésil: Belo Horizonte|ブラジル：ベロオリゾンテ
+Value=13;Brazil: Cardeal Mota|Brésil: Cardeal Mota|ブラジル：地下鉄Cardealモタ
+Value=14;Brazil: Contagem|Brésil: Contagem|ブラジル：コンタージェン
+Value=15;Brazil: Curitiba|Brésil: Curitiba|ブラジル：クリティバ
+Value=16;Brazil: Foz do Iguaçu|Brésil: Foz do Iguaçu|ブラジル：フォス·ド·イグアス
+Value=17;Brazil: Morretes|Brésil: Morretes|ブラジル：Morretes
+Value=18;Brazil: Ouro Prêto|Brésil: Ouro Preto|ブラジル：オーロプレト
+Value=19;Brazil: Rio de Janeiro|Brésil: Rio de Janeiro|ブラジル：リオデジャネイロ
+Value=20;Brazil: São Paulo|Brésil: São Paulo|ブラジル：サンパウロ
+Value=21;Burundi: Bujumbura||ブルンジ：ブジュンブラ
+Value=22;Cambodia: Battambang|Cambodge: Battambang|カンボジア：バッタンバン
+Value=23;Cambodia: Kep|Cambodge: Kep|カンボジア：ケップ
+Value=24;Cambodia: Phnom Penh|Cambodge: Phnom Penh|カンボジア：プノンペン
+Value=25;Cambodia: Siem Reap|Cambodge: Siem Reap|カンボジア：シェムリアップ
+Value=26;Canada: Montreal|Canada: Montréal|カナダ：モントリオール
+Value=27;Canada: Ottawa||カナダ：オタワ
+Value=28;Canada: Québec City|Canada: Québec|カナダ：ケベック
+Value=29;Canada: Toronto||カナダ：トロント
+Value=30;Chad: Mongo|Tchad: Mongo|チャド：モンゴ
+Value=31;Chad: N'Djamena|Tchad: N'Djamena|チャド：ンジャメナ
+Value=32;Chad: Zakouma|Tchad: Zakouma|チャド：Zakouma
+Value=33;China: Beijing|Chine: Pékin|中国：北京
+Value=34;China: Changzhou|Chine: Changzhou|中国：常州
+Value=35;China: Chengde|Chine: Chengde|中国：承徳
+Value=36;China: Chengdu|Chine: Chengdu|中国：成都
+Value=37;China: Guangzhou|Chine: Guangzhou|中国：広州
+Value=38;China: Guilin|Chine: Guilin|中国：桂林
+Value=39;China: Jilihe|Chine: Jilihe|中国：Jilihe
+Value=40;China: Jiuzhaigou|Chine: Jiuzhaigou|中国：九寨溝
+Value=41;China: Kaifeng|Chine: Kaifeng|中国：開封
+Value=42;China: Kunming|Chine: Kunming|中国：昆明
+Value=43;China: Luoyang|Chine: Luoyang|中国：洛陽
+Value=44;China: Nanjing|Chine: Nanjing|中国：南京
+Value=45;China: Nanning|Chine: Nanning|中国：南寧
+Value=46;China: Qingdao|Chine: Qingdao|中国：青島
+Value=47;China: Shanghai|Chine: Shanghai|中国：上海
+Value=48;China: Shanhaiguan|Chine: Shanhaiguan|中国：山海関
+Value=49;China: Songpan|Chine: Songpan|中国：松潘
+Value=50;China: Tai'an|Chine: Tai'an|中国：泰安市
+Value=51;China: Tianjin|Chine: Tianjin|中国：天津
+Value=52;China: Xi'an|Chine: Xi'an|中国：西安
+Value=53;China: Xuzhou|Chine: Xuzhou|中国：徐州
+Value=54;China: Yangshuo|Chine: Yangshuo|中国：陽朔
+Value=55;Croatia: Cavtat|Croatie: Cavtat|クロアチア：ツァブタット
+Value=56;Croatia: Dubrovnik|Croatie: Dubrovnik|クロアチア：ドブロブニク
+Value=57;Croatia: Split|Croatie: Split|クロアチア：スプリット
+Value=58;Croatia: Székesfehérvár|Croatie: Székesfehérvár|クロアチア：セーケシュフェヘールヴァール
+Value=59;Croatia: Zagreb|Croatie: Zagreb|クロアチア：ザグレブ
+Value=60;Cuba: Havana|Cuba: La Havane|キューバ：ハバナ
+Value=61;Czech Republic: Cesky Krumlov|République tchèque: Cesky Krumlov|チェコ共和国：チェスキークルムロフ
+Value=62;Czech Republic: Prague|République tchèque: Prague|チェコ共和国プラハ
+Value=63;Denmark: Copenhagen|Danemark: Copenhague|デンマーク：コペンハーゲン
+Value=64;Denmark: Kastrup|Danemark: Kastrup|デンマーク：カストロップ
+Value=65;Djibouti: Djibouti||ジブチ：ジブチ
+Value=66;El Salvador: El Tunco||エルサルバドル：エルTunco
+Value=67;El Salvador: San Salvador||エルサルバドル：サンサルバドル
+Value=68;El Salvador: Suchitoto||エルサルバドル：スチトト
+Value=69;England: London|Angleterre: Londres|イングランド：ロンドン
+Value=70;England: Manchester|Angleterre: Manchester|イングランド：マンチェスター
+Value=71;Estonia: Kuressaare|Estonie: Kuressaare|エストニア：クレッサーレ
+Value=72;Estonia: Tallinn|Estonie: Tallinn|エストニア：タリン
+Value=73;Ethiopia: Addis Ababa|Ethiopie: Addis Abeba|エチオピア：アディスアベバ
+Value=74;Ethiopia: Bahir Dar|Ethiopie: Bahir Dar|エチオピア：Bahirダル
+Value=75;Ethiopia: Dire Dawa|Ethiopie: Dire Dawa|エチオピア：ディレダワ
+Value=76;Ethiopia: Gondar|Ethiopie: Gondar|エチオピア：ゴンダール
+Value=77;Ethiopia: Lalibela|Ethiopie: Lalibela|エチオピア：ラリベラ
+Value=78;Finland: Helsinki|Finlande: Helsinki|フィンランド：ヘルシンキ
+Value=79;France: Aix-en-Provence||フランス：エクス·アン·プロヴァンス
+Value=80;France: Arles||フランス：アルル
+Value=81;France: Cap d'Ail||フランス：キャップデゥアリ
+Value=82;France: Nice|France: de Nice|フランス：ニース
+Value=83;France: Paris||フランス：パリ
+Value=84;Georgia: Batumi|Géorgie: Batumi|グルジア：バトゥミ
+Value=85;Georgia: Tbilisi|Géorgie: Tbilissi|グルジア：トビリシ
+Value=86;Germany: Baden-Baden|Allemagne: Baden-Baden|ドイツ：バーデンバーデン
+Value=87;Germany: Berlin|Allemagne: Berlin|ドイツ：ベルリン
+Value=88;Germany: Dachau|Allemagne: Dachau|ドイツ：ダッハウ
+Value=89;Germany: Düsseldorf|Allemagne: Düsseldorf|ドイツ：デュッセルドルフ
+Value=90;Germany: Frankfurt|Allemagne: Francfort|ドイツ：フランクフルト
+Value=91;Germany: Icking|Allemagne: Icking|ドイツ：Ickingの
+Value=92;Germany: Kelsterbach|Allemagne: Kelsterbach|ドイツ：ケルステルバッハ
+Value=93;Germany: Munich|Allemagne: Munich|ドイツ：ミュンヘン
+Value=94;Germany: Nuremberg|Allemagne: Nuremberg|ドイツ：ニュルンベルク
+Value=95;Germany: St. Goar|Allemagne: St. Goar|ドイツ：聖ゴアール
+Value=96;Ghana: Accra||ガーナ：アクラ
+Value=97;Honduras: Copán Ruinas||ホンジュラス：コパンルイナス
+Value=98;Honduras: La Guama||ホンジュラス：ラGuamaの
+Value=99;Honduras: San Juan||ホンジュラス：サンファン
+Value=100;Honduras: San Pedro Sula||ホンジュラス：サンペドロスラ
+Value=101;Hong Kong: Hong Kong||香港：香港
+Value=102;Hungary: Budapest|Hongrie: Budapest|ハンガリー：ブダペスト
+Value=103;Hungary: Eger|Hongrie: Eger|ハンガリー：エゲル
+Value=104;India: Delhi|Inde: Delhi|インド：デリー
+Value=105;India: Kolkata|Inde: Kolkata|インド：コルカタ
+Value=106;India: Mumbai|Inde: Mumbai|インド：ムンバイ
+Value=107;Ireland: Dublin|Irlande: Dublin|アイルランド：ダブリン
+Value=108;Italy: Agrigento|Italie: Agrigente|イタリア：アグリジェント
+Value=109;Italy: Bergamo|Italie: Bergamo|イタリア：ベルガモ
+Value=110;Italy: Catania|Italie: Catane|イタリア：カタニア
+Value=111;Italy: Florence|Italie: Florence|イタリア：フィレンツェ
+Value=112;Italy: Marghera|Italie: Marghera|イタリア：マルゲーラ
+Value=113;Italy: Milan|Italie: Milan|イタリア：ミラノ
+Value=114;Italy: Milazzo|Italie: Milazzo|イタリア：ミラッツォ
+Value=115;Italy: Rome|Italie: Rome|イタリア：ローマ
+Value=116;Italy: Siracusa|Italie: Siracusa|イタリア：シラクーサ
+Value=117;Italy: Trieste|Italie: Trieste|イタリア：トリエステ
+Value=118;Italy: Venice|Italie: Venise|イタリア：ヴェネツィア
+Value=119;Italy: Verona|Italie: Vérone|イタリア：ベローナ
+Value=120;Jamaica: Irish Town|Jamaïque: Irish Town|ジャマイカ：アイルランドタウン
+Value=121;Jamaica: Kingston|Jamaïque: Kingston|ジャマイカ：キングストン
+Value=122;Japan: Aso|Japon: Aso|日本：阿蘇
+Value=123;Japan: Hiroshima|Japon: Hiroshima|日本：広島
+Value=124;Japan: Kagoshima|Japon: Kagoshima|日本：鹿児島
+Value=125;Japan: Kyoto|Japon: Kyoto|日本：京都
+Value=126;Japan: Narita|Japon: Narita|日本：成田
+Value=127;Japan: Ono|Japon: Ono|日本：小野
+Value=128;Japan: Tokyo||日本：東京
+Value=129;Jordan: Al Jiza|Jordanie: Al Jiza|ヨルダン：アルJiza
+Value=130;Jordan: Amman|Jordanie: Amman|ヨルダン：アンマン
+Value=131;Kenya: Keekorok||ケニア：キーコロック
+Value=132;Kenya: Kichwa Tembo||ケニア：Kichwaテンボ
+Value=133;Kenya: Masai Mara||ケニア：マサイマラ
+Value=134;Kenya: Mombasa||ケニア：モンバサ
+Value=135;Kenya: Nairobi||ケニア：ナイロビ
+Value=136;Kenya: Oloolaimutia||ケニア：Oloolaimutia
+Value=137;Korea (North): Pyongyang|Corée (Nord): Pyongyang|韓国（北）：平壌
+Value=138;Korea (South): Busan|Corée (du Sud): Busan|韓国（南）：釜山
+Value=139;Korea (South): Incheon|Corée (du Sud): Incheon|韓国（南）：仁川
+Value=140;Korea (South): Seoul|Corée (du Sud): Séoul|大韓民国：ソウル
+Value=141;Kuwait: Kuwait City|Koweït: Koweït|クウェート：クウェートシティ
+Value=142;Latvia: Riga|Lettonie: Riga|ラトビア：リガ
+Value=143;Lebanon: Beirut|Liban: Beyrouth|レバノン：ベイルート
+Value=144;Lebanon: Byblos|Liban: Byblos|レバノン：ビブロス
+Value=145;Liberia: Monrovia||リベリア：モンロビア
+Value=146;Lithuania: Siauliai|Lituanie: Siauliai|リトアニア：シャウレイ
+Value=147;Lithuania: Vilnius|Lituanie: Vilnius|リトアニア：ビリニュス
+Value=148;Mexico: Alisitos|Mexique: Alisitos|メキシコ：Alisitos
+Value=149;Mexico: Rosarito|Mexique: Rosarito|メキシコ：ロザリト
+Value=150;Mongolia: Gun-Galuut Nature Reserve|Réserve naturelle de Gun-Galuut: Mongolie|モンゴル：ガン-Galuut自然保護区
+Value=151;Mongolia: Hustai National Park|Mongolie: Hustai National Park|モンゴル：フスタイ国立公園
+Value=152;Mongolia: Ulaanbaatar|Mongolie: Oulan-Bator|モンゴル：ウランバートル
+Value=153;Montenegro: Bjelopavlići Plain|Monténégro: plaine de Bjelopavlici|モンテネグロ：Bjelopavlići平野
+Value=154;Montenegro: Dražin vrt|Monténégro: Drazin vrt|モンテネグロ：DražinVRT
+Value=155;Montenegro: Igalo|Monténégro: Igalo|モンテネグロ：イガロ
+Value=156;Montenegro: Podgorica|Monténégro: Podgorica|モンテネグロ：ポドゴリツァ
+Value=157;Montenegro: Rose|Monténégro: Rose|モンテネグロ：ローズ
+Value=158;Montenegro: Stari Bar|Monténégro: Stari Bar|モンテネグロ：スタリバー
+Value=159;Mozambique: Maputo||モザンビーク：マプト
+Value=160;Myanmar: Bagan||ミャンマー：バガン
+Value=161;Myanmar: Heho||ミャンマー：ヘホー
+Value=162;Myanmar: Mandalay||ミャンマー：マンダレー
+Value=163;Myanmar: Nyaung Shwe||ミャンマー：ニャウンシュエ
+Value=164;Myanmar: Nyaung U||ミャンマー：Nyaung U
+Value=165;Myanmar: Yangon||ミャンマー：ヤンゴン
+Value=166;Namibia: Lüderitz|Namibie: Lüderitz|ナミビア：リュデリッツ
+Value=167;Namibia: Oranjemund|Namibie: Oranjemund|ナミビア：Oranjemund
+Value=168;Namibia: Swakopmund|Namibie: Swakopmund|ナミビア：スワコプムンド
+Value=169;Namibia: Windhoek|Namibie: Windhoek|ナミビア：ウィントフック
+Value=170;Nepal: Kathmandu|Népal: Katmandou|ネパール：カトマンズ
+Value=171;Netherlands: Amsterdam|Pays-Bas: Amsterdam|オランダ：アムステルダム
+Value=172;Norway: Oslo|Norvège: Oslo|ノルウェー：オスロ
+Value=173;Panama: Carti||パナマ：Carti
+Value=174;Panama: El Valle De Anton||パナマ：エルバレデアントン
+Value=175;Panama: Panama City||パナマ：パナマシティ
+Value=176;Panama: San Carlos||パナマ：サンカルロス
+Value=177;Paraguay: Asunción||パラグアイ：アスンシオン
+Value=178;Paraguay: Caazapá||パラグアイ：カーサパ
+Value=179;Paraguay: Encarnación||パラグアイ：エンカルナシオン
+Value=180;Poland: Krakow|Pologne: Cracovie|ポーランド：クラクフ
+Value=181;Poland: Warsaw|Pologne: Varsovie|ポーランド：ワルシャワ
+Value=182;Qatar: Doha||カタール：ドーハ
+Value=183;Romania: Bucharest|Roumanie: Bucarest|ルーマニア：ブカレスト
+Value=184;Russia: Bol'shoye Goloustnoye|Russie: Bol'shoye Goloustnoye|ロシア：Bol'shoye Goloustnoye
+Value=185;Russia: Moscow|Russie: Moscou|ロシア：モスクワ
+Value=186;Russia: Saint Petersburg|Russie: Saint-Pétersbourg|ロシア：サンクトペテルブルク
+Value=187;Senegal: Dakar|Sénégal: Dakar|セネガル：ダカール
+Value=188;Serbia: Belgrade|Serbie: Belgrade|セルビア：ベオグラード
+Value=189;Singapore: Singapore|Singapour: Singapour|シンガポール：シンガポール
+Value=190;Slovakia: Bratislava|Slovaquie: Bratislava|スロバキア：ブラチスラバ
+Value=191;Slovenia: Ljubljana|Slovénie: Ljubljana|スロベニア：リュブリャナ
+Value=192;South Africa: Cape Town|Afrique du Sud: Le Cap|南アフリカ：ケープタウン
+Value=193;South Africa: Johannesburg|Afrique du Sud: Johannesburg|南アフリカ：ヨハネスブルグ
+Value=194;Spain: Madrid|Espagne: Madrid|スペイン：マドリード
+Value=195;Sweden: Gothenburg|Suède: Göteborg|スウェーデン：ヨーテボリ
+Value=196;Sweden: Stockholm|Suède: Stockholm|スウェーデン：ストックホルム
+Value=197;Sweden: Trollhättan|Suède: Trollhättan|スウェーデン：トロルヘッタン
+Value=198;Switzerland: Allmendingen|Suisse: Allmendingen|スイス：Allmendingen
+Value=199;Switzerland: Brunnen|Suisse: Brunnen|スイス：ブルンネン
+Value=200;Switzerland: Eggiwil|Suisse: Eggiwil|スイス：Eggiwilの
+Value=201;Switzerland: Geneva|Suisse: Genève|スイス：ジュネーブ
+Value=202;Switzerland: Interlaken|Suisse: Interlaken|スイス：インターラーケン
+Value=203;Switzerland: Melchtal|Suisse: Melchtal|スイス：Melchtal
+Value=204;Switzerland: Rümlang|Suisse: Rümlang|スイス：リュムランク
+Value=205;Switzerland: Thielle|Suisse: Thielle|スイス：ティーレ
+Value=206;Switzerland: Welschenrohr|Suisse: Welschenrohr|スイス：ヴェルシェンロール
+Value=207;Switzerland: Zürich|Suisse: Zürich|スイス：チューリッヒ
+Value=208;Tajikistan: Dushanbe|Tadjikistan: Douchanbé|タジキスタン：ドゥシャンベ
+Value=209;Tajikistan: Gharm|Tadjikistan: Gharm|タジキスタン：Gharm
+Value=210;Tajikistan: Kulob|Tadjikistan: Kulob|タジキスタン：クリャーブ
+Value=211;Thailand: Bangkok|Thaïlande: Bangkok|タイ：バンコク
+Value=212;Turkey: Bergama|Turquie: Bergama|トルコ：ベルガマ
+Value=213;Turkey: Bozcaada|Turquie: Bozcaada|トルコ：Bozcaadaの
+Value=214;Turkey: Çanakkale|Turquie: Çanakkale|トルコ：チャナッカレ
+Value=215;Turkey: Istanbul|Turquie: Istanbul|トルコ：イスタンブール
+Value=216;Turkey: Izmir|Turquie: Izmir|トルコ：イズミル
+Value=217;Turkey: Kayseri|Turquie: Kayseri|トルコ：カイセリ
+Value=218;Turkey: Uçhisar|Turquie: Uçhisar|トルコ：ウチヒサール
+Value=219;Ukraine: Kiev||ウクライナ：キエフ
+Value=220;Ukraine: Odessa||ウクライナ：オデッサ
+Value=221;Ukraine: Sevastopol|Ukraine: Sébastopol|ウクライナ：セヴァストポリ
+Value=222;United Arab Emirates: Abu Dhabi|Emirats Arabes Unis: Abu Dhabi|アラブ首長国連邦：アブダビ
+Value=223;United Arab Emirates: Dubai|Emirats Arabes Unis: Dubaï|アラブ首長国連邦：ドバイ
+Value=224;Vietnam: Ha Long Bay||ベトナム：ハロン湾
+Value=225;Vietnam: Hanoi||ベトナム：ハノイ
+Value=226;Vietnam: Ho Chi Minh City|Vietnam: Ho Chi Minh-Ville|ベトナム：ホーチミン市
+Value=227;Zambia: Livingstone|Zambie: Livingstone|ザンビア：リビングストン
+Value=228;Zambia: Lusaka|Zambie: Lusaka|ザンビア：ルサカ
+Value=229;Zimbabwe: Harare||ジンバブエ：ハラレ
+
+[Item]
+Label=Value Set Images|Valeur Set Images|値セットの画像
+Name=VALUE_SET_IMAGES
+Start=9
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Value Set Images|Valeur Set Images|値セットの画像
+Name=VALUE_SET_IMAGES_VS1
+Value=1;Jimmy Carter
+Image=.\Images\carter.jpg
+Value=2;George H.W. Bush
+Image=.\Images\bush_41.jpg
+Value=3;Bill Clinton
+Image=.\Images\clinton.jpg
+Value=4;George W. Bush
+Image=.\Images\bush_43.jpg
+
+[Item]
+Label=Dynamic Value Set with Images|Dynamique Valeur Set avec Images|イメージの設定動的な値
+Name=DYNAMIC_IMAGE_VALUE_SET
+Start=10
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Dynamic Value Set with Images|Dynamique Valeur Set avec Images|イメージの設定動的な値
+Name=DYNAMIC_IMAGE_VALUE_SET_VS1
+Value=1;Barack Obama
+Image=.\Images\obama.jpg
+
+[Item]
+Label=Multiple Languages|Plusieurs langues|多言語
+Name=MULTIPLE_LANGUAGES
+Start=11
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Multiple Languages|Plusieurs langues|多言語
+Name=MULTIPLE_LANGUAGES_VS1
+Value=1;Switch to English|Passer à l'anglais|英語に切り替え
+Value=2;Switch to French (Français)||フランス語に切り替え（フランス語）
+Value=3;Switch to Japanese (日本語)|Basculer vers Japonais (日本語)|（日本語）日本語に切り替え
+Value=4;Restart Program|Redémarrer le programme|再起動プログラム
+Value=5;Quit Program|Quittez Programme|プログラムを終了します
