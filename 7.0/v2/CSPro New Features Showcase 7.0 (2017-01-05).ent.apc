@@ -1,0 +1,488 @@
+﻿PROC GLOBAL
+
+numeric ReturnOrQuitCode = -9;
+
+string Excel2CSProExeFilename = "Excel2CSPro.exe";
+string Excel2CSProSpecFilename = "IDB Excel to CSPro Conversion.xl2cs";
+string Excel2CSProSpecTextDataFilename = "IDB Population Data 2016-08.dat";
+string Excel2CSProSpecCsdbDataFilename = "IDB Population Data 2016-08.csdb";
+
+string DataViewerExeFilename = "DataViewer.exe";
+
+string AutoIncrementPff = "Auto-Increment Application.pff";
+
+string capiText1;
+string capiText2;
+string capiText3;
+
+numeric MaxValuesetOptions = 300;
+array string vsStringCodes(MaxValuesetOptions);
+array string vsLabels(MaxValuesetOptions);
+
+
+function OnStop()
+
+	if getsymbol() = "MENU" then	stop(1);
+	else							reenter MENU;
+	endif;
+
+end;
+
+numeric timestampStartProgram;
+
+list string idbKeys;
+
+list string compressionDirListing;
+
+
+string unprocessedFilesWarning;
+
+function GenerateUnprocessedFilesWarning()
+
+	numeric fileExistanceText = fileexist(Excel2CSProSpecTextDataFilename);
+	numeric fileExistanceCsdb = fileexist(Excel2CSProSpecCsdbDataFilename);
+	numeric filesExisting = fileExistanceText + fileExistanceCsdb;
+
+	if filesExisting = 2 then
+		unprocessedFilesWarning = "";
+
+	else
+		unprocessedFilesWarning = "You must run the Excel to CSPro tool showcase to generate the ";
+
+		if not fileExistanceText then	unprocessedFilesWarning = unprocessedFilesWarning + "text"; 	endif;
+		if filesExisting = 0 then		unprocessedFilesWarning = unprocessedFilesWarning + " and "; 	endif;
+		if not fileExistanceCsdb then	unprocessedFilesWarning = unprocessedFilesWarning + "CSPro DB"; endif;
+
+		unprocessedFilesWarning = unprocessedFilesWarning + " data file(s)."
+
+	endif;
+
+end;
+
+
+function string FormatNumber(largeNumber)
+	string fullNumber = edit("Z,ZZZ,ZZZ,ZZZ",largeNumber);
+	FormatNumber = fullNumber[poschar("0123456789",fullNumber)];
+end;
+
+
+PROC NFS7_20170105_FF
+
+preproc
+
+	timestampStartProgram = timestamp();
+
+
+PROC MENU
+
+onfocus
+
+	MENU = notappl;
+
+	GenerateUnprocessedFilesWarning();
+	
+	close(IDB_POPULATION_DATA_DICT);
+
+postproc
+
+	if MENU = ReturnOrQuitCode then
+		stop(1);
+	
+	elseif MENU in 1:2 and getos() in 20:29 then
+		errmsg("This option does not work on Android.");
+
+	elseif MENU = 1 then
+		skip to EXCEL_TO_CSPRO_MENU;
+
+	elseif unprocessedFilesWarning <> "" then
+		errmsg("%s",unprocessedFilesWarning);
+
+	elseif MENU = 2 then
+		skip to DATA_VIEWER_MENU;
+
+	elseif MENU = 3 then
+		skip to TIMESTAMP_MENU;
+		
+	elseif MENU = 4 then
+		skip to KEYLIST_MENU;
+
+	elseif MENU = 5 then
+		skip to COMPRESSION_MENU;
+	
+	elseif MENU = 6 then
+		skip to FORCASE_MENU;
+	
+	elseif MENU = 7 then
+		skip to AUTO_INCREMENT_MENU;
+	
+	elseif MENU = 8 then
+		skip to DIAGNOSTICS_MENU;
+	
+	elseif MENU = 9 then
+		skip to OTHER_FEATURES_MENU;
+
+	endif;
+
+	reenter;
+
+
+PROC EXCEL_TO_CSPRO_MENU
+
+onfocus
+
+	EXCEL_TO_CSPRO_MENU = notappl;
+
+postproc
+
+	if EXCEL_TO_CSPRO_MENU = ReturnOrQuitCode then
+		reenter MENU;
+
+	elseif EXCEL_TO_CSPRO_MENU = 1 then
+		execsystem(maketext('%s%s "%s"',pathname(CSPro),Excel2CSProExeFilename,Excel2CSProSpecFilename));
+
+	elseif EXCEL_TO_CSPRO_MENU = 2 then
+		execsystem(maketext('%s%s /run "%s"',pathname(CSPro),Excel2CSProExeFilename,Excel2CSProSpecFilename),wait);
+
+	elseif EXCEL_TO_CSPRO_MENU = 3 then
+		execsystem(maketext('%s%s /run "%s" "OutputData=%s"',pathname(CSPro),Excel2CSProExeFilename,Excel2CSProSpecFilename,Excel2CSProSpecCsdbDataFilename),wait);
+
+	endif;
+
+	reenter;
+
+
+PROC DATA_VIEWER_MENU
+
+onfocus
+
+	DATA_VIEWER_MENU = notappl;
+
+postproc
+
+	if DATA_VIEWER_MENU = ReturnOrQuitCode then
+		reenter MENU;
+
+	elseif DATA_VIEWER_MENU = 1 then
+		execsystem(maketext('%s%s',pathname(CSPro),DataViewerExeFilename));
+	
+	elseif DATA_VIEWER_MENU = 2 then
+		string popstanDirectory = maketext("%sCSPro/Examples %s/Popstan Census/",pathname(Documents),diagnostics("version"));
+		string popstanDictionaryFilename = popstanDirectory + "Census Dictionary.dcf";
+		string popstanDataFilename = popstanDirectory + "Popstan Census.dat";
+		
+		if not ( fileexist(popstanDictionaryFilename) and fileexist(popstanDataFilename) ) then
+			errmsg("The Popstan data files could not be found.");
+		
+		else
+			execsystem(maketext('%s%s "%s" "%s"',pathname(CSPro),DataViewerExeFilename,popstanDataFilename,popstanDictionaryFilename));
+		
+		endif;
+	
+	elseif DATA_VIEWER_MENU = 3 then
+		execsystem(maketext('%s%s "%s"',pathname(CSPro),DataViewerExeFilename,Excel2CSProSpecCsdbDataFilename));
+	
+	endif;
+	
+	reenter;
+
+
+PROC TIMESTAMP_MENU
+
+onfocus
+
+	TIMESTAMP_MENU = notappl;
+
+	capiText1 = maketext("%d",timestampStartProgram);
+	capiText2 = maketext("%d",timestamp());
+	capiText3 = maketext("%d",timestamp() - timestampStartProgram);
+
+postproc
+
+	if TIMESTAMP_MENU = ReturnOrQuitCode then
+		reenter MENU;
+
+	else
+		numeric timestampStart = timestamp();
+		
+		string filenameToOpen = Excel2CSProSpecTextDataFilename;
+		
+		if TIMESTAMP_MENU = 2 then
+			filenameToOpen = Excel2CSProSpecCsdbDataFilename;
+		endif;
+		
+		setfile(IDB_POPULATION_DATA_DICT,filenameToOpen);
+		
+		do numeric iterations = 10 while iterations >= 1 by -1
+			forcase IDB_POPULATION_DATA_DICT do
+			endfor;
+		enddo;
+
+		errmsg("It took %d seconds to open and iterate through all cases in %s.",timestamp() - timestampStart,filenameToOpen);		
+	
+	endif;
+	
+	reenter;
+	
+
+PROC KEYLIST_MENU
+
+onfocus
+
+	KEYLIST_MENU = notappl;
+	
+	setfile(IDB_POPULATION_DATA_DICT,Excel2CSProSpecCsdbDataFilename);
+	
+	capiText1 = maketext("%d",keylist(IDB_POPULATION_DATA_DICT));
+	
+	capiText2 = "";
+	keylist(IDB_POPULATION_DATA_DICT,idbKeys);
+	
+	do numeric keyCtr = 1 while keyCtr <= length(idbKeys)
+	
+		if capiText2 <> "" then
+			capiText2 = capiText2 + ", ";
+		endif;
+	
+		capiText2 = capiText2 + idbKeys(keyCtr);
+	
+	enddo;
+
+postproc
+
+	reenter MENU;
+
+
+PROC COMPRESSION_MENU
+
+onfocus
+
+	COMPRESSION_MENU = notappl;
+	
+postproc
+
+	string zipFilePrefix = "compression_test";
+
+	if COMPRESSION_MENU = ReturnOrQuitCode then
+		reenter MENU;
+	
+	elseif COMPRESSION_MENU in 1:3 then
+
+		string inputFiles;
+		
+		// compress using a list so that we don't have to repeat code
+		if COMPRESSION_MENU = 1 then
+			inputFiles = Excel2CSProSpecTextDataFilename;
+		
+		elseif COMPRESSION_MENU = 2 then
+			inputFiles = Excel2CSProSpecCsdbDataFilename;
+		
+		else
+			numeric extPos = pos(".",Excel2CSProSpecTextDataFilename);
+			inputFiles = Excel2CSProSpecTextDataFilename[1:extPos] + "*"; // this will get both files
+		
+		endif;
+		
+		numeric totalBytesToCompress;
+		dirlist(compressionDirListing,pathname(Application),inputFiles);
+		
+		do numeric fileCtr = 1 while fileCtr <= length(compressionDirListing)
+			totalBytesToCompress = totalBytesToCompress + filesize(compressionDirListing(fileCtr));
+		enddo;
+		
+		string compressedFilename = maketext("%s%d.zip",zipFilePrefix,timestamp());
+		
+		compress(compressedFilename,inputFiles);
+		
+		numeric outputBytes = filesize(compressedFilename);
+		
+		errmsg("%d file(s) were compressed to %s. The size went from %s to %s bytes, a compression ratio of %d%.",length(compressionDirListing),
+			compressedFilename,FormatNumber(totalBytesToCompress),FormatNumber(outputBytes),100 * outputBytes / totalBytesToCompress);
+	
+	elseif COMPRESSION_MENU = 4 then
+
+		dirlist(compressionDirListing,pathname(Application),zipFilePrefix + "*.zip");
+		
+		if length(compressionDirListing) = 0 then
+			errmsg("You must compress files before you can decompress them.");
+		
+		else
+			string lastCompressedFilename = compressionDirListing(length(compressionDirListing));
+			numeric zipPos = pos(".zip",lastCompressedFilename);
+			string decompressedDirectory = maketext("%s_decompressed_on_%d",lastCompressedFilename[1:( zipPos - 1 )],timestamp());
+			
+			decompress(lastCompressedFilename,decompressedDirectory);
+
+			dirlist(compressionDirListing,decompressedDirectory);
+			
+			errmsg("%d file(s) decompressed to directory %s",length(compressionDirListing),decompressedDirectory);
+		
+		endif;
+	
+	endif;
+	
+	reenter;
+
+
+PROC FORCASE_MENU
+
+preproc
+
+	setfile(IDB_POPULATION_DATA_DICT,Excel2CSProSpecTextDataFilename);
+	
+	if FORCASE_COUNTRY_FILTER = "" then // start out the filter with the U.S. security council countries
+		FORCASE_COUNTRY_FILTER = "CHFRUKUSRS";
+	endif;
+
+onfocus
+
+	FORCASE_MENU = notappl;
+	
+	numeric ageFilter = visualvalue(FORCASE_AGE_FILTER);
+	numeric ageStartIdx = ageFilter + 1; // ages are 0-based but indices are 1-based
+	numeric ageEndIdx = ageStartIdx;
+	
+	if ageFilter in notappl,-1 then
+		ageStartIdx = 1;
+		ageEndIdx = maxocc(AGESEX_POPULATION);
+		capiText1 = "all ages";
+
+	else
+		capiText1 = maketext("people aged %d",ageFilter);
+
+	endif;
+	
+	
+	numeric yearFilter = visualvalue(FORCASE_YEAR_FILTER);
+	
+	if yearFilter = notappl then
+		yearFilter = sysdate("YYYY");
+	endif;
+	
+	capiText2 = maketext("%d",yearFilter);
+	
+	
+	numeric useAllCountries = ( FORCASE_COUNTRY_FILTER = "" );
+	capiText3 = "";
+	
+	forcase IDB_POPULATION_DATA_DICT where useAllCountries or ( ( pos(FIPS_CODE,FORCASE_COUNTRY_FILTER) % length(FIPS_CODE) ) = 1 ) do
+
+		numeric yearStartIdx = seek(AGESEX_YEAR = yearFilter);
+		
+		if yearStartIdx > 0 then
+	
+			if capiText3 <> "" then
+				capiText3 = capiText3 + " <br />";
+			endif;
+			
+			numeric malePopulation;
+			numeric femalePopulation;
+			
+			do numeric ageCtr = ageStartIdx while ageCtr <= ageEndIdx
+				malePopulation = malePopulation + AGESEX_POPULATION(yearStartIdx,ageCtr);
+				femalePopulation = femalePopulation + AGESEX_POPULATION(yearStartIdx + 1,ageCtr);		
+			enddo;
+			
+			capiText3 = capiText3 + maketext("%s: %s (%s males + %s females)",strip(COUNTRY_NAME),
+				FormatNumber(malePopulation + femalePopulation),FormatNumber(malePopulation),FormatNumber(femalePopulation));
+		
+		endif;
+	
+	endfor;
+
+postproc
+
+	if FORCASE_MENU = ReturnOrQuitCode then
+		reenter MENU;
+	
+	elseif FORCASE_MENU = 1 then
+		skip to FORCASE_COUNTRY_FILTER;
+	
+	elseif FORCASE_MENU = 2 then
+		skip to FORCASE_AGE_FILTER;
+	
+	elseif FORCASE_MENU = 3 then
+		skip to FORCASE_YEAR_FILTER;
+		
+	endif;
+	
+	reenter;
+
+
+PROC FORCASE_COUNTRY_FILTER
+
+onfocus
+
+	// generate the countries value set
+	numeric vsCtr = 1;
+	
+	forcase IDB_POPULATION_DATA_DICT do
+		vsStringCodes(vsCtr) = key(IDB_POPULATION_DATA_DICT);
+		vsLabels(vsCtr) = strip(COUNTRY_NAME);
+		inc(vsCtr);
+	endfor;
+
+	vsStringCodes(vsCtr) = ""; // end the value set
+	
+	setvalueset(FORCASE_COUNTRY_FILTER,vsStringCodes,vsLabels);
+
+postproc
+
+	reenter FORCASE_MENU;
+
+
+PROC FORCASE_AGE_FILTER
+
+	reenter FORCASE_MENU;
+
+
+PROC FORCASE_YEAR_FILTER
+
+	reenter FORCASE_MENU;
+	
+
+PROC AUTO_INCREMENT_MENU
+
+onfocus
+
+	AUTO_INCREMENT_MENU = notappl;
+
+postproc
+
+	if AUTO_INCREMENT_MENU = ReturnOrQuitCode then
+		reenter MENU;
+	
+	elseif AUTO_INCREMENT_MENU = 1 then
+		execpff(AutoIncrementPff,stop);
+	
+	endif;
+	
+	reenter;
+
+
+PROC DIAGNOSTICS_MENU
+
+onfocus
+
+	DIAGNOSTICS_MENU = notappl;
+
+	capiText1 = maketext("version = %s",diagnostics("version"));
+	capiText1 = capiText1 + "<br />" + maketext("version_detailed = %s",diagnostics("version_detailed"));
+	capiText1 = capiText1 + "<br />" + maketext("releasedate = %s",diagnostics("releasedate"));
+	capiText1 = capiText1 + "<br />" + maketext("beta = %s",diagnostics("beta"));
+	capiText1 = capiText1 + "<br />" + maketext("serializer = %s",diagnostics("serializer"));
+	capiText1 = capiText1 + "<br />" + maketext("md5(%s) = %s",AutoIncrementPff,diagnostics("md5",AutoIncrementPff));
+
+postproc
+
+	reenter MENU;
+
+
+PROC OTHER_FEATURES_MENU
+
+onfocus
+
+	OTHER_FEATURES_MENU = notappl;
+
+postproc
+
+	reenter MENU;

@@ -1,0 +1,192 @@
+﻿[Dictionary]
+Version=CSPro 7.0
+Label=CSPro New Features Showcase 7 (2017-01-05) Dictionray
+Name=NFS7_20170105_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=CSPro New Features Showcase 7 (2017-01-05) Level
+Name=NFS7_20170105_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Unused ID Item
+Name=UNUSED_ID_ITEM
+Start=2
+Len=1
+
+[Record]
+Label=CSPro New Features Showcase 7 (2017-01-05) Record
+Name=NFS7_20170105_DICU
+RecordTypeValue='1'
+RecordLen=79
+
+[Item]
+Label=Menu
+Name=MENU
+Start=3
+Len=2
+
+[ValueSet]
+Label=Menu
+Name=MENU_VS1
+Value=1;Learn about the newly improved Excel to CSPro tool
+Value=2;Learn about the new Data Viewer tool
+Value=3;Learn about the new TimeStamp function
+Value=4;Learn about the new KeyList function
+Value=5;Learn about the new compression functions (Compress + Decompress)
+Value=6;Learn about the new ForCase looping statement
+Value=7;Learn about the new auto-increment field property
+Value=8;Learn about the new diagnostics function
+Value=9;Learn about other new features
+Value=-9;Quit
+
+[Item]
+Label=Excel to CSPro Menu
+Name=EXCEL_TO_CSPRO_MENU
+Start=5
+Len=2
+
+[ValueSet]
+Label=Excel to CSPro Menu
+Name=EXCEL_TO_CSPRO_MENU_VS1
+Value=1;Open the Excel to CSPro specifications file
+Value=2;Convert the Excel file to a text data file
+Value=3;Convert the Excel file to a CSPro DB data file
+Value=-9;Return to the main menu
+
+[Item]
+Label=Data Viewer Menu
+Name=DATA_VIEWER_MENU
+Start=7
+Len=2
+
+[ValueSet]
+Label=Data Viewer Menu
+Name=DATA_VIEWER_MENU_VS1
+Value=1;Open the Data Viewer
+Value=2;Open the Popstan Examples data in the Data Viewer
+Value=3;Open the IDB data in the Data Viewer
+Value=-9;Return to the main menu
+
+[Item]
+Label=TimeStamp Menu
+Name=TIMESTAMP_MENU
+Start=9
+Len=2
+
+[ValueSet]
+Label=TimeStamp Menu
+Name=TIMESTAMP_MENU_VS1
+Value=1;Calculate time to open and iterate 10 times through the text data file cases
+Value=2;Calculate time to open and iterate 10 times through the CSPro DB data file cases
+Value=-9;Return to the main menu
+
+[Item]
+Label=KeyList Menu
+Name=KEYLIST_MENU
+Start=11
+Len=2
+
+[ValueSet]
+Label=KeyList Menu
+Name=KEYLIST_MENU_VS1
+Value=-9;Return to the main menu
+
+[Item]
+Label=Compression Menu
+Name=COMPRESSION_MENU
+Start=13
+Len=2
+
+[ValueSet]
+Label=Compression Menu
+Name=COMPRESSION_MENU_VS1
+Value=1;Compress the text data file
+Value=2;Compress the CSPro DB data file
+Value=3;Compress both data files
+Value=4;Decompress the last created zip file
+Value=-9;Return to the main menu
+
+[Item]
+Label=ForCase Menu
+Name=FORCASE_MENU
+Start=15
+Len=2
+
+[ValueSet]
+Label=ForCase Menu
+Name=FORCASE_MENU_VS1
+Value=1;Filter countries
+Value=2;Filter age
+Value=3;Filter year
+Value=-9;Return to the main menu
+
+[Item]
+Label=ForCase Country Filter
+Name=FORCASE_COUNTRY_FILTER
+Start=17
+Len=50
+DataType=Alpha
+
+[Item]
+Label=ForCase Age Filter
+Name=FORCASE_AGE_FILTER
+Start=67
+Len=3
+
+[ValueSet]
+Label=ForCase Age Filter
+Name=FORCASE_AGE_FILTER_VS1
+Value=-1;All Ages
+Value=0:100;Ages
+
+[Item]
+Label=ForCase Year Filter
+Name=FORCASE_YEAR_FILTER
+Start=70
+Len=4
+
+[ValueSet]
+Label=ForCase Year Filter
+Name=FORCASE_YEAR_FILTER_VS1
+Value=1950:2050;Years
+
+[Item]
+Label=Auto-Increment Menu
+Name=AUTO_INCREMENT_MENU
+Start=74
+Len=2
+
+[ValueSet]
+Label=Auto-Increment Menu
+Name=AUTO_INCREMENT_MENU_VS1
+Value=1;Launch program
+Value=-9;Return to the main menu
+
+[Item]
+Label=Diagnostics Menu
+Name=DIAGNOSTICS_MENU
+Start=76
+Len=2
+
+[ValueSet]
+Label=Diagnostics Menu
+Name=DIAGNOSTICS_MENU_VS1
+Value=-9;Return to the main menu
+
+[Item]
+Label=Other Features Menu
+Name=OTHER_FEATURES_MENU
+Start=78
+Len=2
+
+[ValueSet]
+Label=Other Features Menu
+Name=OTHER_FEATURES_MENU_VS1
+Value=-9;Return to the main menu

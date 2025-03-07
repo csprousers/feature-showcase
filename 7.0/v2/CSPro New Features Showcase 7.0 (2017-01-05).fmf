@@ -1,0 +1,217 @@
+﻿[FormFile]
+Version=CSPro 7.0
+Name=NFS7_20170105_FF
+Label=CSPro New Features Showcase 7.0 (2017-01-05)
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\CSPro New Features Showcase 7.0 (2017-01-05).dcf
+  
+[Form]
+Name=FORM000
+Label=CSPro New Features Showcase 7.0 Form
+QuestionTextHeight=257
+Level=1
+Size=909,559
+  
+Item=MENU
+Item=EXCEL_TO_CSPRO_MENU
+Item=DATA_VIEWER_MENU
+Item=TIMESTAMP_MENU
+Item=KEYLIST_MENU
+Item=COMPRESSION_MENU
+Item=FORCASE_MENU
+Item=FORCASE_COUNTRY_FILTER
+Item=FORCASE_AGE_FILTER
+Item=FORCASE_YEAR_FILTER
+Item=AUTO_INCREMENT_MENU
+Item=DIAGNOSTICS_MENU
+Item=OTHER_FEATURES_MENU
+  
+[EndForm]
+  
+[Level]
+Name=NFS7_20170105_LEVEL
+Label=CSPro New Features Showcase 7 questionnaire
+  
+[Group]
+Required=Yes
+Name=NFS7_20170105_FORM
+Label=CSPro New Features Showcase 7.0 Form
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=MENU
+Position=183,20,212,40
+Item=MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,23,55,39
+Text=Menu
+ 
+  
+[Field]
+Name=EXCEL_TO_CSPRO_MENU
+Position=183,54,212,74
+Item=EXCEL_TO_CSPRO_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,57,154,73
+Text=Excel to CSPro Menu
+ 
+  
+[Field]
+Name=DATA_VIEWER_MENU
+Position=183,88,212,108
+Item=DATA_VIEWER_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,91,137,107
+Text=Data Viewer Menu
+ 
+  
+[Field]
+Name=TIMESTAMP_MENU
+Position=183,122,212,142
+Item=TIMESTAMP_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,125,132,141
+Text=TimeStamp Menu
+ 
+  
+[Field]
+Name=KEYLIST_MENU
+Position=183,156,212,176
+Item=KEYLIST_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,159,105,175
+Text=KeyList Menu
+ 
+  
+[Field]
+Name=COMPRESSION_MENU
+Position=183,190,212,210
+Item=COMPRESSION_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,193,141,209
+Text=Compression Menu
+ 
+  
+[Field]
+Name=FORCASE_MENU
+Position=183,224,212,244
+Item=FORCASE_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,227,111,243
+Text=ForCase Menu
+ 
+  
+[Field]
+Name=FORCASE_COUNTRY_FILTER
+Position=183,259,884,279
+Item=FORCASE_COUNTRY_FILTER,NFS7_20170105_DICT
+UpperCase=Yes
+FieldLabelType=DictionaryLabel
+DataCaptureType=CheckBox
+Form=1
+  
+[Text]
+Position=20,262,162,278
+Text=ForCase Country Filter
+ 
+  
+[Field]
+Name=FORCASE_AGE_FILTER
+Position=183,294,226,314
+Item=FORCASE_AGE_FILTER,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=ComboBox
+Form=1
+  
+[Text]
+Position=20,297,138,313
+Text=ForCase Age Filter
+ 
+  
+[Field]
+Name=FORCASE_YEAR_FILTER
+Position=183,329,240,349
+Item=FORCASE_YEAR_FILTER,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=ComboBox
+Form=1
+  
+[Text]
+Position=20,332,142,348
+Text=ForCase Year Filter
+ 
+  
+[Field]
+Name=AUTO_INCREMENT_MENU
+Position=183,364,212,384
+Item=AUTO_INCREMENT_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,367,156,383
+Text=Auto-Increment Menu
+ 
+  
+[Field]
+Name=DIAGNOSTICS_MENU
+Position=183,399,212,419
+Item=DIAGNOSTICS_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,402,131,418
+Text=Diagnostics Menu
+ 
+  
+[Field]
+Name=OTHER_FEATURES_MENU
+Position=183,434,212,454
+Item=OTHER_FEATURES_MENU,NFS7_20170105_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,437,153,453
+Text=Other Features Menu
+ 
+[EndGroup]
+  

@@ -1,0 +1,133 @@
+﻿[Dictionary]
+Version=CSPro 7.0
+Label=CSPro New Features Showcase 7
+Name=SHOWCASE70_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=CSPro New Features Showcase 7 Level
+Name=SHOWCASE70_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Unused ID
+Name=UNUSED_ID
+Start=2
+Len=1
+ZeroFill=Yes
+
+[Record]
+Label=CSPro New Features Showcase 7 Record
+Name=SHOWCASE70_REC
+RecordTypeValue='1'
+RecordLen=60
+
+[Item]
+Label=Menu
+Name=MENU
+Start=3
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Menu
+Name=MENU_VS1
+Value=1;Changing Operator ID
+Value=2;Enhanced Notes
+Value=3;Case Labels
+Value=4;Data Sources
+Value=5;Synchronization from Logic
+Value=6;Show Configuration Settings
+Value=7;Other Features
+Value=8;Quit
+
+[Item]
+Label=Show Operator ID
+Name=SHOW_OPERATOR_ID
+Start=4
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Show Enhanced Notes
+Name=SHOW_ENHANCED_NOTES
+Start=54
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Show Enhanced Notes
+Name=SHOW_ENHANCED_NOTES_VS1
+Value=1;Enter Case Note
+Value=2;Enter Note for Current Field
+Value=0;Return to Menu
+
+[Item]
+Label=Show Case Labels
+Name=SHOW_CASE_LABELS
+Start=55
+Len=2
+ZeroFill=Yes
+
+[ValueSet]
+Label=Show Case Labels
+Name=SHOW_CASE_LABELS_VS1
+Value=1:50;Number of Cases
+Value=0;Return to Menu
+
+[Item]
+Label=Show Data Sources
+Name=SHOW_DATA_SOURCES
+Start=57
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Show Data Sources
+Name=SHOW_DATA_SOURCES_VS1
+Value=1;View Overview
+Value=2;Learn about Text Data Source
+Value=3;Learn about CSPro DB Data Source
+Value=4;Learn about None Data Source
+Value=0;Return to Menu
+
+[Item]
+Label=Show Synchronization from Logic
+Name=SHOW_SYNCHRONIZATION_FROM_LOGIC
+Start=58
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Show Synchronization from Logic
+Name=SHOW_SYNCHRONIZATION_FROM_LOGID
+Value=0;Return to Menu
+
+[Item]
+Label=Show Configuration Settings
+Name=SHOW_CONFIG_SETTINGS
+Start=59
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Show Configuration Settings
+Name=SHOW_CONFIG_SETTINGS_VS1
+Value=0;Return to Menu
+
+[Item]
+Label=Show Other Features
+Name=SHOW_OTHER_FEATURES
+Start=60
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Show Other Features
+Name=SHOW_OTHER_FEATURES_VS1
+Value=0;Return to Menu
