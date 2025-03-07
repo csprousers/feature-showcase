@@ -1,0 +1,463 @@
+﻿{ CSPro Runtime Messages }
+
+{ Common Messages Used by CSEntry }
+
+{ Out of Range }
+88888 WARNING: Out of range! Accept this value for %s%s?
+88889 The "CSPro 6.2.0 New Features Showcase" program is informing you that you did not enter a valid value for %s.
+
+89201 OUT OF RANGE
+89202 OUT OF SEQUENCE
+89203 Enter valid value.
+89204 Enter valid value\nor Press F2 to force.
+89205 Enter correct value.
+89206 Press F8 to clear
+
+{ Go To Field }
+89211 Item not found
+89212 The occurence value is invalid
+
+{ Partial Save }
+89221 Partial Save
+89222 This is a partially saved case. Do you want to go to the last position?
+89223 This is a partially saved case in %s mode. You cannot go into modify mode.
+
+{ Interactive Edit }
+89231 Cannot enter a partially saved case. Stopping Interactive Edit.
+89232 Do you want to cancel Interactive Edit?
+
+{ Verify }
+89241 Done with Verify Mode
+89242 THIS FIELD DOES NOT MATCH
+89243 Reenter the value.
+
+{ Case Management }
+89251 Do you want to discard the current questionnaire?
+89252 Are you sure you want to delete this node?
+89253 Are you sure you want to delete this case?
+89254 Accept this case?
+89255 Accept this %s?
+
+{ Miscellaneous Entry }
+89261 Cannot go to an occurrence that does not exist
+89262 Select a Language
+89263 %s\nThis file doesn't exist.\n\nCreate the file?
+89264 Operator ID cannot be blank
+
+{ Entry Errors }
+89271 Failed to start questionnaire in modify mode.
+89272 Invalid Application Mode. Failed to stop entry application.
+89273 There was an error reading from the binary file %s
+89274 Fatal Error in entry engine. Aborting the entry operation.
+
+{ Messages }
+89281 Entry Message
+89282 Error
+89283 Abort
+
+{ Index }
+89291 Index not created.
+89292 Duplicate case ids: '%s'\n\nin file %s
+
+
+{ ... }
+
+
+{ LevelId clause }
+77    The LevelId list of variables is empty or too many id items
+
+{ Applications execution }
+1000  Cannot allocate memory for %s table
+1001  Unable to open file %s - please check file status
+1003  Warning: input variable assignment to %n
+1004  No room for character object descriptor
+1005  Invalid operation code
+1007  No occurrence: %n(%d) -- %p
+1008  Invalid subscript: %n(%d) -- %p
+1009  Table %n will not be generated - no memory available
+1010  Application error: protected field %n out of range - value is %f
+1011  Skip to previous occurrence of variable %n in %p
+1013  Application too big to fit in memory
+1014  Run time stack overflow
+1015  Run time stack is empty
+
+1024  Level %d Id-variables length mismatch (%d present %d required)
+1026  Id-variables not filled, please reenter
+
+1031  Table expression ignored - empty dimension in %s table %n
+1032  Table expression ignored - dimensions do not agree in left table %n and right table %n
+1033  Table expression ignored - left table %n should have one dimension less than right table %n
+1034  Table expression ignored - left table %n should have same dimension than right table %n
+
+1044  The case identification can't be changed because the application has some Export, Crosstab/Table or Freq command
+1046  Export, Crosstab/Table or Freq command can't be used because the case identification is being changed by the application
+
+1081  Can't insert: invalid subscript: %n(%d) -- %p
+1082  Can't insert: subscript %n(%d), occs = %d -- %p
+1083  Can't insert; occurrences at maximum: %n, occs = %d -- %p
+1085  Can't delete; occurrence doesn't exist: %n(%d), occs = %d -- %p
+1086  Can't delete; one occurrence required: %n(1) -- %p
+1088  Invalid subscript: %n(%f) -- %p
+1089  Invalid subscript in swap: %n(%d and %d), occs = %d -- %p
+
+2001  Cannot open file %s
+2004  No memory for corrector data structures
+2013  Record occurrences %s for record %n
+2014  Section occurrences %s for section %n because there is no information in the corresponding level
+
+2017  New file %s
+2018  Cannot create a new index file '%s' for an existing data file
+2019  Data file did not exist for the existing index file '%s'
+2020  Data file for input dictionary is NULL
+
+{ CsCalc }
+2300  Cannot load slice %s for table '%s' in file '%s'. The table data will be set to zero
+2302  Invalid slice %s for table '%s' in file '%s'. The table data will be set to zero
+2304  Slice %s not found for table '%s' in file '%s'. The table data will be set to zero
+
+{ DISAM-Multi-User version messages }
+4001  Cannot open IDX file for %s
+4003  In file %s, cannot '%s' key
+4009  File '%s' is read-only
+4012  Cannot use LOCATE/FIND/SET ACCESS - no IDX used for input Dict
+4013  Dict' procs allow LOCATE only in Pre-Level-0 o Post-Level-1
+4014  SET ACCESS/FIRST/LAST for input Dict only allowed in PreProc
+4015  ENTRY: cannot user SET ACCESS/FIRST/LAST for input Dict
+4016  LOCATE for input Dict invalid in ENTRY applications
+4017  Unknown error when processing '%s' - failure
+4028  The number of cases in index '%s' is not correct
+4029  WriteCase without an index [ writecase(DICT,noindex,...) ] only works in batch mode
+4031  Cannot use '%s' index - NOX has been required
+
+{ +++DISAM }
+4040  %s(%s) failure, invalid filepos in IDX managed by ISAM support {when %s}
+4041  %s(%s) failure, cannot setup ending filepos in data file {when %s}
+4042  %s(%s) failure, cannot setup case filepos in data file {when %s}
+4043  %s(%s) failure, ftell does not provide located filepos in data file {when %s}
+4044  %s(%s) failure, ftell does not provide the expected filepos in data file {when %s}
+4045  Cannot %s(%s), unable to lock the requested filepos in data file
+
+4050  Cannot %s(%s), dictionary has no primary key definition
+4051  Cannot %s(%s), total length of primary key vars does not match dictionary case-id length
+4052  Cannot %s(%s), total length of a vars-list does not match dictionary case-id length
+4053  Abnormal %s(%s): given key of case '%s' differs from key built following variable values (%s)
+4054  Abnormal %s(%s): cannot update index before start operation
+4055  Abnormal %s(%s): cannot update index once operation completed
+4056  Abnormal %s(%s): existing case had null size when erased from '%s' data file
+4057  Abnormal %s(%s): unknown error while deleting keys from '%s' data file
+4058  Abnormal %s(%s): case data could not be successfully written to '%s' data file
+4059  Abnormal %s(%s): unknown error while adding keys to '%s' data file
+
+4060  Cannot %s(%s): the %s data file is read-only
+4061  Cannot %s(%s): unable to open %s data file
+4062  Cannot %s(%s): unable to open %s index file
+4063  Cannot %s(%s): the %s data file does not use any IDX component
+4069  A serious error arised in %s(%s) - process aborted
+
+{ Secondary Index }
+7001  No MAIN_IDX found in dictionary
+7002  Index name not found in dictionary
+
+{ set FILE executor }
+7080  No file name provided to attach to %n
+7081  File '%s' to attach to %n already attached - no changes made
+7082  File '%s' to attach (%s) to %n does not exist
+7083  File '%s' to attach (%s) to %n has DAT component, but IDX file not found
+7084  File '%s' to attach (%s) to %n has no DAT component, but IDX file found
+7085  Cannot open '%s.DAT' to attach to %n
+7086  Cannot open '%s.IDX' to attach to %n
+7087  Cannot open '%s.DAT' nor '%s.IDX' to attach to %n
+7088  Cannot open a lock-file for '%s' to attach to %n
+7089  CSPro does not support the specified text encoding used in %n
+7098  'SET FILE %n(%s) %s, %s' failure - previous file '%s' will be used
+
+{ IsPartial }
+8050  SavePartial/IsPartial can't be executed from Level 0 procedures
+8052  Cannot execute SavePartial - ids are not filled
+
+8190  Variable %s has invalid ranges
+
+{ List functions }
+8351  An invalid subscript was passed to the countnonspecial function: %n(%d), all records will be examined -- %p
+
+{ SelCase Executor  }
+9010  Number of elements (%d) exceed the maximum allowed: %d. Use where clause.
+
+{ Special Functions }
+9100  Skip/Advance/Reenter/Move/NoInput/EndSect/EndGroup/EndLevel/Enter/Stop can't be executed from On_Focus or Kill_Focus function
+
+9190  EndSect/EndGroup not allowed in Group Postproc/KillFocus or in LEVEL procedures. Instruction will be ignored.
+9192  Stop/EndLevel not allowed in group or items of external dictionaries
+9194  EndLevel not allowed in level 0 KillFocus/PostProc
+
+{ Capi }
+9200  Cannot create alpha variable CAPI_QUEST
+9202  Cannot create alpha variable CAPI_INST
+9204  Cannot create alpha variable CAPI_HELP
+9206  Cannot create alpha variable CAPI_HELPTITLE
+9208  Cannot create numeric variable CAPI_LANG
+
+{ executors - common messages }
+10000 Cannot open executor report file
+10001 Cannot open input data file - no process performed
+10004 Cannot load Application %s (%s)
+10006 Too many occurrences for Record or Group %n (Case: '%s')
+10007 Invalid Record type
+10008 Required Record or Group %n not found
+10010 %d syntax errors detected
+
+10011 Error %d: %s near line %d in %s procedure
+10014 Invalid command line (missing "=")
+10015 Invalid dictionary name %s in command line
+10100 Cannot open '%s' file for reporting 'write' instructions
+10101 Total of %d 'Too many occurrences' messages - truncating at 10
+
+14010 Disk full!
+
+15001 Application type do not agree with '%s' processor
+
+29006 The setoutput function only works in batch applications
+29007 The filename specified by the setoutput function is invalid: %s
+
+{ EXPORT messages }
+31040 Cannot generate CSPro dictionary '%s' (%s)
+31050 Requested EXPORT will be ignored because the subitems specified doesn't follow the same order as the input dictionary
+31055 Requested EXPORT will be ignored because it contains a duplicated item name
+31056 Requested EXPORT will be ignored because it contains a duplicated record type
+31058 Requested EXPORT will be ignored because it contains an invalid record name (%s)
+
+{ ... multi-exports }
+31072 Unable to generate EXPORT' file-name '%s' because of conflicting with another EXPORT command (seq # %d). Only one record type is supported for this model.
+31073 Requested EXPORT will be ignored because cannot open '%s' file
+31074 Requested EXPORT will be ignored because cannot create the area for the exported record(s)
+31075 Requested EXPORT will be ignored because case id items doesn't match with case id items specified in a previous export
+31076 Requested EXPORT will be ignored because record type length doesn't match with the record type length specified in a previous export
+31077 Requested EXPORT will be ignored because the export model doesn't match with the export model specified in a previous export
+31078 Requested EXPORT will be ignored because the record name was already specified in a previous export
+31079 Requested EXPORT will be ignored because the models CSPro/TabDelim/CommaDelim/SemiColonDelim don't allow other models activated
+31080 Requested EXPORT will be ignored because the export level is incompatible with the export level of a previous export. Export must be executed ordered by level. Moving the EXPORT to the PREPROC could fix the problem
+31081 Requested EXPORT will be ignored because the item '%s' already exist in this or in a previous export
+31082 Requested EXPORT will be ignored because the exportation type (ItemOnly/SubItemOnly/ItemSubItem) doesn't match with the specified by a previous export
+
+{ ... new ENSEMBLED RECORD model }
+31090 Invalid dimension specified for item '%s' in the export command
+
+{ open string display }
+32001 %s
+
+{ File }
+33056 Wildcard expression not supported for the target filename or folder
+33057 Target folder '%s' is invalid or doesn't exist
+
+{ Relation Run-Time }
+33108 Multiple Relation can only be used in tables/crosstab in %p
+33200 Index for variable %n is solved by a multiple relation in %p. NOTAPPL index will be used.
+
+{ 3-dim messages }
+34008 Invalid subscript: %n(%d) -- %p
+34088 Invalid subscript: %n(%d) -- %p
+34089 Invalid subscript: %n(%d) -- %p
+34090 Cannot assign value %s no record in case -- %p
+34091 Not enough indexes to calculate expression value around %s
+36000 Fatal 3d Exception: Error code %d
+
+{ RECORD execution }
+44460 Record %n will not be generated - no memory available
+44470 Error in Record %n - index '%f' out of range 1-%d
+44480 Error in Record %n (NULL area)
+
+{ TBD execution }
+46000 Null String Found
+
+{ Notes }
+46500 GetNote/EditNote/PutNote are allowed only in item, in level 1 (or higher) and in GLOBAL procedures (only for Main Dictionary)
+46502 GetNote/EditNote/PutNote will not be executed. They can be executed from an item or level 1 (or higher) procedures (only for Main Dictionary)
+
+{ ATTRIB/SYSINFO Runtime }
+47110 Invalid symbol number (%d). Must be between 1 and %d
+47112 '%s' is not a valid item or value set name
+47113 Numeric expression expected for item '%s' in getlabel function
+47114 Alpha expression expected for item '%s' in getlabel function
+
+{ Setvalueset }
+47156 Alpha array expected
+47158 Numeric array expected
+47160 Alpha value set expected
+47162 Numeric value set expected
+47164 Symbol '%s' is not a valid item
+
+48000 Invalid expression (%s) in QSF File
+48002 Invalid subscript (%s) in QSF File or in ShowText function
+
+{ -- New Crosstab -- }
+70004 Creating Working item '%s'
+
+90545 Unable to Enter( %s ) - this Flow has already been entered
+
+91200 Unable to 'reenter %s' - unknown symbol name {in %p}
+91201 Unable to 'reenter %s' - there is no field entered yet {in %p}
+91204 Unable to 'reenter %s' - occurrence outside structural bound {in %p}
+91205 Unable to 'reenter %s' - it's a never-keyed field {in %p}
+91206 Unable to 'reenter %s' - it's a skipped field {in %p}
+91209 Unable to 'reenter %s' - it's after current field {in %p}
+91402 Unable to 'skip to %s' - can't be used as target {in %p}
+91404 Unable to 'skip to %s' - occurrence outside structural bound {in %p}
+91406 Unable to 'skip to %s' - it's a skipped field {in %p}
+91407 Unable to 'skip to %s' - it's a highlighted field {in %p}
+91409 Unable to 'skip to %s' - it's before current field {in %p}
+91500 Unable to 'advance to %s' - unknown symbol name {in %p}
+91502 Unable to 'advance to %s' - can't be used as target {in %p}
+91504 Unable to 'advance to %s' - occurrence outside structural bound {in %p}
+91506 Unable to 'advance to %s' - it's a skipped field {in %p}
+91507 Unable to 'advance to %s' - it's a highlighted field {in %p}
+91509 Unable to 'advance to %s' - it's before current field {in %p}
+
+91601 Ignoring operator' EndLevel - the EndLevel' switch is currently disabled
+91602 Ignoring operator' EndLevel - a NextLevel %d (meaning "stop-the-session") was requested. A session-stop can only be requested to the interface once a new case is started!
+91603 Ignoring operator' EndLevel - a NextLevel %d was requested, but it is beyond the %d Levels available!
+91604 Ignoring operator' EndLevel - a NextLevel %d was requested while currently at Level %d. Please remind that intermediate Levels cannot be "skipped"!
+91605 Ignoring operator' EndLevel - no-write was requested for current Level %s node. This node is being modified and comes from data file!
+91606 Ignoring operator' EndLevel - no-write was requested for current Level %s node along with opening a Level %s son-node. This is an inconsistent request!
+91607 Ignoring operator' EndLevel - this Level %s node already has written children!
+91608 Ignoring operator' EndLevel - this Level %s node has %s Level %s son-node in process!
+91612 Operator' EndLevel asks for starting a new Level %s brother-node after abandoning current Level node
+91613 Operator' EndLevel asks for starting a new Level %s parent-node after abandoning current Level %s node
+91614 Operator' EndLevel asks for starting a new Level %s ascendant-node after abandoning current Level %s node
+91621 Operator' EndLevel asks for starting a new Level %s son-node after completing current Level %s node
+91622 Operator' EndLevel asks for starting a new Level %s brother-node after completing current Level node
+91623 Operator' EndLevel asks for starting a new Level %s parent-node after completing current Level %s node
+91624 Operator' EndLevel asks for starting a new Level %s ascendant-node after completing current Level %s node
+91631 Operator' EndLevel asks for starting a new Level %s son-node after advancing to the end of current Level %s node
+91632 Operator' EndLevel asks for starting a new Level %s brother-node after advancing to the end of current Level node
+91633 Operator' EndLevel asks for starting a new Level %s parent-node after advancing to the end of current Level %s node
+91634 Operator' EndLevel asks for starting a new Level %s ascendant-node after advancing to the end of current Level %s node
+
+91111 Cannot execute command Set Behavior %s - only allowed in Level-0 PreProc
+91112 Cannot execute command Set Behavior %s - only allowed in Path OFF environments
+
+91118 Language '%s' not found. Set Language ignored.
+
+91120 TreeLoad found an unknown record (# %d, starting with '%s') among case' records
+91121 TreeLoad action: deleting %s in case in process
+91122 TreeLoad action: inserting a new Level %d node at position %d
+
+{ CsDriver updated messages for skip/advance/move/reenter }
+91159 Unable to 'skip to %s' - target-item is the current item {in %p}
+91160 Unable to 'skip to %s' - invalid target {in %p}
+91161 Unable to 'skip to %s' - target-group is not specified in a FormFile {in %p}
+91162 Unable to 'skip to %s' - target-item has no field {in %p}
+91163 Unable to 'skip to %s' - target-group occurrence exceeds group defined maximum {in %p}
+91164 Unable to 'skip to %s' - target-item occurrence exceeds owner' group defined maximum {in %p}
+91165 Unable to 'skip to %s' - target-group is located backward in the flow {in %p}
+91166 Unable to 'skip to %s' - target-item is located backward in the flow {in %p}
+91167 Unable to 'skip to %s' - target-item field is a highlighted field {in %p}
+91168 Unable to 'skip to %s' - target-item field is a skipped field {in %p}
+91169 Unable to 'skip to %s' - please report the problem to CSPro staff {in %p}
+
+91170 Unable to 'advance to %s' - invalid target {in %p}
+91171 Unable to 'advance to %s' - target-group is not specified in a FormFile {in %p}
+91172 Unable to 'advance to %s' - target-item has no field {in %p}
+91173 Unable to 'advance to %s' - target-group occurrence exceeds group defined maximum {in %p}
+91174 Unable to 'advance to %s' - target-item occurrence exceeds owner' group defined maximum {in %p}
+91175 Unable to 'advance to %s' - target-group is located backward in the flow {in %p}
+91176 Unable to 'advance to %s' - target-item is located backward in the flow {in %p}
+91177 Unable to 'advance to %s' - target-item field is a highlighted field {in %p}
+91178 Unable to 'advance to %s' - target-item field is a skipped field {in %p}
+91179 Unable to 'advance to %s' - please report the problem to CSPro staff {in %p}
+
+91180 Unable to 'reenter %s' - invalid target {in %p}
+91181 Unable to 'reenter %s' - target-group is not specified in a FormFile {in %p}
+91182 Unable to 'reenter %s' - target-item has no field {in %p}
+91183 Unable to 'reenter %s' - target-group occurrence exceeds group defined maximum {in %p}
+91184 Unable to 'reenter %s' - target-item occurrence exceeds owner' group defined maximum {in %p}
+91185 Unable to 'reenter %s' - target-group is located forward in the flow {in %p}
+91186 Unable to 'reenter %s' - target-item is located forward in the flow {in %p}
+91187 Unable to 'reenter %s' - target-item field is a never-keyed field {in %p}
+91188 Unable to 'reenter %s' - target-item field is a skipped field {in %p}
+91189 Unable to 'reenter %s' - please report the problem to CSPro staff {in %p}
+
+91190 The requested node is no longer available, probably due to an 'EndLevel' command issued by the application
+
+92000 No filename provided for %s Dictionary %s - process will be cancelled
+92001 At %s Dictionary %s, no IDX file was found for existing DAT file %s - process will be cancelled
+92002 At %s Dictionary %s, no DAT file was found for existing IDX file %s - process will be cancelled
+92003 At %s Dictionary %s, nor the DAT file %s neither the IDX file %s could be found - process will be cancelled
+92004 At %s Dictionary %s, the existing IDX file %s could not be opened - process will be cancelled
+92005 At %s Dictionary %s, the IDX file %s could not be created - process will be cancelled
+92006 At %s Dictionary %s, the existing DAT file %s could not be opened - process will be cancelled
+92007 At %s Dictionary %s, the DAT file %s could not be created - process will be cancelled
+92008 At %s Dictionary %s, nor the existing DAT file %s neither the existing IDX file %s could be open - process will be cancelled
+92009 At %s Dictionary %s, nor the DAT file %s neither the IDX file %s could be created - process will be cancelled
+
+92101 Case ids '%s' duplicate an existing case! Case ids must be unique.
+92102 New case ids '%s' duplicate an existing case! Case ids must be unique. Old ids were '%s'.
+92103 New case ids '%s'. Old ids were '%s'.
+
+92110 TreeLoad failure: too many nodes
+92111 TreeLoad failure: unable to reach the requested file-pos %d to retrieve the case
+92112 TreeLoad failure: the first record of the case is erased/unknown, possible index corruption
+92113 TreeLoad failure: non-contigous Levels found for two adjacent nodes. possible data file corruption
+92114 TreeLoad failure: too many nodes loaded (%d), exceeding allowed maximum
+92115 TreeLoad failure: unexpected Level-%d node found (check node # %d) - possibly using a modified dictionary' version, not compatible with the data file
+
+82001 Cannot open file %s
+
+{ reporting Forms }
+88053 Invalid 'Set %s' command reached - ignored
+
+{ solving at-references at execution time }
+88111 Ignoring 'skip to @%s': referred target '%s' is an unknown symbol%s {%p}
+88112 Ignoring 'skip to next @%s': referred Var '%s' is not multiple-occs%s {%p}
+88113 Ignoring 'skip to next @%s' (referred Var '%s'): it was not issued from a Var' proc%s {%p}
+88114 Ignoring 'skip to next @%s': referred Var '%s' is not at the same Group than the source of the skip%s {%p}
+88115 Ignoring 'skip to @%s': referred target '%s' is not an Var nor a Group%s {%p}
+
+88121 Ignoring 'reenter @%s': referred target '%s' is an unknown symbol%s {%p}
+88125 Ignoring 'reenter @%s': referred target '%s' is not an Var {%p}
+
+88131 Ignoring 'advance @%s': referred target '%s' is an unknown symbol%s {%p}
+88135 Ignoring 'advance @%s': referred target '%s' is not an Var {%p}
+
+88141 Ignoring 'move to @%s': referred target '%s' is an unknown symbol%s {%p}
+88142 Ignoring 'move' command. Invalid specification
+88145 Ignoring 'move to @%s': referred target '%s' is not an Var nor a Group%s {%p}
+
+{ executing selected ENTRY commands in BATCH }
+88180 %s
+88182 %s
+88184 Inconsistent field detected
+88190 Inconsistent field detected following a %s command in %s
+88200 %d inconsistent fields detected following a 'skip to' command in %p
+88201 %d inconsistent fields detected following a 'skip to %s' (Group) command in %p
+88202 %d inconsistent fields detected following a 'skip to next %s' command in %p
+88203 %d inconsistent fields detected following a 'skip to %s' command in %p
+88204 %d inconsistent fields detected following a 'skip to %s(%d)' command in %p
+88205 %d inconsistent fields detected following a 'skip to %s(invalid index)' command in %p
+88206 %d inconsistent fields detected following an 'endsect/engroup' command in %p
+88207 %d inconsistent fields detected following an 'EndLevel' command in %p {not yet implemented}
+88211 ... Group %s should not exist (but currently has occurrences)
+
+88212 ... %s should be blank (currently '%s')
+88213 ... %s(%d) should be blank (currently '%s')
+88214 ... %s should be blank (currently '%s'). %s will be assigned.
+88215 ... %s(%d) should be blank (currently '%s'). %s will be assigned.
+
+88221 ... %s is not a skipped field, however is NotAppl
+88222 ... %s(%d) is not a skipped field, however is NotAppl
+88223 ... %s is not a skipped field, however is NotAppl. %s will be assigned.
+88224 ... %s(%d) is not a skipped field, however is NotAppl. %s will be assigned.
+
+88225 ... skip to %s found but the case only have %d occurrences for this group in %p
+88226 ... skip to %s(%d) found but the case only have %d occurrences for this group in %p
+
+88230 Unexpected 'reenter' command reached in %p
+88231 Unexpected 'reenter %s' command reached in %p
+88232 Unexpected 'reenter %s(%d)' command reached in %p
+
+{ auto-detecting out of range in batch environment }
+88870 Value '%s' out of range - check %s%s
+
+88880 '%s' not implemented in Batch Mode
+
+{ operator actions }
+99990 Operator entered a value out of range

@@ -1,0 +1,132 @@
+﻿[FormFile]
+Version=CSPro 6.2
+Name=SHOWCASE_FF
+Label=CSPro 6.2.0 New Features Showcase
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\CSPro 6.2.0 New Features Showcase.dcf
+  
+[Form]
+Name=FORM000
+Label=CSPro 6.2.0 New Features Showcase
+QuestionTextHeight=140
+Level=1
+Size=352,410
+CapturePos=506,19
+  
+Item=CONNECTION_FUNCTION
+Item=PROMPT_FUNCTION
+Item=CUSTOM_ERROR_MESSAGE
+Item=ENHANCED_EXTENDED_CONTROLS
+Item=VALUE_SET_IMAGES
+Item=DYNAMIC_IMAGE_VALUE_SET
+Item=MULTIPLE_LANGUAGES
+  
+[EndForm]
+  
+[Level]
+Name=SHOWCASE_LEVEL
+Label=CSPro 6.2.0 New Features Showcase
+  
+[Group]
+Required=Yes
+Name=SHOWCASE_FORM
+Label=CSPro 6.2.0 New Features Showcase
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=CONNECTION_FUNCTION
+Position=284,20,299,40
+Item=CONNECTION_FUNCTION,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=23,23,154,39
+Text=Connection Function
+ 
+  
+[Field]
+Name=PROMPT_FUNCTION
+Position=284,69,299,89
+Item=PROMPT_FUNCTION,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=23,72,128,88
+Text=Prompt Function
+ 
+  
+[Field]
+Name=CUSTOM_ERROR_MESSAGE
+Position=284,118,299,138
+Item=CUSTOM_ERROR_MESSAGE,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=23,121,164,137
+Text=Custom Error Message
+ 
+  
+[Field]
+Name=ENHANCED_EXTENDED_CONTROLS
+Position=284,167,327,187
+Item=ENHANCED_EXTENDED_CONTROLS,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=23,170,206,186
+Text=Enhanced Extended Controls
+ 
+  
+[Field]
+Name=VALUE_SET_IMAGES
+Position=284,216,299,236
+Item=VALUE_SET_IMAGES,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=23,219,135,235
+Text=Value Set Images
+ 
+  
+[Field]
+Name=DYNAMIC_IMAGE_VALUE_SET
+Position=284,265,299,285
+Item=DYNAMIC_IMAGE_VALUE_SET,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=23,268,225,284
+Text=Dynamic Value Set with Images
+ 
+  
+[Field]
+Name=MULTIPLE_LANGUAGES
+Position=284,315,299,335
+Item=MULTIPLE_LANGUAGES,SHOWCASE_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=23,318,148,334
+Text=Multiple Languages
+ 
+[EndGroup]
+  
