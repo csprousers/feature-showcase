@@ -1,0 +1,11 @@
+﻿Language=EN
+71	The %s census will take place in %d.
+
+// setting the language means that any numbered message that follows will be in that language
+Language=ES
+71	El censo de %s tendrá lugar en %d.
+ES("United States")	Estados Unidos
+
+// alternatively, you can use the language name when specifying the message
+FR(71)	Le recensement de %s aura lieu en %d.
+FR("United States")	États-Unis

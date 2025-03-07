@@ -1,0 +1,217 @@
+﻿PROC GLOBAL
+
+
+function OnStop()
+	if getsymbol() = "ACTION" then	stop(1);
+	else							reenter ACTION;
+	endif;
+end;
+
+
+function SecondsRunningProgram()
+
+	numeric mostRecentStartTimestamp = paradata(query,
+		"SELECT event.time FROM application_event "
+		"JOIN event ON application_event.id = event.id "
+		"WHERE application_event.action = 1 "
+		"ORDER BY application_event.id DESC "
+		"LIMIT 1;");
+
+	SecondsRunningProgram = timestamp() - mostRecentStartTimestamp;
+
+end;
+
+
+function sql ConvertTimestamp(string timestampType,timestampValue)
+
+	if timestampType = "date" then
+		ConvertTimestamp = sysdate("YYYYMMDD",timestampValue);
+
+	else
+		ConvertTimestamp = systime("HHMMSS",timestampValue);
+
+	endif;
+
+end;
+
+
+function sql string FormatTimestamp(timestampValue)
+
+	string amPm = "am";
+	numeric hours = systime("HH",timestampValue);
+
+	if hours >= 12 then	amPm = "pm";		endif;
+	if hours > 12 then	hours = hours - 12;	endif;
+
+	FormatTimestamp = maketext("%s %d:%s %s",
+		edit("9999-99-99",sysdate("YYYYMMDD",timestampValue)),
+		hours,edit("99:99",systime("MMSS",timestampValue)),
+		amPm);
+
+end;
+
+
+array string fieldsEntered(100,3);
+
+
+PROC CSPRO71_FF
+
+
+PROC ACTION
+
+onfocus
+
+	ACTION = notappl;
+
+postproc
+
+	if ACTION = 1 then		skip to MULTIPLE_LANGUAGE_MESSAGES;
+	elseif ACTION = 2 then	skip to EXTERNAL_MESSAGE_FILES;
+	elseif ACTION = 3 then	skip to PARADATA_COLLECTION;
+	elseif ACTION = 4 then	skip to QUERYING_SQLITE_FILES;
+	elseif ACTION = 5 then	skip to TEMPLATED_REPORTS;
+	else					stop(1);
+	endif;
+
+
+PROC MULTIPLE_LANGUAGE_MESSAGES
+
+onfocus
+
+	MULTIPLE_LANGUAGE_MESSAGES = notappl;
+
+postproc
+
+	if MULTIPLE_LANGUAGE_MESSAGES = 1 then		setlanguage("EN");
+	elseif MULTIPLE_LANGUAGE_MESSAGES = 2 then	setlanguage("ES");
+	elseif MULTIPLE_LANGUAGE_MESSAGES = 3 then	setlanguage("FR");
+	else										reenter ACTION;
+	endif;
+
+	errmsg(71,tr("United States"),2020);
+	reenter;
+
+
+PROC EXTERNAL_MESSAGE_FILES
+
+onfocus
+
+	EXTERNAL_MESSAGE_FILES = notappl;
+
+postproc
+
+	reenter ACTION;
+
+
+PROC PARADATA_COLLECTION
+
+onfocus
+
+	paradata(query,PARADATA_QUERY_REC,"SELECT * FROM device_info ORDER BY id DESC LIMIT 1;");
+
+	PARADATA_COLLECTION = notappl;
+
+postproc
+
+	reenter ACTION;
+
+
+PROC QUERYING_SQLITE_FILES
+
+onfocus
+
+	QUERYING_SQLITE_FILES = notappl;
+
+postproc
+
+	string sqlStatement;
+
+	// scalar query
+	if QUERYING_SQLITE_FILES = 1 then
+
+		sqlStatement = maketext(
+			"SELECT COUNT(*) "
+			"FROM application_instance "
+			"JOIN device_info ON application_instance.device_info = device_info.id "
+			"WHERE device_info.deviceid = '%s';",getdeviceid());
+
+		numeric timesExecuted = sqlquery(paradata,sqlStatement);
+
+		errmsg("On this device you have run this program %d times.",timesExecuted);
+
+
+	// array result set
+	elseif QUERYING_SQLITE_FILES = 2 then
+
+		sqlStatement =
+			"SELECT name.name, COUNT(*) AS entry_count, SUM(field_entry_event.display_duration) "
+			"FROM field_entry_event "
+			"JOIN field_entry_instance ON field_entry_event.field_entry_instance = field_entry_instance.id "
+			"JOIN field_info ON field_entry_instance.field_info = field_info.id "
+			"JOIN name ON field_info.field_name = name.id "
+			"GROUP BY name.id "
+			"ORDER BY 2 DESC;";
+
+		numeric numRows = sqlquery(paradata,fieldsEntered,sqlStatement);
+
+		showarray(fieldsEntered,numRows,title("Field Name","Times Entered","Total Seconds Spent on Field"));
+
+
+	// record result set
+	elseif QUERYING_SQLITE_FILES = 3 then
+
+		sqlStatement =
+			"SELECT name.name AS FIELD_NAME, ConvertTimestamp('date',event.time) AS DATE_ENTERED, ConvertTimestamp('time',event.time) AS TIME_ENTERED, display_duration "
+			"FROM field_entry_event "
+			"JOIN event ON field_entry_event.id = event.id "
+			"JOIN field_entry_instance ON field_entry_event.field_entry_instance = field_entry_instance.id "
+			"JOIN field_info ON field_entry_instance.field_info = field_info.id "
+			"JOIN name ON field_info.field_name = name.id "
+			"ORDER BY event.time DESC;";
+
+		sqlquery(paradata,ENTERED_FIELDS_REC,sqlStatement);
+
+		show(WS_DICT.ENTERED_FIELDS_REC,FIELD_NAME,DATE_ENTERED,TIME_ENTERED,DISPLAY_DURATION)
+
+
+	else
+		reenter ACTION;
+
+	endif;
+
+	reenter;
+
+
+PROC TEMPLATED_REPORTS
+
+onfocus
+
+	TEMPLATED_REPORTS = notappl;
+
+postproc
+
+	if TEMPLATED_REPORTS = 1 then
+		// in logic we will set the data needed for this report
+		setreportdata("report_generation_time",FormatTimestamp(timestamp()));
+
+		setreportdata("error_messages",sqlquery(paradata,
+			"SELECT FormatTimestamp(event.time) AS message_time, unformatted_text.text AS unformatted_message_text, formatted_text.text AS formatted_message_text "
+			"FROM message_event "
+			"JOIN event ON message_event.id = event.id "
+			"JOIN text unformatted_text ON message_event.unformatted_message_text = unformatted_text.id "
+			"JOIN text formatted_text ON message_event.message_text = formatted_text.id "
+			"ORDER BY event.time DESC;"));
+
+		report("Reports/report_error_messages.html");
+
+
+	elseif TEMPLATED_REPORTS = 2 then
+		// the queries needed for this report are all defined in the template
+		report("Reports/report_device_state.html");
+
+	else
+		reenter ACTION;
+
+	endif;
+
+	reenter;

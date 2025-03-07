@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head><title>Device State Report</title></head>
+<body>
+	<script type="application/vnd.cspro.query" data-query-name="device_state" data-source="paradata">
+		CREATE TEMPORARY TABLE enabled_values ( value INTEGER, text TEXT );
+		INSERT INTO enabled_values VALUES ( 0, 'Disabled' );
+		INSERT INTO enabled_values VALUES ( 1, 'Enabled' );
+
+		SELECT FormatTimestamp(event.time) AS time, bluetooth_value.text AS bluetooth_enabled, wifi_value.text AS wifi_enabled, battery_charging_value.text AS battery_charging, device_state_event.battery_level
+		FROM device_state_event
+		JOIN event ON device_state_event.id = event.id
+		LEFT JOIN enabled_values bluetooth_value ON device_state_event.bluetooth_enabled = bluetooth_value.value
+		LEFT JOIN enabled_values wifi_value ON device_state_event.wifi_enabled = wifi_value.value
+		LEFT JOIN enabled_values battery_charging_value ON device_state_event.battery_charging = battery_charging_value.value
+		ORDER BY device_state_event.id DESC;
+	</script>
+
+	<div id="cspro_report"></div>
+
+	<script type="application/vnd.cspro.report-template" id="cspro_report_template">
+		<p>This is a list of some attributes of the device state that are recorded in the paradata log.</p>
+		<table cellpadding="10">
+			<tr><th align="left">Device State Time</th><th align="left">Bluetooth Enabled</th><th align="left">Wi-Fi Enabled</th>
+				<th align="left">Battery Charging</th><th align="left">Battery Level</th></tr>
+			{{#device_state}}
+				<tr>
+					<td><i>{{time}}</i></td>
+					<td>{{bluetooth_enabled}}</td>
+					<td>{{wifi_enabled}}</td>
+					<td>{{battery_charging}}</td>
+					<td>{{battery_level}}</td>
+				</tr>
+			{{/device_state}}
+		</table>
+	</script>
+</body>
+</html>

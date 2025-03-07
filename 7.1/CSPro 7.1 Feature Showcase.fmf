@@ -1,0 +1,119 @@
+﻿[FormFile]
+Version=CSPro 7.1
+Name=CSPRO71_FF
+Label=CSPro 7.1 Feature Showcase
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\CSPro 7.1 Feature Showcase.dcf
+  
+[Form]
+Name=FORM000
+Label=CSPro 7.1 Feature Showcase
+QuestionTextHeight=212
+Level=1
+Size=337,359
+CapturePos=311,26
+  
+Item=ACTION
+Item=MULTIPLE_LANGUAGE_MESSAGES
+Item=EXTERNAL_MESSAGE_FILES
+Item=PARADATA_COLLECTION
+Item=QUERYING_SQLITE_FILES
+Item=TEMPLATED_REPORTS
+  
+[EndForm]
+  
+[Level]
+Name=CSPRO71_LEVEL
+Label=CSPro 7.1 Feature Showcase
+  
+[Group]
+Required=Yes
+Name=CSPRO71_FORM
+Label=CSPro 7.1 Feature Showcase
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=ACTION
+Position=247,20,262,40
+Item=ACTION,CSPRO71_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,23,60,39
+Text=Action
+ 
+  
+[Field]
+Name=MULTIPLE_LANGUAGE_MESSAGES
+Position=247,69,262,89
+Item=MULTIPLE_LANGUAGE_MESSAGES,CSPRO71_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,72,204,88
+Text=Multiple Language Messages
+ 
+  
+[Field]
+Name=EXTERNAL_MESSAGE_FILES
+Position=247,119,262,139
+Item=EXTERNAL_MESSAGE_FILES,CSPRO71_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,122,166,138
+Text=External Message Files
+ 
+  
+[Field]
+Name=PARADATA_COLLECTION
+Position=247,169,262,189
+Item=PARADATA_COLLECTION,CSPRO71_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,172,146,188
+Text=Paradata Collection
+ 
+  
+[Field]
+Name=QUERYING_SQLITE_FILES
+Position=247,219,262,239
+Item=QUERYING_SQLITE_FILES,CSPRO71_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,222,159,238
+Text=Querying SQLite Files
+ 
+  
+[Field]
+Name=TEMPLATED_REPORTS
+Position=247,269,262,289
+Item=TEMPLATED_REPORTS,CSPRO71_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,272,140,288
+Text=Templated Reports
+ 
+[EndGroup]
+  

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head><title>Error Messages Report</title></head>
+<body>
+	<div id="cspro_report"></div>
+
+	<script type="application/vnd.cspro.report-template" id="cspro_report_template">
+		<p>This report was generated at <b>{{report_generation_time}}</b>.</p>
+		<p>This is a list of error messages that have been displayed.</p>
+		<table cellpadding="10">
+			<tr><th align="left">Message Time</th><th align="left">Message Text (Unformatted and Formatted)</th></tr>
+			{{#error_messages}}
+				<tr>
+					<td valign="top"><i>{{message_time}}</i></td>
+					<td>{{unformatted_message_text}}<br>{{formatted_message_text}}</td>
+				</tr>
+			{{/error_messages}}
+		</table>
+	</script>
+</body>
+</html>
