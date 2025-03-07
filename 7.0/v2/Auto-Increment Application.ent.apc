@@ -1,0 +1,41 @@
+﻿PROC GLOBAL
+
+list string keys;
+
+
+PROC AIA_FF
+
+
+PROC AIA_LEVEL
+
+preproc
+
+	// get a list of current keys
+	keylist(AIA_DICT,keys);
+
+	numeric twoValuesAway;
+	numeric oneValueAway = 1;
+
+	if length(keys) >= 1 then
+
+		// the HOUSEHOLD_NUMBER value is at position 6 in the key (STRUCTURE_NUMBER is positions 1-5)
+		oneValueAway = tonumber(keys(length(keys))[6]);
+
+		if length(keys) >= 2 then
+			twoValuesAway = tonumber(keys(length(keys) - 1)[6]);
+		endif;
+
+	endif;
+
+	HOUSEHOLD_NUMBER = twoValuesAway + oneValueAway;
+
+postproc
+
+	setcaselabel(AIA_DICT,maketext("Structure %5d  --  Household (Fibonacci) %10d",STRUCTURE_NUMBER,HOUSEHOLD_NUMBER));
+
+
+PROC CONTINUE
+
+preproc
+
+	CONTINUE = 1;

@@ -1,0 +1,77 @@
+﻿[FormFile]
+Version=CSPro 7.0
+Name=AIA_FF
+Label=Auto-Increment Application
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\Auto-Increment Application.dcf
+  
+[Form]
+Name=FORM000
+Label=Auto-Increment Application Form
+QuestionTextHeight=154
+Level=1
+Size=533,151
+CapturePos=373,27
+  
+Item=STRUCTURE_NUMBER
+Item=HOUSEHOLD_NUMBER
+Item=CONTINUE
+  
+[EndForm]
+  
+[Level]
+Name=AIA_LEVEL
+Label=Auto-Increment Application Level
+  
+[Group]
+Required=Yes
+Name=AIA_FORM
+Label=Auto-Increment Application Form
+Form=1
+LogicControl=No
+Max=1
+  
+[Field]
+Name=STRUCTURE_NUMBER
+Position=155,20,226,40
+Item=STRUCTURE_NUMBER,AIA_DICT
+AutoIncrement=Yes
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=20,23,132,39
+Text=Structure Number
+ 
+  
+[Field]
+Name=HOUSEHOLD_NUMBER
+Position=155,63,296,83
+Item=HOUSEHOLD_NUMBER,AIA_DICT
+Protected=Yes
+FieldLabelType=DictionaryLabel
+Form=1
+  
+[Text]
+Position=20,66,141,82
+Text=Household Number
+ 
+  
+[Field]
+Name=CONTINUE
+Position=155,106,170,126
+Item=CONTINUE,AIA_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=DropDown
+Form=1
+  
+[Text]
+Position=20,109,77,125
+Text=Continue
+ 
+[EndGroup]
+  

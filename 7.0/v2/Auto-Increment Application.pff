@@ -1,0 +1,14 @@
+﻿[Run Information]
+Version=CSPro 7.0
+AppType=Entry
+
+[DataEntryInit]
+ShowInApplicationListing=Never
+StartMode=Add
+
+[Files]
+Application=.\Auto-Increment Application.ent
+InputData=.\AIA.csdb
+
+[Parameters]
+OnExit=.\CSPro New Features Showcase 7.0 (2017-01-05).pff

@@ -1,0 +1,26 @@
+﻿[CAPI QUESTIONS]
+Version=CSPro 7.0
+
+[LANGUAGES]
+ENG=English
+
+[QUESTION]
+Field=AIA_DICT.CONTINUE
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The Household Number value \b %HOUSEHOLD_NUMBER%\b0  was calculated using the KeyList function. This function allows you to get a list of the keys in the input data file, allowing you to perform calculations to automatically generate an ID value. For example, you could ensure that household numbers are unique throughout an E.\par
+ENG=\par
+ENG=In this example, previous keys' values are queried and a new Household Number value is set to a value using the Fibonacci sequence.\par
+ENG=\par
+ENG=Continue and keep adding cases to see this in action.\par
+ENG=}
+
+[QUESTION]
+Field=AIA_DICT.STRUCTURE_NUMBER
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 This field is an auto-increment field. It starts as 1 and then automatically increments by 1 for every new case added to the data file. You can modify it, but generally you will want to make the field protected so that it cannot be modified.\par
+ENG=}
+

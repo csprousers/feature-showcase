@@ -1,0 +1,44 @@
+﻿[Dictionary]
+Version=CSPro 7.0
+Label=Auto-Increment Application Dictionary
+Name=AIA_DICT
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+
+[Level]
+Label=Auto-Increment Application Level
+Name=AIA_LEVEL
+
+[IdItems]
+
+[Item]
+Label=Structure Number
+Name=STRUCTURE_NUMBER
+Start=1
+Len=5
+
+[Item]
+Label=Household Number
+Name=HOUSEHOLD_NUMBER
+Start=6
+Len=10
+
+[Record]
+Label=Auto-Increment Application Record
+Name=AIA_REC
+RecordTypeValue=''
+RecordLen=16
+
+[Item]
+Label=Continue
+Name=CONTINUE
+Start=16
+Len=1
+
+[ValueSet]
+Label=Continue
+Name=CONTINUE_VS1
+Value=1;Continue

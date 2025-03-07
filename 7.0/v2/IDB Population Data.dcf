@@ -1,0 +1,98 @@
+﻿[Dictionary]
+Version=CSPro 7.0
+Label=IDB Population Data
+Name=IDB_POPULATION_DATA_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=Yes
+
+[Level]
+Label=IDB Population Data Level
+Name=IDB_POPULATION_DATA_LEVEL
+
+[IdItems]
+
+[Item]
+Label=FIPS Code
+Name=FIPS_CODE
+Start=2
+Len=2
+DataType=Alpha
+
+[Record]
+Label=Country Metadata Record
+Name=COUNTRY_METADATA_REC
+RecordTypeValue='1'
+RecordLen=46
+
+[Item]
+Label=Country Name
+Name=COUNTRY_NAME
+Start=4
+Len=35
+DataType=Alpha
+
+[Item]
+Label=Area (sq. km.)
+Name=AREA
+Start=39
+Len=8
+ZeroFill=Yes
+
+[Record]
+Label=Midyear Population Record
+Name=MIDYEAR_POPULATION_REC
+RecordTypeValue='2'
+MaxRecords=150
+RecordLen=17
+
+[Item]
+Label=Midyear Year
+Name=MIDYEAR_YEAR
+Start=4
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Midyear Population
+Name=MIDYEAR_POPULATION
+Start=8
+Len=10
+ZeroFill=Yes
+
+[Record]
+Label=Midyear Population by Age / Sex Record
+Name=AGESEX_POPULATION_REC
+RecordTypeValue='3'
+MaxRecords=300
+RecordLen=816
+
+[Item]
+Label=Age/Sex Year
+Name=AGESEX_YEAR
+Start=4
+Len=4
+ZeroFill=Yes
+
+[Item]
+Label=Age/Sex Sex
+Name=AGESEX_SEX
+Start=8
+Len=1
+ZeroFill=Yes
+
+[ValueSet]
+Label=Age/Sex Sex
+Name=AGESEX_SEX_VS1
+Value=2;Male
+Value=3;Female
+
+[Item]
+Label=Age/Sex Population
+Name=AGESEX_POPULATION
+Start=9
+Len=8
+Occurrences=101
+ZeroFill=Yes

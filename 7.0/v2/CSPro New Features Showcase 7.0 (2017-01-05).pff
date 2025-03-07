@@ -1,0 +1,15 @@
+﻿[Run Information]
+Version=CSPro 7.0
+AppType=Entry
+
+[DataEntryInit]
+FullScreen=NoMenus
+StartMode=Add
+Lock=CaseListing
+
+[Files]
+Application=.\CSPro New Features Showcase 7.0 (2017-01-05).ent
+InputData=|NONE
+
+[ExternalFiles]
+IDB_POPULATION_DATA_DICT=|NONE

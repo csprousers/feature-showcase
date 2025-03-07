@@ -1,0 +1,27 @@
+﻿[CSPro Application]
+Version=CSPro 7.0
+Label=CSPRO_NEW_FEATURES_SHOWCASE_7_0
+Name=CSPRO_NEW_FEATURES_SHOWCASE_7_0
+AppType=DataEntry
+OperatorID=No
+CAPI=Yes
+CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+CAPIFont1Color=0
+CAPIFont2Color=16711680
+CaseTree=Never
+CreateListing=No
+CreateLog=No
+[External Dictionaries]
+File=.\IDB Population Data.dcf
+[AppCode]
+File=.\CSPro New Features Showcase 7.0 (2017-01-05).ent.apc
+[Message]
+File=.\CSPro New Features Showcase 7.0 (2017-01-05).ent.mgf
+[Help]
+File=.\CSPro New Features Showcase 7.0 (2017-01-05).ent.qsf
+[Forms]
+File=.\CSPro New Features Showcase 7.0 (2017-01-05).fmf
+[Dictionary Types]
+Dict-Type=.\CSPro New Features Showcase 7.0 (2017-01-05).dcf,Input,.\CSPro New Features Showcase 7.0 (2017-01-05).fmf
+Dict-Type=.\IDB Population Data.dcf,External

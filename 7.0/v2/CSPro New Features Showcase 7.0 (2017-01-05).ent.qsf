@@ -1,0 +1,156 @@
+﻿[CAPI QUESTIONS]
+Version=CSPro 7.0
+
+[LANGUAGES]
+ENG=English
+
+[QUESTION]
+Field=NFS7_20170105_DICT.AUTO_INCREMENT_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 A new auto-increment property can be applied to ID fields. If this property is set, when a new case is added, the field is automatically filled in by calculating the maximum value for this field in the data file and then adding 1 to this value. The value will be 1 for the first case in the file.\par
+ENG=\par
+ENG=Launch the program to see an example of an auto-increment field. Change the field to see what happens as you add additional cases. The program also shows a use of the KeyList function.\par
+ENG=\par
+ENG=Additionally, the program's PFF uses the new OnExit parameter. If this parameter is set, when the program finishes, the program specified will be executed. As you will see, once the program finishes, it will launch this menu program again.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.COMPRESSION_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 There are two new functions to faciliate the compression of data. They may be particularly useful if your programs use FTP syncs, as you can reduce the size of transmissions. They are also useful for backing up data into single archives.\par
+ENG=\par
+ENG=The Compress function can take a string with a filename or a filename with wildcard arguments, or it can take a list (returned from DirList) with the files to compress. It will create a .zip file.\par
+ENG=\par
+ENG=The Decompress function takes a .zip file as its argument. An optional argument allows you to specify to what folder you want to decompress the files.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.DATA_VIEWER_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The new Data Viewer tool allows you to view the contents of a data file. This tool is especially important for viewing CSPro DB files because they cannot be viewed in Text Viewer or any other text editor. The tool shows the contents of the case, along with information like notes, in the dictionary format. If opening a CSPro DB file, you will not have to specify a dictionary because it is embedded in the file.\par
+ENG=\par
+ENG=The tool can also be used to convert data from one type to another. For example, you can convert from CSPro DB to text formats using this tool and all information (like notes, partial save statuses, etc.) will be retained.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.DIAGNOSTICS_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The new Diagnostics function can be used to get information about the version of CSPro you are using, as well as other functionality. It is useful mostly for troubleshooting.\par
+ENG=\par
+ENG=The function takes a parameter and then optional arguments that determine what it returns. If called without a parameter, the function will return all of the no-argument diagnostic parameters.\par
+ENG=\par
+ENG=The current diagnostic value options are:\par
+ENG=\par
+ENG=\b %capiText1%\b0\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.EXCEL_TO_CSPRO_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The Excel to CSPro tool has been completely rewritten since the version that shipped in CSPro 6.3. It can now analyze a worksheet and create a CSPro dictionary based on the worksheet contents. And it now supports converting data from multiple worksheets to multiple records and can convert data to repeating items and to subitems.\par
+ENG=\par
+ENG=The first option will open an Excel to CSPro specification file in the tool. With the new tool you can save specifications for easy editing/rerunning.\par
+ENG=\par
+ENG=The second option will convert data using the specification file from the command line.\par
+ENG=\par
+ENG=The third option will convert data using the specification file but will override the output file option. Overriding options will you allow you to use the tool to batch process many Excel workbooks/worksheets.\par
+ENG=\par
+ENG=The data for this application comes from the Census Bureau's International Data Base (IDB), August 2016 release date, available here: https://www.census.gov/population/international/data/idb/include/IDB_DataSet.zip\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.FORCASE_AGE_FILTER
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 Enter the age that you are interested in looking at, or -1 for all ages.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.FORCASE_COUNTRY_FILTER
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 Select the countries, up to 25, that you are interested in looking at. If no countries are selected, then data for all countries will be displayed.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.FORCASE_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The ForCase looping statement allows you to easily iterate through all of the cases in a data file. An optional \i where\i0  parameter allows you to filter the cases that are processed. ForCase simplifies case iteration, which previously had to be done with a combination of locate and loadcase statements.\par
+ENG=\par
+ENG=The population for \b %capiText1%\b0  in \b %capiText2%\b0 ...\par
+ENG=\par
+ENG=\b %capiText3%\b0\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.FORCASE_YEAR_FILTER
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 Enter the year that you are interested in looking at.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.KEYLIST_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 The new KeyList function fills a string list (like the one returned by the DirList function) with a list of the keys in a data file. You can query the keys in an external dictionary or the main input dictionary of a data entry application. The latter functionality allows you for the first time to query the input file in logic to determine ID values. See the auto-increment example for more information on this.\par
+ENG=\par
+ENG=If called without a list parameter, the function simply returns the number of cases in the file. If called with a list parameter, the keys will be returned in alphabetical order.\par
+ENG=\par
+ENG=KeyList (without a parameter): \b %capiText1%\b0\par
+ENG=\par
+ENG=KeyList (with its string list contents displayed): \b %capiText2%\b0\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
+ENG=\pard\cf1\fs24 This program will introduce you to some of the new features in CSPro 7.0 that were added in the second beta release. The program uses a large data set so some operations may take some time.\par
+ENG=\par
+ENG=\b %unprocessedFilesWarning%\b0\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.OTHER_FEATURES_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The 2017-01-05 beta release of CSPro 7.0 also introduces some other features, including:\par
+ENG=\par
+ENG=* An IsVerified function that returns whether or not a case in an external dictionary is verified.\par
+ENG=\par
+ENG=Several new PFF flags, including:\par
+ENG=\par
+ENG=* ShowInApplicationListing: Determines if an application shows in the Android case listing.\par
+ENG=* Lock=CaseListing: Does not show the case listing screen on Android.\par
+ENG=* Lock=Delete: Prevents the user from deleting cases.\par
+ENG=}
+
+[QUESTION]
+Field=NFS7_20170105_DICT.TIMESTAMP_MENU
+ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+ENG={\colortbl ;\red0\green0\blue0;}
+ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
+ENG=\pard\cf1\fs24 The new TimeStamp function returns the UNIX time, which Wikipedia defines as "the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970, not counting leap seconds." This time can be useful for storing times as well as calculating timespans, which was previously challenging using the SysTime function.\par
+ENG=\par
+ENG=You opened this program at \b %capiText1%\b0 . It is now \b %capiText1%\b0 . The program has been open for \b %capiText3%\b0  seconds.\par
+ENG=}
+
