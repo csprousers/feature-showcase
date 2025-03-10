@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.0
+Version=CSPro 8.0
 Name=AIA_FF
 Label=Auto-Increment Application
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -19,7 +19,7 @@ CapturePos=373,27
   
 Item=STRUCTURE_NUMBER
 Item=HOUSEHOLD_NUMBER
-Item=CONTINUE
+Item=CONTINUE_PROGRAM
   
 [EndForm]
   
@@ -32,7 +32,6 @@ Required=Yes
 Name=AIA_FORM
 Label=Auto-Increment Application Form
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -41,6 +40,7 @@ Position=155,20,226,40
 Item=STRUCTURE_NUMBER,AIA_DICT
 AutoIncrement=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -54,6 +54,7 @@ Position=155,63,296,83
 Item=HOUSEHOLD_NUMBER,AIA_DICT
 Protected=Yes
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -62,9 +63,9 @@ Text=Household Number
  
   
 [Field]
-Name=CONTINUE
+Name=CONTINUE_PROGRAM
 Position=155,106,170,126
-Item=CONTINUE,AIA_DICT
+Item=CONTINUE_PROGRAM,AIA_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=DropDown
 Form=1

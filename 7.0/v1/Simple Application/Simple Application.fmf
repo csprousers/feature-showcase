@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.0
+Version=CSPro 8.0
 Name=SIMPLE_APPLICATION_FF
 Label=Simple Application
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -31,7 +31,6 @@ Required=Yes
 Name=SIMPLE_APPLICATION_QUEST_FORM
 Label=Simple Application questionnaire
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -39,6 +38,7 @@ Name=SIMPLE_APPLICATION_ID_1
 Position=191,20,262,40
 Item=SIMPLE_APPLICATION_ID_1,SIMPLE_APPLICATION_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -51,6 +51,7 @@ Name=SIMPLE_APPLICATION_ID_2
 Position=191,58,262,78
 Item=SIMPLE_APPLICATION_ID_2,SIMPLE_APPLICATION_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
@@ -63,6 +64,7 @@ Name=SIMPLE_APPLICATION_VALUE
 Position=191,96,262,116
 Item=SIMPLE_APPLICATION_VALUE,SIMPLE_APPLICATION_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]

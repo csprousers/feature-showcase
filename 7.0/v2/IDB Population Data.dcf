@@ -1,98 +1,142 @@
-﻿[Dictionary]
-Version=CSPro 7.0
-Label=IDB Population Data
-Name=IDB_POPULATION_DATA_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-
-[Level]
-Label=IDB Population Data Level
-Name=IDB_POPULATION_DATA_LEVEL
-
-[IdItems]
-
-[Item]
-Label=FIPS Code
-Name=FIPS_CODE
-Start=2
-Len=2
-DataType=Alpha
-
-[Record]
-Label=Country Metadata Record
-Name=COUNTRY_METADATA_REC
-RecordTypeValue='1'
-RecordLen=46
-
-[Item]
-Label=Country Name
-Name=COUNTRY_NAME
-Start=4
-Len=35
-DataType=Alpha
-
-[Item]
-Label=Area (sq. km.)
-Name=AREA
-Start=39
-Len=8
-ZeroFill=Yes
-
-[Record]
-Label=Midyear Population Record
-Name=MIDYEAR_POPULATION_REC
-RecordTypeValue='2'
-MaxRecords=150
-RecordLen=17
-
-[Item]
-Label=Midyear Year
-Name=MIDYEAR_YEAR
-Start=4
-Len=4
-ZeroFill=Yes
-
-[Item]
-Label=Midyear Population
-Name=MIDYEAR_POPULATION
-Start=8
-Len=10
-ZeroFill=Yes
-
-[Record]
-Label=Midyear Population by Age / Sex Record
-Name=AGESEX_POPULATION_REC
-RecordTypeValue='3'
-MaxRecords=300
-RecordLen=816
-
-[Item]
-Label=Age/Sex Year
-Name=AGESEX_YEAR
-Start=4
-Len=4
-ZeroFill=Yes
-
-[Item]
-Label=Age/Sex Sex
-Name=AGESEX_SEX
-Start=8
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Age/Sex Sex
-Name=AGESEX_SEX_VS1
-Value=2;Male
-Value=3;Female
-
-[Item]
-Label=Age/Sex Population
-Name=AGESEX_POPULATION
-Start=9
-Len=8
-Occurrences=101
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "IDB_POPULATION_DATA_DICT", 
+  "labels": [ { "text": "IDB Population Data" } ], 
+  "security": {
+    "allowDataViewerModifications": false, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "c357e3eb7bf8f7fdf430e960c4c5ece7099902f129e6c7f42cc51b5b1c32466e5f34c2fcecb5dadb5db061427c15741c"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "IDB_POPULATION_DATA_LEVEL", 
+      "labels": [ { "text": "IDB Population Data Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "FIPS_CODE", 
+            "labels": [ { "text": "FIPS Code" } ], 
+            "contentType": "alpha", 
+            "start": 2, 
+            "length": 2
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "COUNTRY_METADATA_REC", 
+          "labels": [ { "text": "Country Metadata Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "COUNTRY_NAME", 
+              "labels": [ { "text": "Country Name" } ], 
+              "contentType": "alpha", 
+              "length": 35
+            }, 
+            {
+              "name": "AREA", 
+              "labels": [ { "text": "Area (sq. km.)" } ], 
+              "contentType": "numeric", 
+              "length": 8, 
+              "zeroFill": true
+            }
+          ]
+        }, 
+        {
+          "name": "MIDYEAR_POPULATION_REC", 
+          "labels": [ { "text": "Midyear Population Record" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 150
+          }, 
+          "items": [
+            {
+              "name": "MIDYEAR_YEAR", 
+              "labels": [ { "text": "Midyear Year" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "MIDYEAR_POPULATION", 
+              "labels": [ { "text": "Midyear Population" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }
+          ]
+        }, 
+        {
+          "name": "AGESEX_POPULATION_REC", 
+          "labels": [ { "text": "Midyear Population by Age / Sex Record" } ], 
+          "recordType": "3", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 300
+          }, 
+          "items": [
+            {
+              "name": "AGESEX_YEAR", 
+              "labels": [ { "text": "Age/Sex Year" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "AGESEX_SEX", 
+              "labels": [ { "text": "Age/Sex Sex" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "AGESEX_SEX_VS1", 
+                  "labels": [ { "text": "Age/Sex Sex" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Male" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Female" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "AGESEX_POPULATION", 
+              "labels": [ { "text": "Age/Sex Population" } ], 
+              "occurrences": {
+                "maximum": 101
+              }, 
+              "contentType": "numeric", 
+              "length": 8, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

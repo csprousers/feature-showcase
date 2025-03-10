@@ -1,18 +1,76 @@
-﻿[CSPro Application]
-Version=CSPro 7.0
-Label=SIMPLE_APPLICATION
-Name=SIMPLE_APPLICATION
-AppType=DataEntry
-OperatorID=No
-CreateListing=No
-CreateLog=No
-[AppCode]
-File=.\Simple Application.ent.apc
-[Message]
-File=.\Simple Application.ent.mgf
-[Help]
-File=.\Simple Application.ent.qsf
-[Forms]
-File=.\Simple Application.fmf
-[Dictionary Types]
-Dict-Type=.\Simple Application.dcf,Input,.\Simple Application.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "SIMPLE_APPLICATION", 
+  "label": "SIMPLE_APPLICATION", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "path": "Simple Application.dcf", 
+      "parent": "Simple Application.fmf"
+    }
+  ], 
+  "forms": [
+    "Simple Application.fmf"
+  ], 
+  "questionText": [
+    "Simple Application.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "path": "Simple Application.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Simple Application.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": false, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": true, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
+  }
+}

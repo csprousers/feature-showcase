@@ -1,133 +1,249 @@
-﻿[Dictionary]
-Version=CSPro 7.0
-Label=CSPro New Features Showcase 7
-Name=SHOWCASE70_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-
-[Level]
-Label=CSPro New Features Showcase 7 Level
-Name=SHOWCASE70_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Unused ID
-Name=UNUSED_ID
-Start=2
-Len=1
-ZeroFill=Yes
-
-[Record]
-Label=CSPro New Features Showcase 7 Record
-Name=SHOWCASE70_REC
-RecordTypeValue='1'
-RecordLen=60
-
-[Item]
-Label=Menu
-Name=MENU
-Start=3
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Menu
-Name=MENU_VS1
-Value=1;Changing Operator ID
-Value=2;Enhanced Notes
-Value=3;Case Labels
-Value=4;Data Sources
-Value=5;Synchronization from Logic
-Value=6;Show Configuration Settings
-Value=7;Other Features
-Value=8;Quit
-
-[Item]
-Label=Show Operator ID
-Name=SHOW_OPERATOR_ID
-Start=4
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Show Enhanced Notes
-Name=SHOW_ENHANCED_NOTES
-Start=54
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Show Enhanced Notes
-Name=SHOW_ENHANCED_NOTES_VS1
-Value=1;Enter Case Note
-Value=2;Enter Note for Current Field
-Value=0;Return to Menu
-
-[Item]
-Label=Show Case Labels
-Name=SHOW_CASE_LABELS
-Start=55
-Len=2
-ZeroFill=Yes
-
-[ValueSet]
-Label=Show Case Labels
-Name=SHOW_CASE_LABELS_VS1
-Value=1:50;Number of Cases
-Value=0;Return to Menu
-
-[Item]
-Label=Show Data Sources
-Name=SHOW_DATA_SOURCES
-Start=57
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Show Data Sources
-Name=SHOW_DATA_SOURCES_VS1
-Value=1;View Overview
-Value=2;Learn about Text Data Source
-Value=3;Learn about CSPro DB Data Source
-Value=4;Learn about None Data Source
-Value=0;Return to Menu
-
-[Item]
-Label=Show Synchronization from Logic
-Name=SHOW_SYNCHRONIZATION_FROM_LOGIC
-Start=58
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Show Synchronization from Logic
-Name=SHOW_SYNCHRONIZATION_FROM_LOGID
-Value=0;Return to Menu
-
-[Item]
-Label=Show Configuration Settings
-Name=SHOW_CONFIG_SETTINGS
-Start=59
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Show Configuration Settings
-Name=SHOW_CONFIG_SETTINGS_VS1
-Value=0;Return to Menu
-
-[Item]
-Label=Show Other Features
-Name=SHOW_OTHER_FEATURES
-Start=60
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Show Other Features
-Name=SHOW_OTHER_FEATURES_VS1
-Value=0;Return to Menu
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "SHOWCASE70_DICT", 
+  "labels": [ { "text": "CSPro New Features Showcase 7" } ], 
+  "security": {
+    "allowDataViewerModifications": false, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "4b22230e390ca55cc2b7a2727e6fa09bf6a30cabe900eafe481aa947be1778a9"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "SHOWCASE70_LEVEL", 
+      "labels": [ { "text": "CSPro New Features Showcase 7 Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "UNUSED_ID", 
+            "labels": [ { "text": "Unused ID" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "SHOWCASE70_REC", 
+          "labels": [ { "text": "CSPro New Features Showcase 7 Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "MENU", 
+              "labels": [ { "text": "Menu" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MENU_VS1", 
+                  "labels": [ { "text": "Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Changing Operator ID" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enhanced Notes" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Case Labels" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Data Sources" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Synchronization from Logic" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Show Configuration Settings" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Other Features" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Quit" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SHOW_OPERATOR_ID", 
+              "labels": [ { "text": "Show Operator ID" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "SHOW_ENHANCED_NOTES", 
+              "labels": [ { "text": "Show Enhanced Notes" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SHOW_ENHANCED_NOTES_VS1", 
+                  "labels": [ { "text": "Show Enhanced Notes" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Enter Case Note" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enter Note for Current Field" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to Menu" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SHOW_CASE_LABELS", 
+              "labels": [ { "text": "Show Case Labels" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SHOW_CASE_LABELS_VS1", 
+                  "labels": [ { "text": "Show Case Labels" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Number of Cases" } ], 
+                      "pairs": [ { "range": [ "1", "50" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to Menu" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SHOW_DATA_SOURCES", 
+              "labels": [ { "text": "Show Data Sources" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SHOW_DATA_SOURCES_VS1", 
+                  "labels": [ { "text": "Show Data Sources" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "View Overview" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about Text Data Source" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about CSPro DB Data Source" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about None Data Source" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to Menu" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SHOW_SYNCHRONIZATION_FROM_LOGIC", 
+              "labels": [ { "text": "Show Synchronization from Logic" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SHOW_SYNCHRONIZATION_FROM_LOGID", 
+                  "labels": [ { "text": "Show Synchronization from Logic" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Return to Menu" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SHOW_CONFIG_SETTINGS", 
+              "labels": [ { "text": "Show Configuration Settings" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SHOW_CONFIG_SETTINGS_VS1", 
+                  "labels": [ { "text": "Show Configuration Settings" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Return to Menu" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "SHOW_OTHER_FEATURES", 
+              "labels": [ { "text": "Show Other Features" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "SHOW_OTHER_FEATURES_VS1", 
+                  "labels": [ { "text": "Show Other Features" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Return to Menu" } ], 
+                      "pairs": [ { "value": "0" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

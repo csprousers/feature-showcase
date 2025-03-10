@@ -1,6 +1,6 @@
 ﻿PROC GLOBAL
 
-config configVariable;
+config string configVariable;
 
 string capiText1;
 string capiText2;
@@ -9,18 +9,18 @@ string capiText3;
 file pffFile;
 
 numeric NumberNames = 15;
-array string someNames(NumberNames) = 	"Abdi","Abenet","Abraham","Abush","Afewerk","Alemu","Alex",
-										"Amanuel","Ameha","Aniley","Ann","Anna","Annan","Anu","Ayda";
+array string someNames(NumberNames) =   "Abdi", "Abenet", "Abraham", "Abush", "Afewerk", "Alemu", "Alex",
+                                        "Amanuel", "Ameha", "Aniley", "Ann", "Anna", "Annan", "Anu", "Ayda";
 
 function OnStop()
 
-	if getsymbol() = "MENU" then
-		stop(1);
+    if getsymbol() = "MENU" then
+        stop(1);
 
-	else
-		reenter MENU;
+    else
+        reenter MENU;
 
-	endif;
+    endif;
 
 end;
 
@@ -32,200 +32,200 @@ PROC MENU
 
 onfocus
 
-	MENU = notappl;
+    MENU = notappl;
 
 postproc
 
-	if MENU = 1 then		skip to SHOW_OPERATOR_ID;
-	elseif MENU = 2 then	skip to SHOW_ENHANCED_NOTES;
-	elseif MENU = 3 then	skip to SHOW_CASE_LABELS;
-	elseif MENU = 4 then	skip to SHOW_DATA_SOURCES;
-	elseif MENU = 5 then	skip to SHOW_SYNCHRONIZATION_FROM_LOGIC;
-	elseif MENU = 6 then	skip to SHOW_CONFIG_SETTINGS;
-	elseif MENU = 7 then	skip to SHOW_OTHER_FEATURES;
-	elseif MENU = 8 then	stop(1);
-	endif;
+    if MENU = 1 then        skip to SHOW_OPERATOR_ID;
+    elseif MENU = 2 then    skip to SHOW_ENHANCED_NOTES;
+    elseif MENU = 3 then    skip to SHOW_CASE_LABELS;
+    elseif MENU = 4 then    skip to SHOW_DATA_SOURCES;
+    elseif MENU = 5 then    skip to SHOW_SYNCHRONIZATION_FROM_LOGIC;
+    elseif MENU = 6 then    skip to SHOW_CONFIG_SETTINGS;
+    elseif MENU = 7 then    skip to SHOW_OTHER_FEATURES;
+    elseif MENU = 8 then    stop(1);
+    endif;
 
-	reenter;
+    reenter;
 
 
 PROC SHOW_OPERATOR_ID
 
 onfocus
 
-	SHOW_OPERATOR_ID = "";
+    SHOW_OPERATOR_ID = "";
 
-	if getoperatorid() = "" then
-		capiText1 = "<none defined>";
+    if getoperatorid() = "" then
+        capiText1 = "<none defined>";
 
-	else
-		capiText1 = getoperatorid();
+    else
+        capiText1 = getoperatorid();
 
-	endif;
+    endif;
 
 postproc
 
-	setoperatorid(strip(SHOW_OPERATOR_ID));
-	reenter;
+    setoperatorid(strip(SHOW_OPERATOR_ID));
+    reenter;
 
 
 PROC SHOW_ENHANCED_NOTES
 
 onfocus
 
-	SHOW_ENHANCED_NOTES = notappl;
-	capiText1 = getnote(SHOWCASE70_DICT);
-	capiText2 = getnote();
-	// capiText3 = getnote(SHOW_ENHANCED_NOTES,"Demo");
+    SHOW_ENHANCED_NOTES = notappl;
+    capiText1 = getnote(SHOWCASE70_DICT);
+    capiText2 = getnote();
+    // capiText3 = getnote(SHOW_ENHANCED_NOTES,"Demo");
 
 postproc
 
-	if SHOW_ENHANCED_NOTES = 1 then		editnote(SHOWCASE70_DICT);
-	elseif SHOW_ENHANCED_NOTES = 2 then	editnote();
-	// elseif SHOW_ENHANCED_NOTES = 3 then	editnote(SHOW_ENHANCED_NOTES,"Demo");
-	else								reenter MENU;
-	endif;
+    if SHOW_ENHANCED_NOTES = 1 then     editnote(SHOWCASE70_DICT);
+    elseif SHOW_ENHANCED_NOTES = 2 then editnote();
+    // elseif SHOW_ENHANCED_NOTES = 3 then  editnote(SHOW_ENHANCED_NOTES,"Demo");
+    else                                reenter MENU;
+    endif;
 
-	reenter;
+    reenter;
 
 
 PROC SHOW_CASE_LABELS
 
 onfocus
 
-	string applicationFolder = pathname(application) + "Simple Application/";
-	string applicationFile = applicationFolder + "Simple Application.ent";
+    string applicationFolder = pathname(application) + "Simple Application/";
+    string applicationFile = applicationFolder + "Simple Application.ent";
 
-	if not fileexist(applicationFile) then
-		applicationFile = applicationFolder + "Simple Application.pen";
+    if not fileexist(applicationFile) then
+        applicationFile = applicationFolder + "Simple Application.pen";
 
-		if not fileexist(applicationFile) then
-			errmsg("The Simple Application file must exist here: %s. Make sure it is on your device.",applicationFile);
-			reenter MENU;
-		endif;
+        if not fileexist(applicationFile) then
+            errmsg("The Simple Application file must exist here: %s. Make sure it is on your device.", applicationFile);
+            reenter MENU;
+        endif;
 
-	endif;
+    endif;
 
-	SHOW_CASE_LABELS = notappl;
+    SHOW_CASE_LABELS = notappl;
 
 postproc
 
-	if SHOW_CASE_LABELS = 0 then
-		reenter MENU;
-	endif;
+    if SHOW_CASE_LABELS = 0 then
+        reenter MENU;
+    endif;
 
-	// create the new data source
-	string repoFilename = maketext("%s%08d_%02d%02d%02d_%03d.csdb",
-		applicationFolder,
-		sysdate("YYYYMMDD"),
-		// the systime function now takes arguments in the same that sysdate always has
-		systime("HH"), // hour
-		systime("MM"), // minute
-		systime("SS"), // second
-		SHOW_CASE_LABELS);
+    // create the new data source
+    string repoFilename = maketext("%s%08d_%02d%02d%02d_%03d.csdb",
+        applicationFolder,
+        sysdate("YYYYMMDD"),
+        // the systime function now takes arguments in the same that sysdate always has
+        systime("HH"), // hour
+        systime("MM"), // minute
+        systime("SS"), // second
+        SHOW_CASE_LABELS);
 
-	setfile(SIMPLE_APPLICATION_DICT,repoFilename,create);
-	
-	seed(systime());
+    setfile(SIMPLE_APPLICATION_DICT, repoFilename, create);
 
-	do numeric ctr = 1 while ctr <= SHOW_CASE_LABELS
-		// generate random values for the IDs and value
-		clear(SIMPLE_APPLICATION_DICT);
+    seed(systime());
 
-		SIMPLE_APPLICATION_ID_1 = random(1,99999);
-		SIMPLE_APPLICATION_ID_2 = random(1,99999);
-		SIMPLE_APPLICATION_VALUE = random(1,99999);
+    do numeric ctr = 1 while ctr <= SHOW_CASE_LABELS
+        // generate random values for the IDs and value
+        clear(SIMPLE_APPLICATION_DICT);
 
-		// if there is already a case with the randomly generated IDs, then start the loop over
-		if loadcase(SIMPLE_APPLICATION_DICT,SIMPLE_APPLICATION_ID_1,SIMPLE_APPLICATION_ID_2) then
-			inc(ctr,-1);
-			next;
-		endif;
+        SIMPLE_APPLICATION_ID_1 = random(1, 99999);
+        SIMPLE_APPLICATION_ID_2 = random(1, 99999);
+        SIMPLE_APPLICATION_VALUE = random(1, 99999);
 
-		setcaselabel(SIMPLE_APPLICATION_DICT,maketext("Case with IDs %05d-%05d: %s",
-			SIMPLE_APPLICATION_ID_1,SIMPLE_APPLICATION_ID_2,someNames(random(1,NumberNames))));
+        // if there is already a case with the randomly generated IDs, then start the loop over
+        if loadcase(SIMPLE_APPLICATION_DICT, SIMPLE_APPLICATION_ID_1, SIMPLE_APPLICATION_ID_2) then
+            inc(ctr, -1);
+            next;
+        endif;
 
-		if ctr = 1 then // leave a case note for the first added case
-			putnote("This is a case note.\nYou can put a lot of information in these notes and they will show on the Android case listing.",SIMPLE_APPLICATION_DICT);
-		endif;
+        setcaselabel(SIMPLE_APPLICATION_DICT, maketext("Case with IDs %05d-%05d: %s",
+            SIMPLE_APPLICATION_ID_1, SIMPLE_APPLICATION_ID_2, someNames(random(1, NumberNames))));
 
-		writecase(SIMPLE_APPLICATION_DICT);
+        if ctr = 1 then // leave a case note for the first added case
+            putnote("This is a case note.\nYou can put a lot of information in these notes and they will show on the Android case listing.", SIMPLE_APPLICATION_DICT);
+        endif;
 
-	enddo;
+        writecase(SIMPLE_APPLICATION_DICT);
 
-	close(SIMPLE_APPLICATION_DICT);
+    enddo;
 
-	// write a PFF to open Simply Application
-	string pffFilename = repoFilename + ".pff";
+    close(SIMPLE_APPLICATION_DICT);
 
-	setfile(pffFile,pffFilename);
+    // write a PFF to open Simply Application
+    string pffFilename = repoFilename + ".pff";
 
-	filewrite(pffFile,"[Run Information]");
-	filewrite(pffFile,"Version=CSPro 6.3");
-	filewrite(pffFile,"AppType=Entry");
-	filewrite(pffFile,"Description="); // blank description won't show in the Android application listing
+    setfile(pffFile, pffFilename);
 
-	filewrite(pffFile,"[Files]");
-	filewrite(pffFile,"Application=%s",applicationFile);
-	filewrite(pffFile,"InputData=%s",repoFilename);
+    filewrite(pffFile, "[Run Information]");
+    filewrite(pffFile, "Version=CSPro 7.0");
+    filewrite(pffFile, "AppType=Entry");
+    filewrite(pffFile, "Description="); // blank description won't show in the Android application listing
 
-	close(pffFile);
+    filewrite(pffFile, "[Files]");
+    filewrite(pffFile, "Application=%s", applicationFile);
+    filewrite(pffFile, "InputData=%s", repoFilename);
 
-	execpff(pffFilename);
+    close(pffFile);
 
-	if getos() in 20:29 then
-		// on Android stop so that the PFF is opened
-		stop(1);
-	endif;
+    execpff(pffFilename);
 
-	reenter;
+    if getos() in 20:29 then
+        // on Android stop so that the PFF is opened
+        stop(1);
+    endif;
+
+    reenter;
 
 
 PROC SHOW_DATA_SOURCES
 
 preproc
 
-	SHOW_DATA_SOURCES = 1;
+    SHOW_DATA_SOURCES = 1;
 
 postproc
 
-	if SHOW_DATA_SOURCES = 0 then
-		reenter MENU;
+    if SHOW_DATA_SOURCES = 0 then
+        reenter MENU;
 
-	else
-		reenter;
+    else
+        reenter;
 
-	endif;
+    endif;
 
 
 PROC SHOW_SYNCHRONIZATION_FROM_LOGIC
 
 onfocus
 
-	SHOW_SYNCHRONIZATION_FROM_LOGIC = 0;
+    SHOW_SYNCHRONIZATION_FROM_LOGIC = 0;
 
 postproc
 
-	reenter MENU;
+    reenter MENU;
 
 
 PROC SHOW_CONFIG_SETTINGS
 
 onfocus
 
-	SHOW_CONFIG_SETTINGS = 0;
+    SHOW_CONFIG_SETTINGS = 0;
 
 postproc
 
-	reenter MENU;
+    reenter MENU;
 
 
 PROC SHOW_OTHER_FEATURES
 
 onfocus
 
-	SHOW_OTHER_FEATURES = 0;
+    SHOW_OTHER_FEATURES = 0;
 
 postproc
 
-	reenter MENU;
+    reenter MENU;

@@ -1,42 +1,69 @@
-﻿[Dictionary]
-Version=CSPro 7.0
-Label=Simple Application
-Name=SIMPLE_APPLICATION_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-
-[Level]
-Label=Simple Application Level
-Name=SIMPLE_APPLICATION_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Simple Application ID 1
-Name=SIMPLE_APPLICATION_ID_1
-Start=2
-Len=5
-ZeroFill=Yes
-
-[Item]
-Label=Simple Application ID 2
-Name=SIMPLE_APPLICATION_ID_2
-Start=7
-Len=5
-ZeroFill=Yes
-
-[Record]
-Label=Simple Application Record
-Name=SIMPLE_APPLICATION_REC
-RecordTypeValue='1'
-RecordLen=16
-
-[Item]
-Label=Simple Application Value
-Name=SIMPLE_APPLICATION_VALUE
-Start=12
-Len=5
-ZeroFill=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "SIMPLE_APPLICATION_DICT", 
+  "labels": [ { "text": "Simple Application" } ], 
+  "security": {
+    "allowDataViewerModifications": false, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "04809529903d33bb6aa4634eb805ebf1a9e03c108668aee8fa6766beb7a3a9b3a0a05a64a7b4e5b89ea6b11ddee38cd6"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "SIMPLE_APPLICATION_LEVEL", 
+      "labels": [ { "text": "Simple Application Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "SIMPLE_APPLICATION_ID_1", 
+            "labels": [ { "text": "Simple Application ID 1" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 5, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "SIMPLE_APPLICATION_ID_2", 
+            "labels": [ { "text": "Simple Application ID 2" } ], 
+            "contentType": "numeric", 
+            "start": 7, 
+            "length": 5, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "SIMPLE_APPLICATION_REC", 
+          "labels": [ { "text": "Simple Application Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "SIMPLE_APPLICATION_VALUE", 
+              "labels": [ { "text": "Simple Application Value" } ], 
+              "contentType": "numeric", 
+              "length": 5, 
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

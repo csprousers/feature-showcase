@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.0
+Version=CSPro 8.0
 Name=SHOWCASE70_FF
 Label=CSPro New Features Showcase 7.0
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -12,7 +12,7 @@ File=.\CSPro New Features Showcase 7.0.dcf
 [Form]
 Name=FORM000
 Label=CSPro New Features Showcase 7
-QuestionTextHeight=312
+QuestionTextHeight=364
 Level=1
 Size=662,272
 CapturePos=650,15
@@ -37,7 +37,6 @@ Required=Yes
 Name=MENU_FORM
 Label=CSPro New Features Showcase 7
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -57,8 +56,9 @@ Text=Menu
 Name=SHOW_OPERATOR_ID
 Position=250,44,637,64
 Item=SHOW_OPERATOR_ID,SHOWCASE70_DICT
-UseUnicodeTextBox=Yes
 FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
 Form=1
   
 [Text]

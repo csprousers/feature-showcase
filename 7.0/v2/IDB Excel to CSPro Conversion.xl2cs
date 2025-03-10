@@ -1,120 +1,581 @@
-﻿Excel=.\IDB Source Files\IDB Population Data 2016-08.xlsx
-InputDict=.\IDB Population Data.dcf
-OutputData=.\IDB Population Data 2016-08.dat
-StartingRow=2
-
-Mapping=COUNTRY_METADATA_REC;@1;Country Names
-Mapping=COUNTRY_METADATA_REC.FIPS_CODE;@1
-Mapping=COUNTRY_NAME;@2
-Mapping=AREA;@3
-
-Mapping=MIDYEAR_POPULATION_REC;@2;Midyear Population
-Mapping=MIDYEAR_POPULATION_REC.FIPS_CODE;@1
-Mapping=MIDYEAR_YEAR;@2
-Mapping=MIDYEAR_POPULATION;@3
-
-Mapping=AGESEX_POPULATION_REC;@3;Midyear Population by Age_Sex
-Mapping=AGESEX_POPULATION_REC.FIPS_CODE;@1
-Mapping=AGESEX_YEAR;@2
-Mapping=AGESEX_SEX;@3
-Mapping=AGESEX_POPULATION(1);@5
-Mapping=AGESEX_POPULATION(2);@6
-Mapping=AGESEX_POPULATION(3);@7
-Mapping=AGESEX_POPULATION(4);@8
-Mapping=AGESEX_POPULATION(5);@9
-Mapping=AGESEX_POPULATION(6);@10
-Mapping=AGESEX_POPULATION(7);@11
-Mapping=AGESEX_POPULATION(8);@12
-Mapping=AGESEX_POPULATION(9);@13
-Mapping=AGESEX_POPULATION(10);@14
-Mapping=AGESEX_POPULATION(11);@15
-Mapping=AGESEX_POPULATION(12);@16
-Mapping=AGESEX_POPULATION(13);@17
-Mapping=AGESEX_POPULATION(14);@18
-Mapping=AGESEX_POPULATION(15);@19
-Mapping=AGESEX_POPULATION(16);@20
-Mapping=AGESEX_POPULATION(17);@21
-Mapping=AGESEX_POPULATION(18);@22
-Mapping=AGESEX_POPULATION(19);@23
-Mapping=AGESEX_POPULATION(20);@24
-Mapping=AGESEX_POPULATION(21);@25
-Mapping=AGESEX_POPULATION(22);@26
-Mapping=AGESEX_POPULATION(23);@27
-Mapping=AGESEX_POPULATION(24);@28
-Mapping=AGESEX_POPULATION(25);@29
-Mapping=AGESEX_POPULATION(26);@30
-Mapping=AGESEX_POPULATION(27);@31
-Mapping=AGESEX_POPULATION(28);@32
-Mapping=AGESEX_POPULATION(29);@33
-Mapping=AGESEX_POPULATION(30);@34
-Mapping=AGESEX_POPULATION(31);@35
-Mapping=AGESEX_POPULATION(32);@36
-Mapping=AGESEX_POPULATION(33);@37
-Mapping=AGESEX_POPULATION(34);@38
-Mapping=AGESEX_POPULATION(35);@39
-Mapping=AGESEX_POPULATION(36);@40
-Mapping=AGESEX_POPULATION(37);@41
-Mapping=AGESEX_POPULATION(38);@42
-Mapping=AGESEX_POPULATION(39);@43
-Mapping=AGESEX_POPULATION(40);@44
-Mapping=AGESEX_POPULATION(41);@45
-Mapping=AGESEX_POPULATION(42);@46
-Mapping=AGESEX_POPULATION(43);@47
-Mapping=AGESEX_POPULATION(44);@48
-Mapping=AGESEX_POPULATION(45);@49
-Mapping=AGESEX_POPULATION(46);@50
-Mapping=AGESEX_POPULATION(47);@51
-Mapping=AGESEX_POPULATION(48);@52
-Mapping=AGESEX_POPULATION(49);@53
-Mapping=AGESEX_POPULATION(50);@54
-Mapping=AGESEX_POPULATION(51);@55
-Mapping=AGESEX_POPULATION(52);@56
-Mapping=AGESEX_POPULATION(53);@57
-Mapping=AGESEX_POPULATION(54);@58
-Mapping=AGESEX_POPULATION(55);@59
-Mapping=AGESEX_POPULATION(56);@60
-Mapping=AGESEX_POPULATION(57);@61
-Mapping=AGESEX_POPULATION(58);@62
-Mapping=AGESEX_POPULATION(59);@63
-Mapping=AGESEX_POPULATION(60);@64
-Mapping=AGESEX_POPULATION(61);@65
-Mapping=AGESEX_POPULATION(62);@66
-Mapping=AGESEX_POPULATION(63);@67
-Mapping=AGESEX_POPULATION(64);@68
-Mapping=AGESEX_POPULATION(65);@69
-Mapping=AGESEX_POPULATION(66);@70
-Mapping=AGESEX_POPULATION(67);@71
-Mapping=AGESEX_POPULATION(68);@72
-Mapping=AGESEX_POPULATION(69);@73
-Mapping=AGESEX_POPULATION(70);@74
-Mapping=AGESEX_POPULATION(71);@75
-Mapping=AGESEX_POPULATION(72);@76
-Mapping=AGESEX_POPULATION(73);@77
-Mapping=AGESEX_POPULATION(74);@78
-Mapping=AGESEX_POPULATION(75);@79
-Mapping=AGESEX_POPULATION(76);@80
-Mapping=AGESEX_POPULATION(77);@81
-Mapping=AGESEX_POPULATION(78);@82
-Mapping=AGESEX_POPULATION(79);@83
-Mapping=AGESEX_POPULATION(80);@84
-Mapping=AGESEX_POPULATION(81);@85
-Mapping=AGESEX_POPULATION(82);@86
-Mapping=AGESEX_POPULATION(83);@87
-Mapping=AGESEX_POPULATION(84);@88
-Mapping=AGESEX_POPULATION(85);@89
-Mapping=AGESEX_POPULATION(86);@90
-Mapping=AGESEX_POPULATION(87);@91
-Mapping=AGESEX_POPULATION(88);@92
-Mapping=AGESEX_POPULATION(89);@93
-Mapping=AGESEX_POPULATION(90);@94
-Mapping=AGESEX_POPULATION(91);@95
-Mapping=AGESEX_POPULATION(92);@96
-Mapping=AGESEX_POPULATION(93);@97
-Mapping=AGESEX_POPULATION(94);@98
-Mapping=AGESEX_POPULATION(95);@99
-Mapping=AGESEX_POPULATION(96);@100
-Mapping=AGESEX_POPULATION(97);@101
-Mapping=AGESEX_POPULATION(98);@102
-Mapping=AGESEX_POPULATION(99);@103
-Mapping=AGESEX_POPULATION(100);@104
-Mapping=AGESEX_POPULATION(101);@105
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "excelConverter", 
+  "excel": "IDB Source Files/IDB Population Data 2016-08.xlsx", 
+  "dictionary": "IDB Population Data.dcf", 
+  "output": "IDB Population Data 2016-08.dat", 
+  "startingRow": 2, 
+  "caseManagement": "createNewFile", 
+  "runOnlyIfNewer": false, 
+  "records": [
+    {
+      "name": "COUNTRY_METADATA_REC", 
+      "worksheet": {
+        "name": "Country Names", 
+        "index": 1
+      }, 
+      "items": [
+        {
+          "name": "FIPS_CODE", 
+          "column": 1
+        }, 
+        {
+          "name": "COUNTRY_NAME", 
+          "column": 2
+        }, 
+        {
+          "name": "AREA", 
+          "column": 3
+        }
+      ]
+    }, 
+    {
+      "name": "MIDYEAR_POPULATION_REC", 
+      "worksheet": {
+        "name": "Midyear Population", 
+        "index": 2
+      }, 
+      "items": [
+        {
+          "name": "FIPS_CODE", 
+          "column": 1
+        }, 
+        {
+          "name": "MIDYEAR_YEAR", 
+          "column": 2
+        }, 
+        {
+          "name": "MIDYEAR_POPULATION", 
+          "column": 3
+        }
+      ]
+    }, 
+    {
+      "name": "AGESEX_POPULATION_REC", 
+      "worksheet": {
+        "name": "Midyear Population by Age_Sex", 
+        "index": 3
+      }, 
+      "items": [
+        {
+          "name": "FIPS_CODE", 
+          "column": 1
+        }, 
+        {
+          "name": "AGESEX_YEAR", 
+          "column": 2
+        }, 
+        {
+          "name": "AGESEX_SEX", 
+          "column": 3
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 1, 
+          "column": 5
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 2, 
+          "column": 6
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 3, 
+          "column": 7
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 4, 
+          "column": 8
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 5, 
+          "column": 9
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 6, 
+          "column": 10
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 7, 
+          "column": 11
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 8, 
+          "column": 12
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 9, 
+          "column": 13
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 10, 
+          "column": 14
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 11, 
+          "column": 15
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 12, 
+          "column": 16
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 13, 
+          "column": 17
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 14, 
+          "column": 18
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 15, 
+          "column": 19
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 16, 
+          "column": 20
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 17, 
+          "column": 21
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 18, 
+          "column": 22
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 19, 
+          "column": 23
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 20, 
+          "column": 24
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 21, 
+          "column": 25
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 22, 
+          "column": 26
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 23, 
+          "column": 27
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 24, 
+          "column": 28
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 25, 
+          "column": 29
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 26, 
+          "column": 30
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 27, 
+          "column": 31
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 28, 
+          "column": 32
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 29, 
+          "column": 33
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 30, 
+          "column": 34
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 31, 
+          "column": 35
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 32, 
+          "column": 36
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 33, 
+          "column": 37
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 34, 
+          "column": 38
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 35, 
+          "column": 39
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 36, 
+          "column": 40
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 37, 
+          "column": 41
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 38, 
+          "column": 42
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 39, 
+          "column": 43
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 40, 
+          "column": 44
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 41, 
+          "column": 45
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 42, 
+          "column": 46
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 43, 
+          "column": 47
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 44, 
+          "column": 48
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 45, 
+          "column": 49
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 46, 
+          "column": 50
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 47, 
+          "column": 51
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 48, 
+          "column": 52
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 49, 
+          "column": 53
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 50, 
+          "column": 54
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 51, 
+          "column": 55
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 52, 
+          "column": 56
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 53, 
+          "column": 57
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 54, 
+          "column": 58
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 55, 
+          "column": 59
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 56, 
+          "column": 60
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 57, 
+          "column": 61
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 58, 
+          "column": 62
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 59, 
+          "column": 63
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 60, 
+          "column": 64
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 61, 
+          "column": 65
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 62, 
+          "column": 66
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 63, 
+          "column": 67
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 64, 
+          "column": 68
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 65, 
+          "column": 69
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 66, 
+          "column": 70
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 67, 
+          "column": 71
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 68, 
+          "column": 72
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 69, 
+          "column": 73
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 70, 
+          "column": 74
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 71, 
+          "column": 75
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 72, 
+          "column": 76
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 73, 
+          "column": 77
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 74, 
+          "column": 78
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 75, 
+          "column": 79
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 76, 
+          "column": 80
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 77, 
+          "column": 81
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 78, 
+          "column": 82
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 79, 
+          "column": 83
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 80, 
+          "column": 84
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 81, 
+          "column": 85
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 82, 
+          "column": 86
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 83, 
+          "column": 87
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 84, 
+          "column": 88
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 85, 
+          "column": 89
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 86, 
+          "column": 90
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 87, 
+          "column": 91
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 88, 
+          "column": 92
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 89, 
+          "column": 93
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 90, 
+          "column": 94
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 91, 
+          "column": 95
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 92, 
+          "column": 96
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 93, 
+          "column": 97
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 94, 
+          "column": 98
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 95, 
+          "column": 99
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 96, 
+          "column": 100
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 97, 
+          "column": 101
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 98, 
+          "column": 102
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 99, 
+          "column": 103
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 100, 
+          "column": 104
+        }, 
+        {
+          "name": "AGESEX_POPULATION", 
+          "occurrence": 101, 
+          "column": 105
+        }
+      ]
+    }
+  ]
+}

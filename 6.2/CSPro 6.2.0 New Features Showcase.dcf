@@ -1,360 +1,4316 @@
-﻿[Dictionary]
-Version=CSPro 6.2
-Label=CSPro 6.2.0 New Features Showcase|CSPro 6.2.0 Nouvelles fonctionnalités Showcase|CSPROは、新機能のショーケースを6.2.0
-Name=SHOWCASE_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=Yes
-DecimalChar=Yes
-
-[Languages]
-EN=English
-FR=French
-JP=Japanese
-
-[Level]
-Label=CSPro 6.2.0 New Features Showcase|CSPro 6.2.0 Nouvelles fonctionnalités Showcase|CSPROは、新機能のショーケースを6.2.0
-Name=SHOWCASE_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Showcase ID||ショーケースID
-Name=SHOWCASE_ID
-Start=2
-Len=1
-ZeroFill=Yes
-
-[Record]
-Label=CSPro 6.2.0 New Features Showcase|CSPro 6.2.0 Nouvelles fonctionnalités Showcase|CSPROは、新機能のショーケースを6.2.0
-Name=SHOWCASE_REC
-RecordTypeValue='1'
-RecordLen=11
-
-[Item]
-Label=Connection Function|Fonction de connexion|接続機能
-Name=CONNECTION_FUNCTION
-Start=3
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Connection Function|Fonction de connexion|接続機能
-Name=CONNECTION_FUNCTION_VS1
-Value=1;Continue|Continuer|続けます
-
-[Item]
-Label=Prompt Function|Fonction Prompt|プロンプト機能
-Name=PROMPT_FUNCTION
-Start=4
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Prompt Function|Fonction Prompt|プロンプト機能
-Name=PROMPT_FUNCTION_VS1
-Value=1;Password Protected|Mot de passe protégé|パスワード保護
-Value=2;Numeric|Numérique|数値の
-Value=3;Multiline|Multiligne|複数行
-Value=4;Continue|Continuer|続けます
-
-[Item]
-Label=Custom Error Message|Message d'erreur personnalisé|カスタムエラーメッセージ
-Name=CUSTOM_ERROR_MESSAGE
-Start=5
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Custom Error Message|Message d'erreur personnalisé|カスタムエラーメッセージ
-Name=CUSTOM_ERROR_MESSAGE_VS1
-Value=0 2 4 6 8;Valid Values|Valeurs valides|有効な値
-
-[Item]
-Label=Enhanced Extended Controls|Contrôles étendus améliorées|強化された拡張コントロール
-Name=ENHANCED_EXTENDED_CONTROLS
-Start=6
-Len=3
-ZeroFill=Yes
-
-[ValueSet]
-Label=Enhanced Extended Controls|Contrôles étendus améliorées|強化された拡張コントロール
-Name=ENHANCED_EXTENDED_CONTROLS_VS1
-Value=1;Armenia: Goris|Arménie: Goris|アルメニア：ゴリス
-Value=2;Armenia: Yerevan|Arménie: Erevan|アルメニア：エレバン
-Value=3;Austria: Schwechat|Autriche: Schwechat|オーストリア：シュベッヒャート
-Value=4;Austria: Spitz|Autriche: Spitz|オーストリア：スピッツ
-Value=5;Austria: Traunkirchen|Autriche: Traunkirchen|オーストリア：トロンカーシェン
-Value=6;Austria: Vienna|Autriche: Vienne|オーストリア：ウィーン
-Value=7;Bangladesh: Dhaka||バングラデシュ：ダッカ
-Value=8;Bangladesh: Srimongol||バングラデシュ：Srimongol
-Value=9;Belgium: Brussels|Belgique: Bruxelles|ベルギー：ブリュッセル
-Value=10;Bosnia and Herzegovina: Mostar|Bosnie-Herzégovine: Mostar|ボスニア·ヘルツェゴビナ：モスタル
-Value=11;Bosnia and Herzegovina: Sarajevo|Bosnie-Herzégovine: Sarajevo|ボスニア·ヘルツェゴビナ：サラエボ
-Value=12;Brazil: Belo Horizonte|Brésil: Belo Horizonte|ブラジル：ベロオリゾンテ
-Value=13;Brazil: Cardeal Mota|Brésil: Cardeal Mota|ブラジル：地下鉄Cardealモタ
-Value=14;Brazil: Contagem|Brésil: Contagem|ブラジル：コンタージェン
-Value=15;Brazil: Curitiba|Brésil: Curitiba|ブラジル：クリティバ
-Value=16;Brazil: Foz do Iguaçu|Brésil: Foz do Iguaçu|ブラジル：フォス·ド·イグアス
-Value=17;Brazil: Morretes|Brésil: Morretes|ブラジル：Morretes
-Value=18;Brazil: Ouro Prêto|Brésil: Ouro Preto|ブラジル：オーロプレト
-Value=19;Brazil: Rio de Janeiro|Brésil: Rio de Janeiro|ブラジル：リオデジャネイロ
-Value=20;Brazil: São Paulo|Brésil: São Paulo|ブラジル：サンパウロ
-Value=21;Burundi: Bujumbura||ブルンジ：ブジュンブラ
-Value=22;Cambodia: Battambang|Cambodge: Battambang|カンボジア：バッタンバン
-Value=23;Cambodia: Kep|Cambodge: Kep|カンボジア：ケップ
-Value=24;Cambodia: Phnom Penh|Cambodge: Phnom Penh|カンボジア：プノンペン
-Value=25;Cambodia: Siem Reap|Cambodge: Siem Reap|カンボジア：シェムリアップ
-Value=26;Canada: Montreal|Canada: Montréal|カナダ：モントリオール
-Value=27;Canada: Ottawa||カナダ：オタワ
-Value=28;Canada: Québec City|Canada: Québec|カナダ：ケベック
-Value=29;Canada: Toronto||カナダ：トロント
-Value=30;Chad: Mongo|Tchad: Mongo|チャド：モンゴ
-Value=31;Chad: N'Djamena|Tchad: N'Djamena|チャド：ンジャメナ
-Value=32;Chad: Zakouma|Tchad: Zakouma|チャド：Zakouma
-Value=33;China: Beijing|Chine: Pékin|中国：北京
-Value=34;China: Changzhou|Chine: Changzhou|中国：常州
-Value=35;China: Chengde|Chine: Chengde|中国：承徳
-Value=36;China: Chengdu|Chine: Chengdu|中国：成都
-Value=37;China: Guangzhou|Chine: Guangzhou|中国：広州
-Value=38;China: Guilin|Chine: Guilin|中国：桂林
-Value=39;China: Jilihe|Chine: Jilihe|中国：Jilihe
-Value=40;China: Jiuzhaigou|Chine: Jiuzhaigou|中国：九寨溝
-Value=41;China: Kaifeng|Chine: Kaifeng|中国：開封
-Value=42;China: Kunming|Chine: Kunming|中国：昆明
-Value=43;China: Luoyang|Chine: Luoyang|中国：洛陽
-Value=44;China: Nanjing|Chine: Nanjing|中国：南京
-Value=45;China: Nanning|Chine: Nanning|中国：南寧
-Value=46;China: Qingdao|Chine: Qingdao|中国：青島
-Value=47;China: Shanghai|Chine: Shanghai|中国：上海
-Value=48;China: Shanhaiguan|Chine: Shanhaiguan|中国：山海関
-Value=49;China: Songpan|Chine: Songpan|中国：松潘
-Value=50;China: Tai'an|Chine: Tai'an|中国：泰安市
-Value=51;China: Tianjin|Chine: Tianjin|中国：天津
-Value=52;China: Xi'an|Chine: Xi'an|中国：西安
-Value=53;China: Xuzhou|Chine: Xuzhou|中国：徐州
-Value=54;China: Yangshuo|Chine: Yangshuo|中国：陽朔
-Value=55;Croatia: Cavtat|Croatie: Cavtat|クロアチア：ツァブタット
-Value=56;Croatia: Dubrovnik|Croatie: Dubrovnik|クロアチア：ドブロブニク
-Value=57;Croatia: Split|Croatie: Split|クロアチア：スプリット
-Value=58;Croatia: Székesfehérvár|Croatie: Székesfehérvár|クロアチア：セーケシュフェヘールヴァール
-Value=59;Croatia: Zagreb|Croatie: Zagreb|クロアチア：ザグレブ
-Value=60;Cuba: Havana|Cuba: La Havane|キューバ：ハバナ
-Value=61;Czech Republic: Cesky Krumlov|République tchèque: Cesky Krumlov|チェコ共和国：チェスキークルムロフ
-Value=62;Czech Republic: Prague|République tchèque: Prague|チェコ共和国プラハ
-Value=63;Denmark: Copenhagen|Danemark: Copenhague|デンマーク：コペンハーゲン
-Value=64;Denmark: Kastrup|Danemark: Kastrup|デンマーク：カストロップ
-Value=65;Djibouti: Djibouti||ジブチ：ジブチ
-Value=66;El Salvador: El Tunco||エルサルバドル：エルTunco
-Value=67;El Salvador: San Salvador||エルサルバドル：サンサルバドル
-Value=68;El Salvador: Suchitoto||エルサルバドル：スチトト
-Value=69;England: London|Angleterre: Londres|イングランド：ロンドン
-Value=70;England: Manchester|Angleterre: Manchester|イングランド：マンチェスター
-Value=71;Estonia: Kuressaare|Estonie: Kuressaare|エストニア：クレッサーレ
-Value=72;Estonia: Tallinn|Estonie: Tallinn|エストニア：タリン
-Value=73;Ethiopia: Addis Ababa|Ethiopie: Addis Abeba|エチオピア：アディスアベバ
-Value=74;Ethiopia: Bahir Dar|Ethiopie: Bahir Dar|エチオピア：Bahirダル
-Value=75;Ethiopia: Dire Dawa|Ethiopie: Dire Dawa|エチオピア：ディレダワ
-Value=76;Ethiopia: Gondar|Ethiopie: Gondar|エチオピア：ゴンダール
-Value=77;Ethiopia: Lalibela|Ethiopie: Lalibela|エチオピア：ラリベラ
-Value=78;Finland: Helsinki|Finlande: Helsinki|フィンランド：ヘルシンキ
-Value=79;France: Aix-en-Provence||フランス：エクス·アン·プロヴァンス
-Value=80;France: Arles||フランス：アルル
-Value=81;France: Cap d'Ail||フランス：キャップデゥアリ
-Value=82;France: Nice|France: de Nice|フランス：ニース
-Value=83;France: Paris||フランス：パリ
-Value=84;Georgia: Batumi|Géorgie: Batumi|グルジア：バトゥミ
-Value=85;Georgia: Tbilisi|Géorgie: Tbilissi|グルジア：トビリシ
-Value=86;Germany: Baden-Baden|Allemagne: Baden-Baden|ドイツ：バーデンバーデン
-Value=87;Germany: Berlin|Allemagne: Berlin|ドイツ：ベルリン
-Value=88;Germany: Dachau|Allemagne: Dachau|ドイツ：ダッハウ
-Value=89;Germany: Düsseldorf|Allemagne: Düsseldorf|ドイツ：デュッセルドルフ
-Value=90;Germany: Frankfurt|Allemagne: Francfort|ドイツ：フランクフルト
-Value=91;Germany: Icking|Allemagne: Icking|ドイツ：Ickingの
-Value=92;Germany: Kelsterbach|Allemagne: Kelsterbach|ドイツ：ケルステルバッハ
-Value=93;Germany: Munich|Allemagne: Munich|ドイツ：ミュンヘン
-Value=94;Germany: Nuremberg|Allemagne: Nuremberg|ドイツ：ニュルンベルク
-Value=95;Germany: St. Goar|Allemagne: St. Goar|ドイツ：聖ゴアール
-Value=96;Ghana: Accra||ガーナ：アクラ
-Value=97;Honduras: Copán Ruinas||ホンジュラス：コパンルイナス
-Value=98;Honduras: La Guama||ホンジュラス：ラGuamaの
-Value=99;Honduras: San Juan||ホンジュラス：サンファン
-Value=100;Honduras: San Pedro Sula||ホンジュラス：サンペドロスラ
-Value=101;Hong Kong: Hong Kong||香港：香港
-Value=102;Hungary: Budapest|Hongrie: Budapest|ハンガリー：ブダペスト
-Value=103;Hungary: Eger|Hongrie: Eger|ハンガリー：エゲル
-Value=104;India: Delhi|Inde: Delhi|インド：デリー
-Value=105;India: Kolkata|Inde: Kolkata|インド：コルカタ
-Value=106;India: Mumbai|Inde: Mumbai|インド：ムンバイ
-Value=107;Ireland: Dublin|Irlande: Dublin|アイルランド：ダブリン
-Value=108;Italy: Agrigento|Italie: Agrigente|イタリア：アグリジェント
-Value=109;Italy: Bergamo|Italie: Bergamo|イタリア：ベルガモ
-Value=110;Italy: Catania|Italie: Catane|イタリア：カタニア
-Value=111;Italy: Florence|Italie: Florence|イタリア：フィレンツェ
-Value=112;Italy: Marghera|Italie: Marghera|イタリア：マルゲーラ
-Value=113;Italy: Milan|Italie: Milan|イタリア：ミラノ
-Value=114;Italy: Milazzo|Italie: Milazzo|イタリア：ミラッツォ
-Value=115;Italy: Rome|Italie: Rome|イタリア：ローマ
-Value=116;Italy: Siracusa|Italie: Siracusa|イタリア：シラクーサ
-Value=117;Italy: Trieste|Italie: Trieste|イタリア：トリエステ
-Value=118;Italy: Venice|Italie: Venise|イタリア：ヴェネツィア
-Value=119;Italy: Verona|Italie: Vérone|イタリア：ベローナ
-Value=120;Jamaica: Irish Town|Jamaïque: Irish Town|ジャマイカ：アイルランドタウン
-Value=121;Jamaica: Kingston|Jamaïque: Kingston|ジャマイカ：キングストン
-Value=122;Japan: Aso|Japon: Aso|日本：阿蘇
-Value=123;Japan: Hiroshima|Japon: Hiroshima|日本：広島
-Value=124;Japan: Kagoshima|Japon: Kagoshima|日本：鹿児島
-Value=125;Japan: Kyoto|Japon: Kyoto|日本：京都
-Value=126;Japan: Narita|Japon: Narita|日本：成田
-Value=127;Japan: Ono|Japon: Ono|日本：小野
-Value=128;Japan: Tokyo||日本：東京
-Value=129;Jordan: Al Jiza|Jordanie: Al Jiza|ヨルダン：アルJiza
-Value=130;Jordan: Amman|Jordanie: Amman|ヨルダン：アンマン
-Value=131;Kenya: Keekorok||ケニア：キーコロック
-Value=132;Kenya: Kichwa Tembo||ケニア：Kichwaテンボ
-Value=133;Kenya: Masai Mara||ケニア：マサイマラ
-Value=134;Kenya: Mombasa||ケニア：モンバサ
-Value=135;Kenya: Nairobi||ケニア：ナイロビ
-Value=136;Kenya: Oloolaimutia||ケニア：Oloolaimutia
-Value=137;Korea (North): Pyongyang|Corée (Nord): Pyongyang|韓国（北）：平壌
-Value=138;Korea (South): Busan|Corée (du Sud): Busan|韓国（南）：釜山
-Value=139;Korea (South): Incheon|Corée (du Sud): Incheon|韓国（南）：仁川
-Value=140;Korea (South): Seoul|Corée (du Sud): Séoul|大韓民国：ソウル
-Value=141;Kuwait: Kuwait City|Koweït: Koweït|クウェート：クウェートシティ
-Value=142;Latvia: Riga|Lettonie: Riga|ラトビア：リガ
-Value=143;Lebanon: Beirut|Liban: Beyrouth|レバノン：ベイルート
-Value=144;Lebanon: Byblos|Liban: Byblos|レバノン：ビブロス
-Value=145;Liberia: Monrovia||リベリア：モンロビア
-Value=146;Lithuania: Siauliai|Lituanie: Siauliai|リトアニア：シャウレイ
-Value=147;Lithuania: Vilnius|Lituanie: Vilnius|リトアニア：ビリニュス
-Value=148;Mexico: Alisitos|Mexique: Alisitos|メキシコ：Alisitos
-Value=149;Mexico: Rosarito|Mexique: Rosarito|メキシコ：ロザリト
-Value=150;Mongolia: Gun-Galuut Nature Reserve|Réserve naturelle de Gun-Galuut: Mongolie|モンゴル：ガン-Galuut自然保護区
-Value=151;Mongolia: Hustai National Park|Mongolie: Hustai National Park|モンゴル：フスタイ国立公園
-Value=152;Mongolia: Ulaanbaatar|Mongolie: Oulan-Bator|モンゴル：ウランバートル
-Value=153;Montenegro: Bjelopavlići Plain|Monténégro: plaine de Bjelopavlici|モンテネグロ：Bjelopavlići平野
-Value=154;Montenegro: Dražin vrt|Monténégro: Drazin vrt|モンテネグロ：DražinVRT
-Value=155;Montenegro: Igalo|Monténégro: Igalo|モンテネグロ：イガロ
-Value=156;Montenegro: Podgorica|Monténégro: Podgorica|モンテネグロ：ポドゴリツァ
-Value=157;Montenegro: Rose|Monténégro: Rose|モンテネグロ：ローズ
-Value=158;Montenegro: Stari Bar|Monténégro: Stari Bar|モンテネグロ：スタリバー
-Value=159;Mozambique: Maputo||モザンビーク：マプト
-Value=160;Myanmar: Bagan||ミャンマー：バガン
-Value=161;Myanmar: Heho||ミャンマー：ヘホー
-Value=162;Myanmar: Mandalay||ミャンマー：マンダレー
-Value=163;Myanmar: Nyaung Shwe||ミャンマー：ニャウンシュエ
-Value=164;Myanmar: Nyaung U||ミャンマー：Nyaung U
-Value=165;Myanmar: Yangon||ミャンマー：ヤンゴン
-Value=166;Namibia: Lüderitz|Namibie: Lüderitz|ナミビア：リュデリッツ
-Value=167;Namibia: Oranjemund|Namibie: Oranjemund|ナミビア：Oranjemund
-Value=168;Namibia: Swakopmund|Namibie: Swakopmund|ナミビア：スワコプムンド
-Value=169;Namibia: Windhoek|Namibie: Windhoek|ナミビア：ウィントフック
-Value=170;Nepal: Kathmandu|Népal: Katmandou|ネパール：カトマンズ
-Value=171;Netherlands: Amsterdam|Pays-Bas: Amsterdam|オランダ：アムステルダム
-Value=172;Norway: Oslo|Norvège: Oslo|ノルウェー：オスロ
-Value=173;Panama: Carti||パナマ：Carti
-Value=174;Panama: El Valle De Anton||パナマ：エルバレデアントン
-Value=175;Panama: Panama City||パナマ：パナマシティ
-Value=176;Panama: San Carlos||パナマ：サンカルロス
-Value=177;Paraguay: Asunción||パラグアイ：アスンシオン
-Value=178;Paraguay: Caazapá||パラグアイ：カーサパ
-Value=179;Paraguay: Encarnación||パラグアイ：エンカルナシオン
-Value=180;Poland: Krakow|Pologne: Cracovie|ポーランド：クラクフ
-Value=181;Poland: Warsaw|Pologne: Varsovie|ポーランド：ワルシャワ
-Value=182;Qatar: Doha||カタール：ドーハ
-Value=183;Romania: Bucharest|Roumanie: Bucarest|ルーマニア：ブカレスト
-Value=184;Russia: Bol'shoye Goloustnoye|Russie: Bol'shoye Goloustnoye|ロシア：Bol'shoye Goloustnoye
-Value=185;Russia: Moscow|Russie: Moscou|ロシア：モスクワ
-Value=186;Russia: Saint Petersburg|Russie: Saint-Pétersbourg|ロシア：サンクトペテルブルク
-Value=187;Senegal: Dakar|Sénégal: Dakar|セネガル：ダカール
-Value=188;Serbia: Belgrade|Serbie: Belgrade|セルビア：ベオグラード
-Value=189;Singapore: Singapore|Singapour: Singapour|シンガポール：シンガポール
-Value=190;Slovakia: Bratislava|Slovaquie: Bratislava|スロバキア：ブラチスラバ
-Value=191;Slovenia: Ljubljana|Slovénie: Ljubljana|スロベニア：リュブリャナ
-Value=192;South Africa: Cape Town|Afrique du Sud: Le Cap|南アフリカ：ケープタウン
-Value=193;South Africa: Johannesburg|Afrique du Sud: Johannesburg|南アフリカ：ヨハネスブルグ
-Value=194;Spain: Madrid|Espagne: Madrid|スペイン：マドリード
-Value=195;Sweden: Gothenburg|Suède: Göteborg|スウェーデン：ヨーテボリ
-Value=196;Sweden: Stockholm|Suède: Stockholm|スウェーデン：ストックホルム
-Value=197;Sweden: Trollhättan|Suède: Trollhättan|スウェーデン：トロルヘッタン
-Value=198;Switzerland: Allmendingen|Suisse: Allmendingen|スイス：Allmendingen
-Value=199;Switzerland: Brunnen|Suisse: Brunnen|スイス：ブルンネン
-Value=200;Switzerland: Eggiwil|Suisse: Eggiwil|スイス：Eggiwilの
-Value=201;Switzerland: Geneva|Suisse: Genève|スイス：ジュネーブ
-Value=202;Switzerland: Interlaken|Suisse: Interlaken|スイス：インターラーケン
-Value=203;Switzerland: Melchtal|Suisse: Melchtal|スイス：Melchtal
-Value=204;Switzerland: Rümlang|Suisse: Rümlang|スイス：リュムランク
-Value=205;Switzerland: Thielle|Suisse: Thielle|スイス：ティーレ
-Value=206;Switzerland: Welschenrohr|Suisse: Welschenrohr|スイス：ヴェルシェンロール
-Value=207;Switzerland: Zürich|Suisse: Zürich|スイス：チューリッヒ
-Value=208;Tajikistan: Dushanbe|Tadjikistan: Douchanbé|タジキスタン：ドゥシャンベ
-Value=209;Tajikistan: Gharm|Tadjikistan: Gharm|タジキスタン：Gharm
-Value=210;Tajikistan: Kulob|Tadjikistan: Kulob|タジキスタン：クリャーブ
-Value=211;Thailand: Bangkok|Thaïlande: Bangkok|タイ：バンコク
-Value=212;Turkey: Bergama|Turquie: Bergama|トルコ：ベルガマ
-Value=213;Turkey: Bozcaada|Turquie: Bozcaada|トルコ：Bozcaadaの
-Value=214;Turkey: Çanakkale|Turquie: Çanakkale|トルコ：チャナッカレ
-Value=215;Turkey: Istanbul|Turquie: Istanbul|トルコ：イスタンブール
-Value=216;Turkey: Izmir|Turquie: Izmir|トルコ：イズミル
-Value=217;Turkey: Kayseri|Turquie: Kayseri|トルコ：カイセリ
-Value=218;Turkey: Uçhisar|Turquie: Uçhisar|トルコ：ウチヒサール
-Value=219;Ukraine: Kiev||ウクライナ：キエフ
-Value=220;Ukraine: Odessa||ウクライナ：オデッサ
-Value=221;Ukraine: Sevastopol|Ukraine: Sébastopol|ウクライナ：セヴァストポリ
-Value=222;United Arab Emirates: Abu Dhabi|Emirats Arabes Unis: Abu Dhabi|アラブ首長国連邦：アブダビ
-Value=223;United Arab Emirates: Dubai|Emirats Arabes Unis: Dubaï|アラブ首長国連邦：ドバイ
-Value=224;Vietnam: Ha Long Bay||ベトナム：ハロン湾
-Value=225;Vietnam: Hanoi||ベトナム：ハノイ
-Value=226;Vietnam: Ho Chi Minh City|Vietnam: Ho Chi Minh-Ville|ベトナム：ホーチミン市
-Value=227;Zambia: Livingstone|Zambie: Livingstone|ザンビア：リビングストン
-Value=228;Zambia: Lusaka|Zambie: Lusaka|ザンビア：ルサカ
-Value=229;Zimbabwe: Harare||ジンバブエ：ハラレ
-
-[Item]
-Label=Value Set Images|Valeur Set Images|値セットの画像
-Name=VALUE_SET_IMAGES
-Start=9
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Value Set Images|Valeur Set Images|値セットの画像
-Name=VALUE_SET_IMAGES_VS1
-Value=1;Jimmy Carter
-Image=.\Images\carter.jpg
-Value=2;George H.W. Bush
-Image=.\Images\bush_41.jpg
-Value=3;Bill Clinton
-Image=.\Images\clinton.jpg
-Value=4;George W. Bush
-Image=.\Images\bush_43.jpg
-
-[Item]
-Label=Dynamic Value Set with Images|Dynamique Valeur Set avec Images|イメージの設定動的な値
-Name=DYNAMIC_IMAGE_VALUE_SET
-Start=10
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Dynamic Value Set with Images|Dynamique Valeur Set avec Images|イメージの設定動的な値
-Name=DYNAMIC_IMAGE_VALUE_SET_VS1
-Value=1;Barack Obama
-Image=.\Images\obama.jpg
-
-[Item]
-Label=Multiple Languages|Plusieurs langues|多言語
-Name=MULTIPLE_LANGUAGES
-Start=11
-Len=1
-ZeroFill=Yes
-
-[ValueSet]
-Label=Multiple Languages|Plusieurs langues|多言語
-Name=MULTIPLE_LANGUAGES_VS1
-Value=1;Switch to English|Passer à l'anglais|英語に切り替え
-Value=2;Switch to French (Français)||フランス語に切り替え（フランス語）
-Value=3;Switch to Japanese (日本語)|Basculer vers Japonais (日本語)|（日本語）日本語に切り替え
-Value=4;Restart Program|Redémarrer le programme|再起動プログラム
-Value=5;Quit Program|Quittez Programme|プログラムを終了します
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "SHOWCASE_DICT", 
+  "languages": [
+    {
+      "name": "EN", 
+      "label": "English"
+    }, 
+    {
+      "name": "FR", 
+      "label": "French"
+    }, 
+    {
+      "name": "JP", 
+      "label": "Japanese"
+    }
+  ], 
+  "labels": [
+    {
+      "text": "CSPro 6.2.0 New Features Showcase", 
+      "language": "EN"
+    }, 
+    {
+      "text": "CSPro 6.2.0 Nouvelles fonctionnalités Showcase", 
+      "language": "FR"
+    }, 
+    {
+      "text": "CSPROは、新機能のショーケースを6.2.0", 
+      "language": "JP"
+    }
+  ], 
+  "security": {
+    "allowDataViewerModifications": false, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "1514450e3498d1a0ca7e044460b04d65b6029fd19c4808d48dcc10065f9c6b3e"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "SHOWCASE_LEVEL", 
+      "labels": [
+        {
+          "text": "CSPro 6.2.0 New Features Showcase", 
+          "language": "EN"
+        }, 
+        {
+          "text": "CSPro 6.2.0 Nouvelles fonctionnalités Showcase", 
+          "language": "FR"
+        }, 
+        {
+          "text": "CSPROは、新機能のショーケースを6.2.0", 
+          "language": "JP"
+        }
+      ], 
+      "ids": {
+        "items": [
+          {
+            "name": "SHOWCASE_ID", 
+            "labels": [
+              {
+                "text": "Showcase ID", 
+                "language": "EN"
+              }, 
+              {
+                "text": "ショーケースID", 
+                "language": "JP"
+              }
+            ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "SHOWCASE_REC", 
+          "labels": [
+            {
+              "text": "CSPro 6.2.0 New Features Showcase", 
+              "language": "EN"
+            }, 
+            {
+              "text": "CSPro 6.2.0 Nouvelles fonctionnalités Showcase", 
+              "language": "FR"
+            }, 
+            {
+              "text": "CSPROは、新機能のショーケースを6.2.0", 
+              "language": "JP"
+            }
+          ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "CONNECTION_FUNCTION", 
+              "labels": [
+                {
+                  "text": "Connection Function", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Fonction de connexion", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "接続機能", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CONNECTION_FUNCTION_VS1", 
+                  "labels": [
+                    {
+                      "text": "Connection Function", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Fonction de connexion", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "接続機能", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [
+                        {
+                          "text": "Continue", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Continuer", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "続けます", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "PROMPT_FUNCTION", 
+              "labels": [
+                {
+                  "text": "Prompt Function", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Fonction Prompt", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "プロンプト機能", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "PROMPT_FUNCTION_VS1", 
+                  "labels": [
+                    {
+                      "text": "Prompt Function", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Fonction Prompt", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "プロンプト機能", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [
+                        {
+                          "text": "Password Protected", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Mot de passe protégé", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "パスワード保護", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Numeric", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Numérique", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "数値の", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Multiline", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Multiligne", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "複数行", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Continue", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Continuer", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "続けます", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "CUSTOM_ERROR_MESSAGE", 
+              "labels": [
+                {
+                  "text": "Custom Error Message", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Message d'erreur personnalisé", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "カスタムエラーメッセージ", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "CUSTOM_ERROR_MESSAGE_VS1", 
+                  "labels": [
+                    {
+                      "text": "Custom Error Message", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Message d'erreur personnalisé", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "カスタムエラーメッセージ", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [
+                        {
+                          "text": "Valid Values", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Valeurs valides", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "有効な値", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "0" }, { "value": "2" }, { "value": "4" }, { "value": "6" }, { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ENHANCED_EXTENDED_CONTROLS", 
+              "labels": [
+                {
+                  "text": "Enhanced Extended Controls", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Contrôles étendus améliorées", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "強化された拡張コントロール", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "ENHANCED_EXTENDED_CONTROLS_VS1", 
+                  "labels": [
+                    {
+                      "text": "Enhanced Extended Controls", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Contrôles étendus améliorées", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "強化された拡張コントロール", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [
+                        {
+                          "text": "Armenia: Goris", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Arménie: Goris", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "アルメニア：ゴリス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Armenia: Yerevan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Arménie: Erevan", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "アルメニア：エレバン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Austria: Schwechat", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Autriche: Schwechat", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "オーストリア：シュベッヒャート", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Austria: Spitz", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Autriche: Spitz", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "オーストリア：スピッツ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Austria: Traunkirchen", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Autriche: Traunkirchen", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "オーストリア：トロンカーシェン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Austria: Vienna", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Autriche: Vienne", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "オーストリア：ウィーン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Bangladesh: Dhaka", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "バングラデシュ：ダッカ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Bangladesh: Srimongol", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "バングラデシュ：Srimongol", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Belgium: Brussels", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Belgique: Bruxelles", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ベルギー：ブリュッセル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Bosnia and Herzegovina: Mostar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Bosnie-Herzégovine: Mostar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ボスニア·ヘルツェゴビナ：モスタル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Bosnia and Herzegovina: Sarajevo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Bosnie-Herzégovine: Sarajevo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ボスニア·ヘルツェゴビナ：サラエボ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Belo Horizonte", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Belo Horizonte", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：ベロオリゾンテ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Cardeal Mota", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Cardeal Mota", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：地下鉄Cardealモタ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Contagem", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Contagem", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：コンタージェン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Curitiba", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Curitiba", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：クリティバ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "15" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Foz do Iguaçu", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Foz do Iguaçu", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：フォス·ド·イグアス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "16" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Morretes", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Morretes", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：Morretes", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "17" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Ouro Prêto", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Ouro Preto", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：オーロプレト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "18" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: Rio de Janeiro", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: Rio de Janeiro", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：リオデジャネイロ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "19" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Brazil: São Paulo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Brésil: São Paulo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ブラジル：サンパウロ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Burundi: Bujumbura", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ブルンジ：ブジュンブラ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Cambodia: Battambang", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Cambodge: Battambang", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "カンボジア：バッタンバン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Cambodia: Kep", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Cambodge: Kep", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "カンボジア：ケップ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "23" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Cambodia: Phnom Penh", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Cambodge: Phnom Penh", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "カンボジア：プノンペン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "24" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Cambodia: Siem Reap", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Cambodge: Siem Reap", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "カンボジア：シェムリアップ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "25" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Canada: Montreal", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Canada: Montréal", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "カナダ：モントリオール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "26" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Canada: Ottawa", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "カナダ：オタワ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "27" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Canada: Québec City", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Canada: Québec", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "カナダ：ケベック", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "28" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Canada: Toronto", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "カナダ：トロント", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "29" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Chad: Mongo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Tchad: Mongo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "チャド：モンゴ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "30" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Chad: N'Djamena", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Tchad: N'Djamena", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "チャド：ンジャメナ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "31" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Chad: Zakouma", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Tchad: Zakouma", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "チャド：Zakouma", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "32" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Beijing", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Pékin", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：北京", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "33" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Changzhou", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Changzhou", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：常州", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "34" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Chengde", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Chengde", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：承徳", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "35" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Chengdu", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Chengdu", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：成都", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "36" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Guangzhou", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Guangzhou", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：広州", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "37" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Guilin", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Guilin", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：桂林", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "38" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Jilihe", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Jilihe", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：Jilihe", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "39" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Jiuzhaigou", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Jiuzhaigou", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：九寨溝", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "40" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Kaifeng", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Kaifeng", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：開封", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "41" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Kunming", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Kunming", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：昆明", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "42" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Luoyang", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Luoyang", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：洛陽", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "43" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Nanjing", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Nanjing", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：南京", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "44" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Nanning", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Nanning", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：南寧", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "45" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Qingdao", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Qingdao", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：青島", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "46" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Shanghai", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Shanghai", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：上海", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "47" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Shanhaiguan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Shanhaiguan", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：山海関", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "48" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Songpan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Songpan", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：松潘", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "49" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Tai'an", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Tai'an", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：泰安市", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "50" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Tianjin", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Tianjin", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：天津", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "51" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Xi'an", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Xi'an", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：西安", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "52" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Xuzhou", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Xuzhou", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：徐州", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "53" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "China: Yangshuo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Chine: Yangshuo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "中国：陽朔", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "54" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Croatia: Cavtat", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Croatie: Cavtat", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "クロアチア：ツァブタット", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "55" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Croatia: Dubrovnik", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Croatie: Dubrovnik", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "クロアチア：ドブロブニク", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "56" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Croatia: Split", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Croatie: Split", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "クロアチア：スプリット", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "57" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Croatia: Székesfehérvár", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Croatie: Székesfehérvár", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "クロアチア：セーケシュフェヘールヴァール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "58" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Croatia: Zagreb", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Croatie: Zagreb", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "クロアチア：ザグレブ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "59" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Cuba: Havana", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Cuba: La Havane", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "キューバ：ハバナ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "60" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Czech Republic: Cesky Krumlov", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "République tchèque: Cesky Krumlov", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "チェコ共和国：チェスキークルムロフ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "61" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Czech Republic: Prague", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "République tchèque: Prague", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "チェコ共和国プラハ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "62" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Denmark: Copenhagen", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Danemark: Copenhague", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "デンマーク：コペンハーゲン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "63" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Denmark: Kastrup", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Danemark: Kastrup", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "デンマーク：カストロップ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "64" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Djibouti: Djibouti", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ジブチ：ジブチ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "65" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "El Salvador: El Tunco", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "エルサルバドル：エルTunco", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "66" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "El Salvador: San Salvador", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "エルサルバドル：サンサルバドル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "67" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "El Salvador: Suchitoto", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "エルサルバドル：スチトト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "68" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "England: London", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Angleterre: Londres", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イングランド：ロンドン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "69" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "England: Manchester", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Angleterre: Manchester", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イングランド：マンチェスター", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "70" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Estonia: Kuressaare", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Estonie: Kuressaare", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エストニア：クレッサーレ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "71" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Estonia: Tallinn", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Estonie: Tallinn", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エストニア：タリン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "72" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ethiopia: Addis Ababa", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Ethiopie: Addis Abeba", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エチオピア：アディスアベバ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "73" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ethiopia: Bahir Dar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Ethiopie: Bahir Dar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エチオピア：Bahirダル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "74" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ethiopia: Dire Dawa", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Ethiopie: Dire Dawa", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エチオピア：ディレダワ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "75" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ethiopia: Gondar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Ethiopie: Gondar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エチオピア：ゴンダール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "76" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ethiopia: Lalibela", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Ethiopie: Lalibela", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "エチオピア：ラリベラ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "77" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Finland: Helsinki", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Finlande: Helsinki", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "フィンランド：ヘルシンキ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "78" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "France: Aix-en-Provence", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "フランス：エクス·アン·プロヴァンス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "79" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "France: Arles", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "フランス：アルル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "80" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "France: Cap d'Ail", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "フランス：キャップデゥアリ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "81" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "France: Nice", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "France: de Nice", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "フランス：ニース", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "82" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "France: Paris", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "フランス：パリ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "83" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Georgia: Batumi", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Géorgie: Batumi", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "グルジア：バトゥミ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "84" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Georgia: Tbilisi", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Géorgie: Tbilissi", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "グルジア：トビリシ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "85" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Baden-Baden", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Baden-Baden", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：バーデンバーデン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "86" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Berlin", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Berlin", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：ベルリン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "87" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Dachau", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Dachau", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：ダッハウ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "88" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Düsseldorf", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Düsseldorf", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：デュッセルドルフ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "89" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Frankfurt", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Francfort", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：フランクフルト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "90" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Icking", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Icking", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：Ickingの", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "91" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Kelsterbach", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Kelsterbach", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：ケルステルバッハ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "92" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Munich", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Munich", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：ミュンヘン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "93" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: Nuremberg", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: Nuremberg", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：ニュルンベルク", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "94" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Germany: St. Goar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Allemagne: St. Goar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ドイツ：聖ゴアール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "95" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ghana: Accra", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ガーナ：アクラ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "96" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Honduras: Copán Ruinas", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ホンジュラス：コパンルイナス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "97" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Honduras: La Guama", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ホンジュラス：ラGuamaの", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "98" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Honduras: San Juan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ホンジュラス：サンファン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Honduras: San Pedro Sula", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ホンジュラス：サンペドロスラ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "100" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Hong Kong: Hong Kong", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "香港：香港", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "101" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Hungary: Budapest", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Hongrie: Budapest", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ハンガリー：ブダペスト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "102" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Hungary: Eger", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Hongrie: Eger", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ハンガリー：エゲル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "103" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "India: Delhi", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Inde: Delhi", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "インド：デリー", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "104" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "India: Kolkata", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Inde: Kolkata", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "インド：コルカタ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "105" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "India: Mumbai", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Inde: Mumbai", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "インド：ムンバイ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "106" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ireland: Dublin", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Irlande: Dublin", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "アイルランド：ダブリン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "107" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Agrigento", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Agrigente", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：アグリジェント", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "108" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Bergamo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Bergamo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：ベルガモ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "109" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Catania", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Catane", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：カタニア", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "110" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Florence", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Florence", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：フィレンツェ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "111" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Marghera", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Marghera", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：マルゲーラ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "112" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Milan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Milan", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：ミラノ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "113" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Milazzo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Milazzo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：ミラッツォ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "114" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Rome", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Rome", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：ローマ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "115" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Siracusa", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Siracusa", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：シラクーサ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "116" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Trieste", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Trieste", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：トリエステ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "117" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Venice", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Venise", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：ヴェネツィア", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "118" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Italy: Verona", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Italie: Vérone", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "イタリア：ベローナ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "119" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Jamaica: Irish Town", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Jamaïque: Irish Town", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ジャマイカ：アイルランドタウン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "120" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Jamaica: Kingston", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Jamaïque: Kingston", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ジャマイカ：キングストン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "121" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Aso", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Japon: Aso", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "日本：阿蘇", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "122" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Hiroshima", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Japon: Hiroshima", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "日本：広島", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "123" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Kagoshima", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Japon: Kagoshima", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "日本：鹿児島", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "124" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Kyoto", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Japon: Kyoto", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "日本：京都", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "125" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Narita", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Japon: Narita", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "日本：成田", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "126" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Ono", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Japon: Ono", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "日本：小野", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "127" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Japan: Tokyo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "日本：東京", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "128" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Jordan: Al Jiza", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Jordanie: Al Jiza", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ヨルダン：アルJiza", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "129" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Jordan: Amman", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Jordanie: Amman", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ヨルダン：アンマン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "130" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kenya: Keekorok", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ケニア：キーコロック", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "131" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kenya: Kichwa Tembo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ケニア：Kichwaテンボ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "132" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kenya: Masai Mara", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ケニア：マサイマラ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "133" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kenya: Mombasa", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ケニア：モンバサ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "134" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kenya: Nairobi", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ケニア：ナイロビ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "135" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kenya: Oloolaimutia", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ケニア：Oloolaimutia", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "136" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Korea (North): Pyongyang", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Corée (Nord): Pyongyang", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "韓国（北）：平壌", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "137" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Korea (South): Busan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Corée (du Sud): Busan", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "韓国（南）：釜山", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "138" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Korea (South): Incheon", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Corée (du Sud): Incheon", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "韓国（南）：仁川", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "139" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Korea (South): Seoul", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Corée (du Sud): Séoul", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "大韓民国：ソウル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "140" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Kuwait: Kuwait City", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Koweït: Koweït", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "クウェート：クウェートシティ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "141" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Latvia: Riga", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Lettonie: Riga", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ラトビア：リガ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "142" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Lebanon: Beirut", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Liban: Beyrouth", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "レバノン：ベイルート", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "143" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Lebanon: Byblos", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Liban: Byblos", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "レバノン：ビブロス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "144" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Liberia: Monrovia", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "リベリア：モンロビア", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "145" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Lithuania: Siauliai", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Lituanie: Siauliai", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "リトアニア：シャウレイ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "146" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Lithuania: Vilnius", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Lituanie: Vilnius", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "リトアニア：ビリニュス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "147" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Mexico: Alisitos", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Mexique: Alisitos", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "メキシコ：Alisitos", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "148" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Mexico: Rosarito", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Mexique: Rosarito", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "メキシコ：ロザリト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "149" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Mongolia: Gun-Galuut Nature Reserve", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Réserve naturelle de Gun-Galuut: Mongolie", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンゴル：ガン-Galuut自然保護区", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "150" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Mongolia: Hustai National Park", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Mongolie: Hustai National Park", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンゴル：フスタイ国立公園", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "151" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Mongolia: Ulaanbaatar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Mongolie: Oulan-Bator", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンゴル：ウランバートル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "152" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Montenegro: Bjelopavlići Plain", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Monténégro: plaine de Bjelopavlici", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンテネグロ：Bjelopavlići平野", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "153" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Montenegro: Dražin vrt", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Monténégro: Drazin vrt", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンテネグロ：DražinVRT", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "154" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Montenegro: Igalo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Monténégro: Igalo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンテネグロ：イガロ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "155" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Montenegro: Podgorica", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Monténégro: Podgorica", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンテネグロ：ポドゴリツァ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "156" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Montenegro: Rose", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Monténégro: Rose", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンテネグロ：ローズ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "157" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Montenegro: Stari Bar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Monténégro: Stari Bar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "モンテネグロ：スタリバー", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "158" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Mozambique: Maputo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "モザンビーク：マプト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "159" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Myanmar: Bagan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ミャンマー：バガン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "160" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Myanmar: Heho", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ミャンマー：ヘホー", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "161" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Myanmar: Mandalay", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ミャンマー：マンダレー", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "162" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Myanmar: Nyaung Shwe", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ミャンマー：ニャウンシュエ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "163" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Myanmar: Nyaung U", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ミャンマー：Nyaung U", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "164" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Myanmar: Yangon", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ミャンマー：ヤンゴン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "165" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Namibia: Lüderitz", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Namibie: Lüderitz", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ナミビア：リュデリッツ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "166" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Namibia: Oranjemund", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Namibie: Oranjemund", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ナミビア：Oranjemund", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "167" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Namibia: Swakopmund", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Namibie: Swakopmund", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ナミビア：スワコプムンド", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "168" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Namibia: Windhoek", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Namibie: Windhoek", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ナミビア：ウィントフック", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "169" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Nepal: Kathmandu", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Népal: Katmandou", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ネパール：カトマンズ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "170" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Netherlands: Amsterdam", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Pays-Bas: Amsterdam", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "オランダ：アムステルダム", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "171" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Norway: Oslo", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Norvège: Oslo", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ノルウェー：オスロ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "172" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Panama: Carti", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パナマ：Carti", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "173" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Panama: El Valle De Anton", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パナマ：エルバレデアントン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "174" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Panama: Panama City", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パナマ：パナマシティ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "175" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Panama: San Carlos", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パナマ：サンカルロス", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "176" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Paraguay: Asunción", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パラグアイ：アスンシオン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "177" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Paraguay: Caazapá", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パラグアイ：カーサパ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "178" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Paraguay: Encarnación", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "パラグアイ：エンカルナシオン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "179" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Poland: Krakow", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Pologne: Cracovie", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ポーランド：クラクフ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "180" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Poland: Warsaw", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Pologne: Varsovie", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ポーランド：ワルシャワ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "181" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Qatar: Doha", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "カタール：ドーハ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "182" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Romania: Bucharest", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Roumanie: Bucarest", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ルーマニア：ブカレスト", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "183" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Russia: Bol'shoye Goloustnoye", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Russie: Bol'shoye Goloustnoye", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ロシア：Bol'shoye Goloustnoye", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "184" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Russia: Moscow", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Russie: Moscou", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ロシア：モスクワ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "185" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Russia: Saint Petersburg", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Russie: Saint-Pétersbourg", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ロシア：サンクトペテルブルク", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "186" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Senegal: Dakar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Sénégal: Dakar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "セネガル：ダカール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "187" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Serbia: Belgrade", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Serbie: Belgrade", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "セルビア：ベオグラード", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "188" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Singapore: Singapore", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Singapour: Singapour", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "シンガポール：シンガポール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "189" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Slovakia: Bratislava", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Slovaquie: Bratislava", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スロバキア：ブラチスラバ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "190" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Slovenia: Ljubljana", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Slovénie: Ljubljana", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スロベニア：リュブリャナ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "191" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "South Africa: Cape Town", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Afrique du Sud: Le Cap", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "南アフリカ：ケープタウン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "192" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "South Africa: Johannesburg", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Afrique du Sud: Johannesburg", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "南アフリカ：ヨハネスブルグ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "193" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Spain: Madrid", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Espagne: Madrid", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スペイン：マドリード", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "194" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Sweden: Gothenburg", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suède: Göteborg", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スウェーデン：ヨーテボリ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "195" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Sweden: Stockholm", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suède: Stockholm", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スウェーデン：ストックホルム", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "196" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Sweden: Trollhättan", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suède: Trollhättan", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スウェーデン：トロルヘッタン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "197" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Allmendingen", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Allmendingen", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：Allmendingen", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "198" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Brunnen", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Brunnen", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：ブルンネン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "199" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Eggiwil", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Eggiwil", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：Eggiwilの", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "200" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Geneva", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Genève", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：ジュネーブ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "201" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Interlaken", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Interlaken", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：インターラーケン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "202" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Melchtal", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Melchtal", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：Melchtal", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "203" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Rümlang", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Rümlang", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：リュムランク", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "204" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Thielle", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Thielle", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：ティーレ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "205" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Welschenrohr", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Welschenrohr", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：ヴェルシェンロール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "206" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switzerland: Zürich", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Suisse: Zürich", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "スイス：チューリッヒ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "207" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Tajikistan: Dushanbe", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Tadjikistan: Douchanbé", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "タジキスタン：ドゥシャンベ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "208" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Tajikistan: Gharm", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Tadjikistan: Gharm", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "タジキスタン：Gharm", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "209" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Tajikistan: Kulob", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Tadjikistan: Kulob", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "タジキスタン：クリャーブ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "210" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Thailand: Bangkok", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Thaïlande: Bangkok", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "タイ：バンコク", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "211" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Bergama", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Bergama", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：ベルガマ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "212" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Bozcaada", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Bozcaada", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：Bozcaadaの", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "213" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Çanakkale", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Çanakkale", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：チャナッカレ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "214" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Istanbul", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Istanbul", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：イスタンブール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "215" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Izmir", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Izmir", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：イズミル", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "216" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Kayseri", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Kayseri", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：カイセリ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "217" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Turkey: Uçhisar", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Turquie: Uçhisar", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "トルコ：ウチヒサール", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "218" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ukraine: Kiev", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ウクライナ：キエフ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "219" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ukraine: Odessa", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ウクライナ：オデッサ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "220" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Ukraine: Sevastopol", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Ukraine: Sébastopol", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ウクライナ：セヴァストポリ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "221" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "United Arab Emirates: Abu Dhabi", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Emirats Arabes Unis: Abu Dhabi", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "アラブ首長国連邦：アブダビ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "222" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "United Arab Emirates: Dubai", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Emirats Arabes Unis: Dubaï", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "アラブ首長国連邦：ドバイ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "223" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Vietnam: Ha Long Bay", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ベトナム：ハロン湾", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "224" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Vietnam: Hanoi", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ベトナム：ハノイ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "225" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Vietnam: Ho Chi Minh City", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Vietnam: Ho Chi Minh-Ville", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ベトナム：ホーチミン市", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "226" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Zambia: Livingstone", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Zambie: Livingstone", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ザンビア：リビングストン", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "227" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Zambia: Lusaka", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Zambie: Lusaka", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "ザンビア：ルサカ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "228" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Zimbabwe: Harare", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "ジンバブエ：ハラレ", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "229" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "VALUE_SET_IMAGES", 
+              "labels": [
+                {
+                  "text": "Value Set Images", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Valeur Set Images", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "値セットの画像", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "VALUE_SET_IMAGES_VS1", 
+                  "labels": [
+                    {
+                      "text": "Value Set Images", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Valeur Set Images", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "値セットの画像", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Jimmy Carter" } ], 
+                      "image": "Images/carter.jpg", 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "George H.W. Bush" } ], 
+                      "image": "Images/bush_41.jpg", 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bill Clinton" } ], 
+                      "image": "Images/clinton.jpg", 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "George W. Bush" } ], 
+                      "image": "Images/bush_43.jpg", 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "DYNAMIC_IMAGE_VALUE_SET", 
+              "labels": [
+                {
+                  "text": "Dynamic Value Set with Images", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Dynamique Valeur Set avec Images", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "イメージの設定動的な値", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "DYNAMIC_IMAGE_VALUE_SET_VS1", 
+                  "labels": [
+                    {
+                      "text": "Dynamic Value Set with Images", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Dynamique Valeur Set avec Images", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "イメージの設定動的な値", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Barack Obama" } ], 
+                      "image": "Images/obama.jpg", 
+                      "pairs": [ { "value": "1" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "MULTIPLE_LANGUAGES", 
+              "labels": [
+                {
+                  "text": "Multiple Languages", 
+                  "language": "EN"
+                }, 
+                {
+                  "text": "Plusieurs langues", 
+                  "language": "FR"
+                }, 
+                {
+                  "text": "多言語", 
+                  "language": "JP"
+                }
+              ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "MULTIPLE_LANGUAGES_VS1", 
+                  "labels": [
+                    {
+                      "text": "Multiple Languages", 
+                      "language": "EN"
+                    }, 
+                    {
+                      "text": "Plusieurs langues", 
+                      "language": "FR"
+                    }, 
+                    {
+                      "text": "多言語", 
+                      "language": "JP"
+                    }
+                  ], 
+                  "values": [
+                    {
+                      "labels": [
+                        {
+                          "text": "Switch to English", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Passer à l'anglais", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "英語に切り替え", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switch to French (Français)", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "フランス語に切り替え（フランス語）", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Switch to Japanese (日本語)", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Basculer vers Japonais (日本語)", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "（日本語）日本語に切り替え", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Restart Program", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Redémarrer le programme", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "再起動プログラム", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [
+                        {
+                          "text": "Quit Program", 
+                          "language": "EN"
+                        }, 
+                        {
+                          "text": "Quittez Programme", 
+                          "language": "FR"
+                        }, 
+                        {
+                          "text": "プログラムを終了します", 
+                          "language": "JP"
+                        }
+                      ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

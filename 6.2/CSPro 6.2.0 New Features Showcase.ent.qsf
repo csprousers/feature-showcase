@@ -1,190 +1,174 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 6.2
-
-[LANGUAGES]
-EN=English
-FR=French
-JP=Japanese
-
-[QUESTION]
-Field=SHOWCASE_DICT.CONNECTION_FUNCTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 The \b connection\b0  function displays information about whether the device is connected to a system that allows for Internet access. The function does not guarantee that there is Internet access:\par
-EN=\par
-EN=connection() = \b %capiTextConnection%\b0\par
-EN=connection(wifi) = \b %capiTextConnectionWifi%\par
-EN=\b0 connection(mobile) = \b %capiTextConnectionMobile%\par
-EN=\b0\par
-EN=(The optional parameters are ignored on Windows.)\b\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FR={\colortbl ;\red0\green0\blue0;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-FR=\pard\cf1\fs24 La fonction de \b connection\b0  affiche des informations pour savoir si l'appareil est connect\'e9 \'e0 un syst\'e8me qui permet l'acc\'e8s \'e0 Internet. La fonction ne garantit pas qu'il y ait un acc\'e8s Internet:\par
-FR=\par
-FR=connection() = \b %capiTextConnection%\b0\par
-FR=connection(wifi) = \b %capiTextConnectionWifi%\par
-FR=\b0 connection(mobile) = \b %capiTextConnectionMobile%\par
-FR=\b0\par
-FR=(Les param\'e8tres optionnels sont ignor\'e9s sur Windows.)\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset128 Meiryo;}}
-JP={\colortbl ;\red0\green0\blue0;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\b\fs24 connection\b0\f1\'8b\'40\'94\'5c\'82\'cd\'81\'41\'83\'66\'83\'6f\'83\'43\'83\'58\'82\'aa\'83\'43\'83\'93\'83\'5e\'81\'5b\'83\'6c\'83\'62\'83\'67\'82\'c9\'83\'41\'83\'4e\'83\'5a\'83\'58\'82\'b7\'82\'e9\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'81\'41\'83\'56\'83\'58\'83\'65\'83\'80\'82\'c9\'90\'da\'91\'b1\'82\'b3\'82\'ea\'82\'c4\'82\'a2\'82\'e9\'82\'a9\'94\'db\'82\'a9\'82\'c9\'8a\'d6\'82\'b7\'82\'e9\'8f\'ee\'95\'f1\'82\'aa\'95\'5c\'8e\'a6\'82\'b3\'82\'ea\'82\'dc\'82\'b7\'81\'42\'8b\'40\'94\'5c\'82\'cd\'81\'41\'83\'43\'83\'93\'83\'5e\'81\'5b\'83\'6c\'83\'62\'83\'67\'83\'41\'83\'4e\'83\'5a\'83\'58\'82\'aa\'82\'a0\'82\'e9\'82\'b1\'82\'c6\'82\'f0\'95\'db\'8f\'d8\'82\'b7\'82\'e9\'82\'e0\'82\'cc\'82\'c5\'82\'cd\'82\'a0\'82\'e8\'82\'dc\'82\'b9\'82\'f1\'81\'42\par
-JP=\f0\par
-JP=connection() = \b %capiTextConnection%\b0\par
-JP=connection(wifi) = \b %capiTextConnectionWifi%\par
-JP=\b0 connection(mobile) = \b %capiTextConnectionMobile%\par
-JP=
-JP=\pard\b0\f1\par
-JP=\'81\'69\'83\'49\'83\'76\'83\'56\'83\'87\'83\'93\'82\'cc\'83\'70\'83\'89\'83\'81\'81\'5b\'83\'5e\'82\'cd\'81\'41\f0 Windows\f1\'8f\'e3\'82\'c5\'96\'b3\'8e\'8b\'82\'b3\'82\'ea\'82\'dc\'82\'b7\'81\'42\'81\'6a\f0\par
-JP=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.CUSTOM_ERROR_MESSAGE
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 There is a file containing error messages that CSEntry might display, CSProRuntime.mgf. If you create a copy of this file in the folder with your application, you can override these messages.\par
-EN=\line\b To see this, enter an odd number and try to continue. You will see a custom out-of-range message. To continue, enter an even number.\b0\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FR={\colortbl ;\red0\green0\blue0;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-FR=\pard\cf1\fs24 Il est un fichier contenant les messages d'erreur qui CSEntry pourrait afficher, CSProRuntime.mgf. Si vous cr\'e9ez une copie de ce fichier dans le dossier de votre application, vous pouvez remplacer ces messages.\par
-FR=\par
-FR=\b Pour le voir, saisir un nombre impair et essayer de continuer. Vous verrez un message personnalis\'e9 de-gamme. Pour continuer, entrez un nombre pair.\b0\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset128 Meiryo;}}
-JP={\colortbl ;\red0\green0\blue0;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\fs24 CSEntry\f1\'82\'cd\'81\'41\f0 CSProRuntime.mgf\f1\'82\'aa\'95\'5c\'8e\'a6\'82\'b3\'82\'ea\'82\'e9\'82\'b1\'82\'c6\'82\'aa\'82\'a0\'82\'e8\'82\'dc\'82\'b7\'83\'47\'83\'89\'81\'5b\'83\'81\'83\'62\'83\'5a\'81\'5b\'83\'57\'82\'f0\'8a\'dc\'82\'de\'83\'74\'83\'40\'83\'43\'83\'8b\'82\'aa\'82\'a0\'82\'e8\'82\'dc\'82\'b7\'81\'42\'82\'a0\'82\'c8\'82\'bd\'82\'aa\'82\'a0\'82\'c8\'82\'bd\'82\'cc\'83\'41\'83\'76\'83\'8a\'83\'50\'81\'5b\'83\'56\'83\'87\'83\'93\'82\'cc\'83\'74\'83\'48\'83\'8b\'83\'5f\'82\'c9\'82\'b1\'82\'cc\'83\'74\'83\'40\'83\'43\'83\'8b\'82\'cc\'83\'52\'83\'73\'81\'5b\'82\'f0\'8d\'ec\'90\'ac\'82\'b7\'82\'e9\'8f\'ea\'8d\'87\'81\'41\'82\'b1\'82\'ea\'82\'e7\'82\'cc\'83\'81\'83\'62\'83\'5a\'81\'5b\'83\'57\'82\'f0\'96\'b3\'8c\'f8\'82\'c9\'82\'b7\'82\'e9\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'82\'dc\'82\'b7\'81\'42\f0\par
-JP=\par
-JP=\b\f1\'82\'b1\'82\'ea\'82\'f0\'97\'9d\'89\'f0\'82\'b7\'82\'e9\'82\'bd\'82\'df\'82\'c9\'81\'41\'8a\'ef\'90\'94\'94\'d4\'8d\'86\'82\'f0\'93\'fc\'97\'cd\'82\'b5\'82\'c4\'91\'b1\'8d\'73\'82\'b5\'82\'c4\'82\'ad\'82\'be\'82\'b3\'82\'a2\'81\'42\'83\'4a\'83\'58\'83\'5e\'83\'80\'94\'cd\'88\'cd\'8a\'4f\'82\'cc\'83\'81\'83\'62\'83\'5a\'81\'5b\'83\'57\'82\'aa\'95\'5c\'8e\'a6\'82\'b3\'82\'ea\'82\'dc\'82\'b7\'81\'42\'91\'b1\'8d\'73\'82\'b7\'82\'e9\'82\'c9\'82\'cd\'81\'41\'8b\'f4\'90\'94\'94\'d4\'8d\'86\'82\'f0\'93\'fc\'97\'cd\'82\'b5\'82\'dc\'82\'b7\'81\'42\b0\f0\par
-JP=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.DYNAMIC_IMAGE_VALUE_SET
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 A new function, \b getimage\b0 , works in a similar way to the getlabel function, and can return the file name of a value set image. Additionally, the \b setvalueset\b0  function now takes an optional third parameter of a string array containing links to value set image file names. These functions were used to dynamically create a value set showing the current president as well as the former president you selected in the previous question.\par
-EN=\par
-EN=\b Do you prefer %capiTextPresident1% or your favorite living former president, %capiTextPresident2%?\b0\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FR={\colortbl ;\red0\green0\blue0;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-FR=\pard\cf1\fs24 Une nouvelle fonction, \b getimage\b0 , fonctionne d'une mani\'e8re similaire \'e0 la fonction de getLabel, et peut retourner le nom de fichier d'une image de jeu de valeur. En outre, la fonction de \b setvalueset \b0 prend d\'e9sormais un troisi\'e8me param\'e8tre optionnel un tableau de cha\'eenes contenant des liens vers des noms de fichiers d'image de valeur de consigne. Ces fonctions ont \'e9t\'e9 utilis\'e9s pour cr\'e9er dynamiquement un ensemble de valeurs montrant le pr\'e9sident actuel ainsi que l'ancien pr\'e9sident que vous avez s\'e9lectionn\'e9 dans la question pr\'e9c\'e9dente.\par
-FR=\par
-FR=\b Pr\'e9f\'e9rez-vous %capiTextPresident1% ou votre favori vivant ancien pr\'e9sident, %capiTextPresident2%?\b0\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset128 Meiryo;}{\f1\fnil\fcharset0 Arial;}}
-JP={\colortbl ;\red0\green0\blue0;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\f0\fs24\'90\'56\'8b\'40\'94\'5c\'81\'41\'82\'cc\b\f1 getImage\b0\f0\'82\'cd\'81\'41\b\f1 getlabel\b0\f0\'8b\'40\'94\'5c\'82\'c6\'93\'af\'97\'6c\'82\'c9\'93\'ae\'8d\'ec\'82\'b5\'81\'41\'92\'6c\'82\'cc\'90\'dd\'92\'e8\'82\'b3\'82\'ea\'82\'bd\'89\'e6\'91\'9c\'82\'cc\'83\'74\'83\'40\'83\'43\'83\'8b\'96\'bc\'82\'f0\'95\'d4\'82\'b7\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'82\'dc\'82\'b7\'81\'42\'82\'b3\'82\'e7\'82\'c9\'81\'41\f1 setvalueset\f0\'8a\'d6\'90\'94\'82\'cd\'81\'41\'8c\'bb\'8d\'dd\'92\'6c\'90\'dd\'92\'e8\'82\'b3\'82\'ea\'82\'bd\'89\'e6\'91\'9c\'82\'cc\'83\'74\'83\'40\'83\'43\'83\'8b\'96\'bc\'82\'d6\'82\'cc\'83\'8a\'83\'93\'83\'4e\'82\'f0\'8a\'dc\'82\'de\'95\'b6\'8e\'9a\'97\'f1\'94\'7a\'97\'f1\'82\'cc\'83\'49\'83\'76\'83\'56\'83\'87\'83\'93\'82\'cc\f1 3\f0\'94\'d4\'96\'da\'82\'cc\'83\'70\'83\'89\'83\'81\'81\'5b\'83\'5e\'82\'f0\'8e\'e6\'82\'e8\'82\'dc\'82\'b7\'81\'42\'82\'b1\'82\'ea\'82\'e7\'82\'cc\'8b\'40\'94\'5c\'82\'cd\'81\'41\'93\'ae\'93\'49\'82\'c9\'8c\'bb\'8e\'d0\'92\'b7\'82\'c8\'82\'e7\'82\'d1\'82\'c9\'81\'41\'91\'4f\'82\'cc\'8e\'bf\'96\'e2\'82\'c5\'91\'49\'91\'f0\'82\'b5\'82\'bd\'8c\'b3\'91\'e5\'93\'9d\'97\'cc\'82\'f0\'8e\'a6\'82\'b7\'92\'6c\'83\'5a\'83\'62\'83\'67\'82\'f0\'8d\'ec\'90\'ac\'82\'b7\'82\'e9\'82\'bd\'82\'df\'82\'c9\'8e\'67\'97\'70\'82\'b3\'82\'ea\'82\'dc\'82\'b5\'82\'bd\'81\'42\f1\par
-JP=\par
-JP=\b %capiTextPresident2%\b0\f0\'82\'a0\'82\'c8\'82\'bd\'82\'cd\'81\'41\b\f1 %capiTextPresident1%\b0\f0\'82\'cc\'82\'f0\'8d\'44\'82\'de\'82\'a9\'82\'a0\'82\'c8\'82\'bd\'82\'cc\'82\'a8\'8b\'43\'82\'c9\'93\'fc\'82\'e8\'82\'cd\'81\'41\'8c\'b3\'91\'e5\'93\'9d\'97\'cc\'82\'f0\'90\'b6\'82\'ab\'82\'c4\'82\'a2\'82\'dc\'82\'b7\'82\'a9\'81\'48\par
-JP=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.ENHANCED_EXTENDED_CONTROLS
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 On Windows, the extended control windows have been improved, with tablet-friendly next and previous buttons, and search functionality.\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FR={\colortbl ;\red0\green0\blue0;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-FR=\pard\cf1\fs24 Sous Windows, les fen\'eatres de contr\'f4le \'e9tendus ont \'e9t\'e9 am\'e9lior\'e9es, avec suivant et pr\'e9c\'e9dent boutons de la tablette de l'environnement, et la fonctionnalit\'e9 de recherche.\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset128 Meiryo;}}
-JP={\colortbl ;\red0\green0\blue0;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\fs24 Windows\f1\'82\'c5\'82\'cd\'81\'41\'8a\'67\'92\'a3\'82\'b3\'82\'ea\'82\'bd\'83\'52\'83\'93\'83\'67\'83\'8d\'81\'5b\'83\'8b\f0\'b7\f1\'83\'45\'83\'42\'83\'93\'83\'68\'83\'45\'82\'cd\'81\'41\'83\'5e\'83\'75\'83\'8c\'83\'62\'83\'67\'8c\'fc\'82\'af\'82\'cc\'8e\'9f\'82\'c6\'91\'4f\'82\'cc\'83\'7b\'83\'5e\'83\'93\'81\'41\'8c\'9f\'8d\'f5\'8b\'40\'94\'5c\'82\'c5\'81\'41\'89\'fc\'91\'50\'82\'b3\'82\'ea\'82\'c4\'82\'a2\'82\'dc\'82\'b7\'81\'42\f0\par
-JP=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.MULTIPLE_LANGUAGES
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 Multiple language dictionary labels are now supported. Select Edit->Languages in the dictionary editor to add languages to your application. Unique labels can be added in each language. When creating forms, the "link field label to dictionary item" drag property ensures that the field labels will be modified when the dictionary language is changed.\par
-EN=\par
-EN=Select a different language to see that both the 1) value sets and 2) form labels will be changed. (French and Japanese translations come from Google Translate.)\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FR={\colortbl ;\red0\green0\blue0;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-FR=\pard\cf1\fs24\'c9tiquettes dictionnaire de langue multiple sont maintenant support\'e9s. S\'e9lectionnez Edit->Languages dans l'\'e9diteur de dictionnaire pour ajouter des langues \'e0 votre demande. Les \'e9tiquettes uniques peuvent \'eatre ajout\'e9s dans chaque langue. Lors de la cr\'e9ation des formes, la \'abpropri\'e9t\'e9 de tra\'een\'e9e "link field label to dictionary item" assure que les \'e9tiquettes de champ seront modifi\'e9s lorsque le dictionnaire langue est modifi\'e9e.\par
-FR=\par
-FR=S\'e9lectionnez une langue diff\'e9rente de voir que les deux 1) ensembles de valeurs et 2) \'e9tiquettes en seront chang\'e9s. (Traductions fran\'e7aises et japonaises viennent de Google Translate.)\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset128 Meiryo;}{\f1\fnil\fcharset0 Arial;}}
-JP={\colortbl ;\red0\green0\blue0;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\f0\fs24\'95\'a1\'90\'94\'82\'cc\'8c\'be\'8c\'ea\'82\'cc\'8e\'ab\'8f\'91\'82\'cc\'83\'89\'83\'78\'83\'8b\'82\'aa\'83\'54\'83\'7c\'81\'5b\'83\'67\'82\'b3\'82\'ea\'82\'e9\'82\'e6\'82\'a4\'82\'c9\'82\'c8\'82\'e8\'82\'dc\'82\'b5\'82\'bd\'81\'42\'83\'41\'83\'76\'83\'8a\'83\'50\'81\'5b\'83\'56\'83\'87\'83\'93\'82\'c9\'8c\'be\'8c\'ea\'82\'f0\'92\'c7\'89\'c1\'82\'b7\'82\'e9\'8e\'ab\'8f\'91\'83\'47\'83\'66\'83\'42\'83\'5e\'82\'c5\f1 Edit->Languages\f0\'91\'49\'91\'f0\'82\'b5\'82\'dc\'82\'b7\'81\'42\'83\'86\'83\'6a\'81\'5b\'83\'4e\'82\'c8\'83\'89\'83\'78\'83\'8b\'82\'cd\'81\'41\'8a\'65\'8c\'be\'8c\'ea\'82\'c5\'93\'59\'89\'c1\'82\'b7\'82\'e9\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'82\'dc\'82\'b7\'81\'42\'83\'74\'83\'48\'81\'5b\'83\'80\'82\'f0\'8d\'ec\'90\'ac\'82\'b7\'82\'e9\'8f\'ea\'8d\'87\'82\'cd\'81\'41\'81\'75\f1 link field label to dictionary item\f0\'81\'75\'83\'68\'83\'89\'83\'62\'83\'4f\'82\'cc\'8f\'68\'94\'91\'8e\'7b\'90\'dd\'82\'c9\'82\'cd\'81\'41\'8e\'ab\'8f\'91\'82\'cc\'8c\'be\'8c\'ea\'82\'aa\'95\'cf\'8d\'58\'82\'b3\'82\'ea\'82\'bd\'82\'c6\'82\'ab\'82\'c9\'81\'41\'83\'74\'83\'42\'81\'5b\'83\'8b\'83\'68\'82\'cc\'83\'89\'83\'78\'83\'8b\'82\'aa\'95\'cf\'8d\'58\'82\'b3\'82\'ea\'82\'e9\'82\'e6\'82\'a4\'82\'c9\'82\'c8\'82\'e8\'82\'dc\'82\'b7\'81\'42\f1\par
-JP=\par
-JP=1\f0\'81\'6a\'92\'6c\'82\'cc\'83\'5a\'83\'62\'83\'67\'82\'c6\f1 2\f0\'81\'6a\'83\'74\'83\'48\'81\'5b\'83\'80\'83\'89\'83\'78\'83\'8b\'82\'cc\'97\'bc\'95\'fb\'82\'aa\'95\'cf\'8d\'58\'82\'b3\'82\'ea\'82\'e9\'82\'b1\'82\'c6\'82\'f0\'8a\'6d\'94\'46\'82\'b7\'82\'e9\'82\'bd\'82\'df\'82\'c9\'95\'ca\'82\'cc\'8c\'be\'8c\'ea\'82\'f0\'91\'49\'91\'f0\'82\'b5\'82\'dc\'82\'b7\'81\'42\f1  \f0\'81\'69\'83\'74\'83\'89\'83\'93\'83\'58\'8c\'ea\'82\'c6\'93\'fa\'96\'7b\'8c\'ea\'82\'cc\'96\'7c\'96\'f3\'82\'cd\f1 Google\f0\'96\'7c\'96\'f3\'82\'a9\'82\'e7\'97\'88\'82\'c4\'82\'a2\'82\'dc\'82\'b7\'81\'42\'81\'6a\par
-JP=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.PROMPT_FUNCTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;\red0\green128\blue128;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 The \b prompt\b0  function displays a dialog with a message and allows the user to enter a string value. There are four optional attributes that affect how data is entered, with three that you can try by selecting an option. Some of the attributes can be combined together.\par
-EN=\par
-EN=\cf2\b %capiTextPrompt%\cf1\b0\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-FR={\colortbl ;\red0\green0\blue0;\red0\green128\blue128;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-FR=\pard\cf1\fs24 La fonction de \b prompt\b0  affiche une bo\'eete de dialogue avec un message et permet \'e0 l'utilisateur d'entrer une valeur de cha\'eene. Il ya quatre attributs facultatifs qui affectent la fa\'e7on dont les donn\'e9es sont saisies, avec trois que vous pouvez essayer en s\'e9lectionnant une option. Certains des attributs peuvent \'eatre combin\'e9s ensemble.\par
-FR=\par
-FR=\cf2\b %capiTextPrompt%\cf1\b0\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset128 Meiryo;}}
-JP={\colortbl ;\red0\green0\blue0;\red0\green128\blue128;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\b\fs24 prompt\b0\f1\'8b\'40\'94\'5c\'82\'cd\'81\'41\'83\'81\'83\'62\'83\'5a\'81\'5b\'83\'57\'82\'c9\'83\'5f\'83\'43\'83\'41\'83\'8d\'83\'4f\'82\'f0\'95\'5c\'8e\'a6\'82\'b5\'81\'41\'83\'86\'81\'5b\'83\'55\'81\'5b\'82\'aa\'95\'b6\'8e\'9a\'97\'f1\'92\'6c\'82\'f0\'93\'fc\'97\'cd\'82\'b7\'82\'e9\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'82\'dc\'82\'b7\'81\'42\'82\'b1\'82\'cc\'83\'49\'83\'76\'83\'56\'83\'87\'83\'93\'82\'f0\'91\'49\'91\'f0\'82\'b5\'82\'c4\'8e\'8e\'82\'b7\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'82\'dc\'82\'b7\f0 3\f1\'82\'c5\'93\'fc\'97\'cd\'82\'b3\'82\'ea\'82\'bd\'82\'c7\'82\'cc\'82\'e6\'82\'a4\'82\'c9\'83\'66\'81\'5b\'83\'5e\'82\'c9\'89\'65\'8b\'bf\f0 4\f1\'83\'49\'83\'76\'83\'56\'83\'87\'83\'93\'82\'cc\'91\'ae\'90\'ab\'82\'aa\'82\'a0\'82\'e8\'82\'dc\'82\'b7\'81\'42\'91\'ae\'90\'ab\'82\'cc\'82\'a2\'82\'ad\'82\'c2\'82\'a9\'82\'cd\'81\'41\'91\'67\'82\'dd\'8d\'87\'82\'ed\'82\'b9\'82\'e9\'82\'b1\'82\'c6\'82\'aa\'82\'c5\'82\'ab\'82\'dc\'82\'b7\'81\'42\f0\par
-JP=\par
-JP=\cf2\b %capiTextPrompt%\cf1\b0\par
-JP=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.QUIT_PROMPT
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 You have reached the end of the program. Would you like to run it again from the start?\par
-EN=}
-
-[QUESTION]
-Field=SHOWCASE_DICT.VALUE_SET_IMAGES
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-EN=\pard\cf1\fs24 Value set images have now been fully implemented on both Windows and Android enviroments. The file formats supported include: .jpg, .gif, .bmp, .png, and .tif. (The photos of these presidents came from the White House website.)\par
-EN=\par
-EN=\b Select your favorite of the living former presidents.\b0\par
-EN=}
-FR={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset238{\*\fname Arial;}Arial CE;}}
-FR={\colortbl ;\red0\green0\blue0;}
-FR={\*\generator Riched20 6.3.9600}\viewkind4\uc1
-FR=\pard\cf1\fs24 Valeur images fixes ont \'e9t\'e9 pleinement mis en \f1\u339?uvre sur les deux environnements Windows et Android. Les formats de fichiers support\f0\'e9s sont: .jpg, .gif, .bmp, .png et .tif. (Les photos de ces pr\'e9sidents sont venus sur le site Web de la Maison Blanche.)\par
-FR=\par
-FR=\b Choisissez votre favori des anciens pr\'e9sidents vivants.\b0\par
-FR=}
-JP={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset128 Meiryo;}{\f1\fnil\fcharset0 Arial;}{\f2\fswiss\fcharset134 Microsoft YaHei;}}
-JP={\colortbl ;\red0\green0\blue0;}
-JP={\*\generator Riched20 6.3.9600}\viewkind4\uc1 
-JP=\pard\cf1\f0\fs24\'92\'6c\'83\'5a\'83\'62\'83\'67\'82\'cc\'89\'e6\'91\'9c\'82\'cd\'8a\'ae\'91\'53\'82\'c9\'97\'bc\'95\'fb\'82\'cc\f1 Windows\f0\'82\'c6\f1 Android enviroments\f0\'8f\'e3\'82\'c9\'8e\'c0\'91\'95\'82\'b3\'82\'ea\'82\'c4\'82\'a2\'82\'dc\'82\'b7\'81\'42\'83\'54\'83\'7c\'81\'5b\'83\'67\'82\'b3\'82\'ea\'82\'c4\'82\'a2\'82\'e9\'83\'74\'83\'40\'83\'43\'83\'8b\'8c\'60\'8e\'ae\'82\'aa\'8a\'dc\'82\'dc\'82\'ea\'82\'dc\'82\'b7\'81\'46\f1 .JPG\f2\'a1\'a2\f1 .GIF\f2\'a1\'a2\f1 .BMP\f0\'81\'41\f1 .PNG\f0\'81\'41\'82\'a8\'82\'e6\'82\'d1\f1 .TIF\f0\'82\'f0\'81\'42\f1  \f0\'81\'69\'82\'b1\'82\'ea\'82\'e7\'82\'cc\'91\'e5\'93\'9d\'97\'cc\'82\'cc\'8e\'ca\'90\'5e\'82\'cd\'81\'41\'83\'7a\'83\'8f\'83\'43\'83\'67\'83\'6e\'83\'45\'83\'58\'82\'cc\'83\'45\'83\'46\'83\'75\'83\'54\'83\'43\'83\'67\'82\'a9\'82\'e7\'97\'88\'82\'dc\'82\'b5\'82\'bd\'81\'42\'81\'6a\f1\par
-JP=\par
-JP=\b\f0\'90\'b6\'82\'ab\'82\'c4\'82\'a2\'82\'e9\'8c\'b3\'91\'e5\'93\'9d\'97\'cc\'82\'cc\'82\'a0\'82\'c8\'82\'bd\'82\'cc\'82\'a8\'8b\'43\'82\'c9\'93\'fc\'82\'e8\'82\'f0\'91\'49\'91\'f0\'82\'b5\'82\'dc\'82\'b7\'81\'42\b0\f1\par
-JP=}
-
+﻿---
+fileType: Question Text
+version: CSPro 8.0
+languages:
+  - name: EN
+    label: English
+  - name: FR
+    label: French
+  - name: JP
+    label: Japanese
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: SHOWCASE_DICT.CONNECTION_FUNCTION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">The <span style="font-weight:bold;">connection</span> function displays information about whether the device is connected to a system that allows for Internet access. The function does not guarantee that there is Internet access:&nbsp;</span>&nbsp;</p>
+            <p><span style="font-size:16px;color:#000000;">connection() = <b>~~capiTextConnection~~&nbsp;<br></b></span>connection(wifi) = <b>~~capiTextConnectionWifi~~&nbsp;<br></b>connection(mobile) = <span style="font-weight: bold;">~~capiTextConnectionMobile~~&nbsp;</span></p>
+            <p>(The optional parameters are ignored on Windows.)&nbsp;</p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">La fonction de <span style="font-weight:bold;">connection</span> affiche des informations pour savoir si l'appareil est connecté à un système qui permet l'accès à Internet. La fonction ne garantit pas qu'il y ait un accès Internet:&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">connection() = <b>~~capiTextConnection~~&nbsp;<br></b></span>connection(wifi) = <b>~~capiTextConnectionWifi~~&nbsp;<br></b>connection(mobile) = <span style="font-weight: bold;">~~capiTextConnectionMobile~~&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">(Les paramètres optionnels sont ignorés sur Windows.)&nbsp;</span></p>
+          JP: |
+            <div>connection機能は、デバイスがインターネットにアクセスすることができ、システムに接続されているか否かに関する情報が表示されます。機能は、インターネットアクセスがあることを保証するものではありません。</div><div><br></div><div>connection() = ~~capiTextConnection~~</div><div>connection(wifi) = ~~capiTextConnectionWifi~~</div><div>connection(mobile) = ~~capiTextConnectionMobile~~</div><div><br></div><div>（オプションのパラメータは、Windows上で無視されます。）</div>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.PROMPT_FUNCTION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">The <span style="font-weight:bold;">prompt</span> function displays a dialog with a message and allows the user to enter a string value. There are four optional attributes that affect how data is entered, with three that you can try by selecting an option. Some of the attributes can be combined together.&nbsp;</span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#008080;">~~capiTextPrompt~~&nbsp;</span></p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">La fonction de <span style="font-weight:bold;">prompt</span> affiche une boîte de dialogue avec un message et permet à l'utilisateur d'entrer une valeur de chaîne. Il ya quatre attributs facultatifs qui affectent la façon dont les données sont saisies, avec trois que vous pouvez essayer en sélectionnant une option. Certains des attributs peuvent être combinés ensemble.&nbsp;</span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#008080;">~~capiTextPrompt~~&nbsp;</span></p>
+          JP: |
+            <p><b>prompt</b>機能は、メッセージにダイアログを表示し、ユーザーが文字列値を入力することができます。このオプションを選択して試すことができます3で入力されたどのようにデータに影響4オプションの属性があります。属性のいくつかは、組み合わせることができます。</p><p>~~capiTextPrompt~~</p>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.CUSTOM_ERROR_MESSAGE
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">There is a file containing error messages that CSEntry might display, CSProRuntime.mgf. If you create a copy of this file in the folder with your application, you can override these messages.&nbsp;</span></p><p><span style="font-size:16px;color:#000000;"><span style="font-weight:bold;">To see this, enter an odd number and try to continue. You will see a custom out-of-range message. To continue, enter an even number.&nbsp;</span></span></p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">Il est un fichier contenant les messages d'erreur qui CSEntry pourrait afficher, CSProRuntime.mgf. Si vous créez une copie de ce fichier dans le dossier de votre application, vous pouvez remplacer ces messages.&nbsp;</span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">Pour le voir, saisir un nombre impair et essayer de continuer. Vous verrez un message personnalisé de-gamme. Pour continuer, entrez un nombre pair.&nbsp;</span></p>
+          JP: |
+            <div>CSEntryは、CSProRuntime.mgfが表示されることがありますエラーメッセージを含むファイルがあります。あなたがあなたのアプリケーションのフォルダにこのファイルのコピーを作成する場合、これらのメッセージを無効にすることができます。</div><div><br></div><div><b>これを理解するために、奇数番号を入力して続行してください。カスタム範囲外のメッセージが表示されます。続行するには、偶数番号を入力します。</b></div>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.ENHANCED_EXTENDED_CONTROLS
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">On Windows, the extended control windows have been improved, with tablet-friendly next and previous buttons, and search functionality.&#160;</span></p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">Sous Windows, les fenêtres de contrôle étendus ont été améliorées, avec suivant et précédent boutons de la tablette de l&apos;environnement, et la fonctionnalité de recherche.&#160;</span></p>
+          JP: |
+            <p>Windowsでは、拡張されたコントロール·ウィンドウは、タブレット向けの次と前のボタン、検索機能で、改善されています。</p>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.VALUE_SET_IMAGES
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Value set images have now been fully implemented on both Windows and Android enviroments. The file formats supported include: .jpg, .gif, .bmp, .png, and .tif. (The photos of these presidents came from the White House website.)&nbsp;</span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">Select your favorite of the living former presidents.&nbsp;</span></p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">Valeur images fixes ont été pleinement mis en <span style="font-family:'Arial CE';">œuvre sur les deux environnements Windows et Android. Les formats de fichiers support<span style="font-family:'Arial';">és sont: .jpg, .gif, .bmp, .png et .tif. (Les photos de ces présidents sont venus sur le site Web de la Maison Blanche.)&nbsp;</span></span></span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;font-family:'Arial';">Choisissez votre favori des anciens présidents vivants.&nbsp;</span></p>
+          JP: |
+            <p><font face="Meiryo">値セットの画像は完全に両方のWindowsとAndroid enviroments上に実装されています。サポートされているファイル形式が含まれます：.JPG、.GIF、.BMP、.PNG、および.TIFを。 （これらの大統領の写真は、ホワイトハウスのウェブサイトから来ました。）</font></p><p><font face="Meiryo"><b>生きている元大統領のあなたのお気に入りを選択します。</b></font></p>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.DYNAMIC_IMAGE_VALUE_SET
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">A new function, <span style="font-weight:bold;">getimage</span>, works in a similar way to the getlabel function, and can return the file name of a value set image. Additionally, the <span style="font-weight:bold;">setvalueset</span> function now takes an optional third parameter of a string array containing links to value set image file names. These functions were used to dynamically create a value set showing the current president as well as the former president you selected in the previous question.&nbsp;</span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">Do you prefer ~~capiTextPresident1~~ or your favorite living former president, ~~capiTextPresident2~~?&nbsp;</span></p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">Une nouvelle fonction, <span style="font-weight:bold;">getimage</span>, fonctionne d'une manière similaire à la fonction de getLabel, et peut retourner le nom de fichier d'une image de jeu de valeur. En outre, la fonction de <span style="font-weight:bold;">setvalueset </span>prend désormais un troisième paramètre optionnel un tableau de chaînes contenant des liens vers des noms de fichiers d'image de valeur de consigne. Ces fonctions ont été utilisés pour créer dynamiquement un ensemble de valeurs montrant le président actuel ainsi que l'ancien président que vous avez sélectionné dans la question précédente.&nbsp;</span></p>
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">Préférez-vous ~~capiTextPresident1~~ ou votre favori vivant ancien président, ~~capiTextPresident2~~?&nbsp;</span></p>
+          JP: |
+            <p><font face="Meiryo">新機能、の<b>getImage</b>は、<b>getlabel</b>機能と同様に動作し、値の設定された画像のファイル名を返すことができます。さらに、setvalueset関数は、現在値設定された画像のファイル名へのリンクを含む文字列配列のオプションの3番目のパラメータを取ります。これらの機能は、動的に現社長ならびに、前の質問で選択した元大統領を示す値セットを作成するために使用されました。</font></p><p><font face="Meiryo"><b>~~capiTextPresident2~~あなたは、~~capiTextPresident1~~のを好むかあなたのお気に入りは、元大統領を生きていますか？</b></font></p>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.MULTIPLE_LANGUAGES
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Multiple language dictionary labels are now supported. Select Edit-&gt;Languages in the dictionary editor to add languages to your application. Unique labels can be added in each language. When creating forms, the "link field label to dictionary item" drag property ensures that the field labels will be modified when the dictionary language is changed.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Select a different language to see that both the 1) value sets and 2) form labels will be changed. (French and Japanese translations come from Google Translate.)&nbsp;</span></p>
+          FR: |
+            <p><span style="font-size:16px;color:#000000;">Étiquettes dictionnaire de langue multiple sont maintenant supportés. Sélectionnez Edit-&gt;Languages dans l'éditeur de dictionnaire pour ajouter des langues à votre demande. Les étiquettes uniques peuvent être ajoutés dans chaque langue. Lors de la création des formes, la «propriété de traînée "link field label to dictionary item" assure que les étiquettes de champ seront modifiés lorsque le dictionnaire langue est modifiée.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Sélectionnez une langue différente de voir que les deux 1) ensembles de valeurs et 2) étiquettes en seront changés. (Traductions françaises et japonaises viennent de Google Translate.)&nbsp;</span></p>
+          JP: |
+            <p><font face="Meiryo">複数の言語の辞書のラベルがサポートされるようになりました。アプリケーションに言語を追加する辞書エディタでEdit-&gt;Languages選択します。ユニークなラベルは、各言語で添加することができます。フォームを作成する場合は、「link field label to dictionary item「ドラッグの宿泊施設には、辞書の言語が変更されたときに、フィールドのラベルが変更されるようになります。</font></p><p><font face="Meiryo">1）値のセットと2）フォームラベルの両方が変更されることを確認するために別の言語を選択します。 （フランス語と日本語の翻訳はGoogle翻訳から来ています。）</font></p>
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+  - name: SHOWCASE_DICT.QUIT_PROMPT
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">You have reached the end of the program. Would you like to run it again from the start?&#160;</span></p>
+          FR: |
+            
+          JP: |
+            
+        helpText:
+          EN: |
+            
+          FR: |
+            
+          JP: |
+            
+...

@@ -1,179 +1,165 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.0
-
-[LANGUAGES]
-ENG=English
-
-[QUESTION]
-Field=SHOWCASE70_DICT.MENU
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 This program will introduce you to some of the new features in CSPro 7.0. Select an option.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_CASE_LABELS
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 Case labels are a powerful new feature that allow you to show descriptive text in a case listing screen rather than to show the case IDs. (A menu option allows an interviewer to switch between seeing case labels and case IDs, though viewing case labels is the default.) Using the \b setcaselabel\b0  and \b getcaselabel\b0  functions, you can set the case label. If a case label is blank, then the case ID is shown. Case labels are only supported when using a CSPro DB data source.\par
-ENG=\par
-ENG=A case label allows you to display something like "Household 20 - Head: Johnson" rather than "01029920." Case labels, along with case notes, are a great way to display information to users.\par
-ENG=\par
-ENG=To see an example of this, enter a number of cases from 1 - 50 (or 0 to return to the menu). Case labels and case notes will be written to an external file and then that file will be opened in CSEntry.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_CONFIG_SETTINGS
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-ENG=\pard\cf1\fs24 In logic you can declare a string with the keyword \b config\b0 . Configuration settings are stored locally on your device and loaded at compile time. You can edit them by using an option off the View menu while editing a data entry or batch application.\par
-ENG=\line The current value of \b configVariable\b0  is: \b %configVariable%\b0\par
-ENG=\par
-ENG=If you are running this program on Windows, the value is likely empty because you have not yet set a configuration setting with the name configVariable. If you run the .pen file distributed with this showcase, you should see a message from the creator of the showcase.\par
-ENG=\par
-ENG=Because .pen data entry applications are only compiled with the .pen is created, the settings stored on the computer used to create the file are saved in the .pen file.\par
-ENG=\par
-ENG=Why use configuration variables? If you want to use a revision control system (e.g., you are using GitHub), there may be some values, like the URL you are using to sync data, that you do not want to store in your publicly visible logic. You can define these settings on your machine without having to share them with the world.\par
-ENG=\par
-ENG=To test this, you can open this program and add a setting for configVariable and rerun this program to see it display above.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_DATA_SOURCES
-Condition=SHOW_DATA_SOURCES = 1
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 CSPro 7.0 introduces the concept of data sources. Instead of only working with text files, CSPro now works with several different data sources. If a file exists, CSPro will attempt to determine what kind of file it is and then open it with the appropriate data source handler. If creating new files, we encourage you to use a CSPro DB data source, as most features added in the future will only be implemented using this type. Currently there are three types:\par
-ENG=\par
-ENG=1) \b Text\b0 : These are text files and what you are familiar with if you have used CSPro in the past.\par
-ENG=\par
-ENG=2) \b CSPro DB\b0 : These files, with the mandatory extension .csdb, are now the default data source for newly created files. They are not text files so they cannot be viewed in Text Viewer. All information about a case is stored in this file, including the case contents, case labels, notes, partial save status, verification information, revision history, and a copy of the dictionary. The revision history allows CSPro, when syncing data, to only sync data that has changed. If you use the CSPro DB type, then the data you collect cannot be used with previous versions of CSPro. There is a tool associated with .csdb files that allows you to convert data from the CSPro DB type to Text and vice versa in case you need to use a previous version of CSPro or a preexisting tool that only works with text files.\par
-ENG=\par
-ENG=3) \b None\b0 : This data source is not associated with a file and allows you to run programs without needing to associate a dictionary with a file, usually with the assumption that the file association will be determined during the program.\par
-ENG=\par
-ENG=You can learn more about each data source by selecting one of the following options.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_DATA_SOURCES
-Condition=SHOW_DATA_SOURCES = 2
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\b\fs24 Text Data Source\b0\par
-ENG=\par
-ENG=The Text data source is similar to what has been used for the lifetime of CPro. Cases are stored as text in UTF-8 format. Supporting Text data sources allows CSPro 7.0 to maintain backwards compatibility with existing data files. Text data sources can use any file extension with the exception of .csdb.\par
-ENG=\par
-ENG=There are some differences in CSPro 7.0 when using Text data sources:\par
-ENG=\par
-ENG=1) Notes are stored in a .csnot file, no longer the .not file. If you have a .not file, the notes will be read from that file but then saved in a .csnot file. The .csnot file supports the added functionality described in the Enhanced Notes section.\par
-ENG=\par
-ENG=2) Verification information in the .sts file is stored on a case-by-case basis. This means that keyers no longer have to verify data in file order.\par
-ENG=\par
-ENG=3) The index file format has changed and uses the extension .csidx instead of .idx.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_DATA_SOURCES
-Condition=SHOW_DATA_SOURCES = 3
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\b\fs24 CSPro DB Data Source\b0\par
-ENG=\par
-ENG=The CSPro DB data source is a new feature in CSPro 7.0. It simplifies data collection, particularly if conducting a CAPI survey, as all information about cases is stored in a single place. This information includes all the information that, in previous versions of CSPro, was stored in the data file along with its corresponding .not, .sts, and .idx files.\par
-ENG=\par
-ENG=In addition to storing all case information in a single place, CSPro DB data sources support two new features:\par
-ENG=\par
-ENG=1) Case labels\par
-ENG=2) Revision history\par
-ENG=\par
-ENG=The revision history allows for CSPro to intelligently synchronize data between devices so that you can sync data more frequently without worrying about using excess bandwidth.\par
-ENG=\par
-ENG=In addition to these features, a copy of the dictionary is stored in the CSPro DB file, which will eventually make working the data management tools in CSPro much easier. These enhancements will come in a future version of CSPro.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_DATA_SOURCES
-Condition=SHOW_DATA_SOURCES = 4
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\b\fs24 None Data Source\b0\par
-ENG=\par
-ENG=The None data source is not associated with any file. Adding cases to the file will result in nothing happening and any attempt to load or write cases to the file will appear successful but nothing will happen. This data source is useful for menu programs or instances when you do not initially know what an external dictionary should be set to. In these cases, you will often use \b setfile\b0  to assign a file to the dictionary from logic.\par
-ENG=\par
-ENG=This data source solves a problem that many people faced when they had to create files like dummy.dat or junk.dat, or using <none> in a batch application, in order to satisfy the requirement that non-working storage dictionaries had to be associated with a file.\par
-ENG=\line This program's two dictionaries are set to the None data source.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_ENHANCED_NOTES
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 In CSPro 7.0, if using a CSPro DB data source, notes are saved in the same file as the data. If using a Text data source, notes are saved in a .csnot file. (In previous versions notes were saved in a .not file.) You can create a dictionary to read the .csnot file by using Dictionary Macros.\par
-ENG=\par
-ENG=Notes are now more powerful as they contain information about who left the note and when the note was left. In addition, multiple operators can leave a note on the same field, which will facilitate functionality such as supervisors leaving remarks for interviewer.\par
-ENG=\par
-ENG=Notes can now be left on external forms, on items in external dictionaries, and on a case-level basis. Case notes show up on the Android case listing screen, making them a great way to display remarks to interviewers. If using a CSPro DB data source, notes can also be manipulated using the \b getnote\b0  and \b putnote\b0  functions in a batch application.\par
-ENG=\par
-ENG=Current Case Note: \b %capiText1%\par
-ENG=\b0 Current Field Note: \b %capiText2%\b0\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_OPERATOR_ID
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 You can now change the operator ID in logic using the \b setoperatorid\b0  function. This impacts the statistics saved in the .log file and affects the attributes saved with the new enhanced notes. To change the operator ID, enter one below. To return to the main menu, "stop" entry (back on Android, Ctrl+S on Windows).\par
-ENG=\par
-ENG=The current operator ID is: \b %capiText1%\b0\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_OTHER_FEATURES
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 CSPro 7.0 contains a lot of internal changes, particularly regarding reading files and working with external dictionaries, but there also some small enhancements that may be useful to you.\par
-ENG=\par
-ENG=1) You can use HH/MM/SS as parameters to \b systime\b0  in the same way that such parameters work with \b sysdate\b0 , making working with times easier.\par
-ENG=\par
-ENG=2) You can specify that a batch application should be run in sorted file order using the \b InputOrder\b0  PFF parameter.\par
-ENG=\par
-ENG=3) There are functions, \b set access\b0 , \b set first\b0 , and \b set last\b0  that allow you to move around an external dictionary easily.\par
-ENG=\par
-ENG=4) The \b Concatenate Data\b0  tool and the \b fileconcat\b0  function now maintain entry-specific information like notes and partial save statuses.\par
-ENG=\par
-ENG=5) You can clear any saved settings using the \b savesetting(clear)\b0  function call.\par
-ENG=\par
-ENG=6) Using the Data Sources options for a data entry application, you can disable the creation of listing and operator statistics log files.\par
-ENG=\par
-ENG=7) You can use the \b setfile\b0  function to change the input source in the middle of a data entry program.\par
-ENG=\par
-ENG=8) Portuguese language strings were added to CSEntry on Android.\par
-ENG=}
-
-[QUESTION]
-Field=SHOWCASE70_DICT.SHOW_SYNCHRONIZATION_FROM_LOGIC
-ENG={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-ENG={\colortbl ;\red0\green0\blue0;}
-ENG={\*\generator Riched20 10.0.14393}\viewkind4\uc1
-ENG=\pard\cf1\fs24 CSPro 7.0 introduces a much more powerful way to synchronize data with the addition of several logic functions: \b syncconnect\b0 , \b syncdata\b0 , \b syncdisconnect\b0 , \b syncfile\b0 , and \b syncserver\b0 . Instead of working with the .pnc files that existed in CSPro 6.x, you can write your synchronization routines directly from logic. Syncing from logic only works if you are using a CSPro DB data source.\par
-ENG=\par
-ENG=In addition, you can now run a web server that will allow you to synchronize data on a server of your choosing. The PHP code that runs the server, along with the MySQL database to store data, is freely available for your use. It can be modified at will.\par
-ENG=\line CSPro maintains revision information for each case added, so when syncing data, only modified cases are updated. Syncing from logic now works on Windows as well as Android, for both Bluetooth peer-to-peer and web-based syncing. However, Dropbox and FTP syncs via .pnc files are still only supported on Android.\par
-ENG=\par
-ENG=You can also set synchronization parameters in your data entry application and then use menu options to update your data file rather than relying on using logic commands.\par
-ENG=\par
-ENG=To learn more about this new functionality, see the example in the CSPro examples folder. The examples folder is now installed in your Documents folder, so look here:\par
-ENG=\par
-ENG=\i <Documents folder>\\CSPro\\Examples 7.0\\1 - Data Entry\\Synchronization In Logic\i0 .\par
-ENG=}
-
+﻿---
+fileType: Question Text
+version: CSPro 8.0
+languages:
+  - name: ENG
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: SHOWCASE70_DICT.MENU
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">This program will introduce you to some of the new features in CSPro 7.0. Select an option.&#160;</span></p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_OPERATOR_ID
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">You can now change the operator ID in logic using the <span style="font-weight:bold;">setoperatorid</span> function. This impacts the statistics saved in the .log file and affects the attributes saved with the new enhanced notes. To change the operator ID, enter one below. To return to the main menu, "stop" entry (back on Android, Ctrl+S on Windows).&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">The current operator ID is: <span style="font-weight:bold;">~~capiText1~~</span></span></p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_ENHANCED_NOTES
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">In CSPro 7.0, if using a CSPro DB data source, notes are saved in the same file as the data. If using a Text data source, notes are saved in a .csnot file. (In previous versions notes were saved in a .not file.) You can create a dictionary to read the .csnot file by using Dictionary Macros.</span></p>
+            <p><span style="font-size:16px;color:#000000;">Notes are now more powerful as they contain information about who left the note and when the note was left. In addition, multiple operators can leave a note on the same field, which will facilitate functionality such as supervisors leaving remarks for interviewer.</span></p>
+            <p><span style="font-size:16px;color:#000000;">Notes can now be left on external forms, on items in external dictionaries, and on a case-level basis. Case notes show up on the Android case listing screen, making them a great way to display remarks to interviewers. If using a CSPro DB data source, notes can also be manipulated using the <span style="font-weight:bold;">getnote</span> and <span style="font-weight:bold;">putnote</span> functions in a batch application.</span></p>
+            <p><span style="font-size:16px;color:#000000;">Current Case Note: <span style="font-weight:bold;">~~capiText1~~</span></span></p>
+            <p><span style="font-size:16px;color:#000000;">Current Field Note: <span style="font-weight:bold;">~~capiText2~~</span></span></p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_CASE_LABELS
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">Case labels are a powerful new feature that allow you to show descriptive text in a case listing screen rather than to show the case IDs. (A menu option allows an interviewer to switch between seeing case labels and case IDs, though viewing case labels is the default.) Using the <span style="font-weight:bold;">setcaselabel</span> and <span style="font-weight:bold;">getcaselabel</span> functions, you can set the case label. If a case label is blank, then the case ID is shown. Case labels are only supported when using a CSPro DB data source.</span></p>
+            <p><span style="font-size:16px;color:#000000;">A case label allows you to display something like "Household 20 - Head: Johnson" rather than "01029920." Case labels, along with case notes, are a great way to display information to users.</span></p>
+            <p><span style="font-size:16px;color:#000000;">To see an example of this, enter a number of cases from 1 - 50 (or 0 to return to the menu). Case labels and case notes will be written to an external file and then that file will be opened in CSEntry.</span></p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_DATA_SOURCES
+    conditions:
+      - logic: visualvalue(SHOW_DATA_SOURCES) = 1
+        questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">CSPro 7.0 introduces the concept of data sources. Instead of only working with text files, CSPro now works with several different data sources. If a file exists, CSPro will attempt to determine what kind of file it is and then open it with the appropriate data source handler. If creating new files, we encourage you to use a CSPro DB data source, as most features added in the future will only be implemented using this type. Currently there are three types:</span></p>
+            <p><span style="font-size:16px;color:#000000;">1) <span style="font-weight:bold;">Text</span>: These are text files and what you are familiar with if you have used CSPro in the past.</span></p>
+            <p><span style="font-size:16px;color:#000000;">2) <span style="font-weight:bold;">CSPro DB</span>: These files, with the mandatory extension .csdb, are now the default data source for newly created files. They are not text files so they cannot be viewed in Text Viewer. All information about a case is stored in this file, including the case contents, case labels, notes, partial save status, verification information, revision history, and a copy of the dictionary. The revision history allows CSPro, when syncing data, to only sync data that has changed. If you use the CSPro DB type, then the data you collect cannot be used with previous versions of CSPro. There is a tool associated with .csdb files that allows you to convert data from the CSPro DB type to Text and vice versa in case you need to use a previous version of CSPro or a preexisting tool that only works with text files.</span></p>
+            <p><span style="font-size:16px;color:#000000;">3) <span style="font-weight:bold;">None</span>: This data source is not associated with a file and allows you to run programs without needing to associate a dictionary with a file, usually with the assumption that the file association will be determined during the program.</span></p>
+            <p><span style="font-size:16px;color:#000000;">You can learn more about each data source by selecting one of the following options.</span></p>
+            
+        helpText:
+          ENG: |
+            
+      - logic: visualvalue(SHOW_DATA_SOURCES) = 2
+        questionText:
+          ENG: |
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">Text Data Source&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">The Text data source is similar to what has been used for the lifetime of CPro. Cases are stored as text in UTF-8 format. Supporting Text data sources allows CSPro 7.0 to maintain backwards compatibility with existing data files. Text data sources can use any file extension with the exception of .csdb.</span></p>
+            <p><span style="font-size:16px;color:#000000;">There are some differences in CSPro 7.0 when using Text data sources:</span></p>
+            <p><span style="font-size:16px;color:#000000;">1) Notes are stored in a .csnot file, no longer the .not file. If you have a .not file, the notes will be read from that file but then saved in a .csnot file. The .csnot file supports the added functionality described in the Enhanced Notes section.</span></p>
+            <p><span style="font-size:16px;color:#000000;">2) Verification information in the .sts file is stored on a case-by-case basis. This means that keyers no longer have to verify data in file order.</span></p>
+            <p><span style="font-size:16px;color:#000000;">3) The index file format has changed and uses the extension .csidx instead of .idx.</span></p>
+            
+        helpText:
+          ENG: |
+            
+      - logic: visualvalue(SHOW_DATA_SOURCES) = 3
+        questionText:
+          ENG: |
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">CSPro DB Data Source</span>&nbsp;</p>
+            <p><span style="font-size:16px;color:#000000;">The CSPro DB data source is a new feature in CSPro 7.0. It simplifies data collection, particularly if conducting a CAPI survey, as all information about cases is stored in a single place. This information includes all the information that, in previous versions of CSPro, was stored in the data file along with its corresponding .not, .sts, and .idx files.</span></p>
+            <p><span style="font-size:16px;color:#000000;">In addition to storing all case information in a single place, CSPro DB data sources support two new features:</span></p>
+            <p><span style="font-size:16px;color:#000000;">1) Case labels&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">2) Revision history&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">The revision history allows for CSPro to intelligently synchronize data between devices so that you can sync data more frequently without worrying about using excess bandwidth.</span></p>
+            <p><span style="font-size:16px;color:#000000;">In addition to these features, a copy of the dictionary is stored in the CSPro DB file, which will eventually make working the data management tools in CSPro much easier. These enhancements will come in a future version of CSPro.</span></p>
+            
+        helpText:
+          ENG: |
+            
+      - logic: visualvalue(SHOW_DATA_SOURCES) = 4
+        questionText:
+          ENG: |
+            <p><span style="font-weight:bold;font-size:16px;color:#000000;">None Data Source&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">The None data source is not associated with any file. Adding cases to the file will result in nothing happening and any attempt to load or write cases to the file will appear successful but nothing will happen. This data source is useful for menu programs or instances when you do not initially know what an external dictionary should be set to. In these cases, you will often use <span style="font-weight:bold;">setfile</span> to assign a file to the dictionary from logic.</span></p>
+            <p><span style="font-size:16px;color:#000000;">This data source solves a problem that many people faced when they had to create files like dummy.dat or junk.dat, or using &lt;none&gt; in a batch application, in order to satisfy the requirement that non-working storage dictionaries had to be associated with a file.</span></p><p><span style="font-size:16px;color:#000000;">This program's two dictionaries are set to the None data source.</span></p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_SYNCHRONIZATION_FROM_LOGIC
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">CSPro 7.0 introduces a much more powerful way to synchronize data with the addition of several logic functions: <span style="font-weight:bold;">syncconnect</span>, <span style="font-weight:bold;">syncdata</span>, <span style="font-weight:bold;">syncdisconnect</span>, <span style="font-weight:bold;">syncfile</span>, and <span style="font-weight:bold;">syncserver</span>. Instead of working with the .pnc files that existed in CSPro 6.x, you can write your synchronization routines directly from logic. Syncing from logic only works if you are using a CSPro DB data source.</span></p>
+            <p><span style="font-size:16px;color:#000000;">In addition, you can now run a web server that will allow you to synchronize data on a server of your choosing. The PHP code that runs the server, along with the MySQL database to store data, is freely available for your use. It can be modified at will.</span></p><p><span style="font-size:16px;color:#000000;">CSPro maintains revision information for each case added, so when syncing data, only modified cases are updated. Syncing from logic now works on Windows as well as Android, for both Bluetooth peer-to-peer and web-based syncing. However, Dropbox and FTP syncs via .pnc files are still only supported on Android.</span></p>
+            <p><span style="font-size:16px;color:#000000;">You can also set synchronization parameters in your data entry application and then use menu options to update your data file rather than relying on using logic commands.</span></p>
+            <p><span style="font-size:16px;color:#000000;">To learn more about this new functionality, see the example in the CSPro examples folder. The examples folder is now installed in your Documents folder, so look here:</span></p>
+            <p><span style="font-style:italic;font-size:16px;color:#000000;">&lt;Documents folder&gt;\CSPro\Examples 7.0\1 - Data Entry\Synchronization In Logic<span style="font-style:normal;">.</span></span></p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_CONFIG_SETTINGS
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">In logic you can declare a string with the keyword <span style="font-weight:bold;">config</span>. Configuration settings are stored locally on your device and loaded at compile time. You can edit them by using an option off the View menu while editing a data entry or batch application.&nbsp;</span></p><p><span style="font-size:16px;color:#000000;">The current value of <span style="font-weight:bold;">configVariable</span> is: <span style="font-weight:bold;">~~configVariable~~</span></span></p>
+            <p>If you are running this program on Windows, the value is likely empty because you have not yet set a configuration setting with the name configVariable. If you run the .pen file distributed with this showcase, you should see a message from the creator of the showcase.</p>
+            <p><span style="font-size:16px;color:#000000;">Because .pen data entry applications are only compiled with the .pen is created, the settings stored on the computer used to create the file are saved in the .pen file.</span></p>
+            <p><span style="font-size:16px;color:#000000;">Why use configuration variables? If you want to use a revision control system (e.g., you are using GitHub), there may be some values, like the URL you are using to sync data, that you do not want to store in your publicly visible logic. You can define these settings on your machine without having to share them with the world.</span></p><p>To test this, you can open this program and add a setting for configVariable and rerun this program to see it display above.</p>
+            
+        helpText:
+          ENG: |
+            
+  - name: SHOWCASE70_DICT.SHOW_OTHER_FEATURES
+    conditions:
+      - questionText:
+          ENG: |
+            <p><span style="font-size:16px;color:#000000;">CSPro 7.0 contains a lot of internal changes, particularly regarding reading files and working with external dictionaries, but there also some small enhancements that may be useful to you.</span></p>
+            <p><span style="font-size:16px;color:#000000;">1) You can use HH/MM/SS as parameters to <span style="font-weight:bold;">systime</span> in the same way that such parameters work with <span style="font-weight:bold;">sysdate</span>, making working with times easier.</span></p>
+            <p><span style="font-size:16px;color:#000000;">2) You can specify that a batch application should be run in sorted file order using the <span style="font-weight:bold;">InputOrder</span> PFF parameter.</span></p>
+            <p><span style="font-size:16px;color:#000000;">3) There are functions, <span style="font-weight:bold;">set access</span>, <span style="font-weight:bold;">set first</span>, and <span style="font-weight:bold;">set last</span> that allow you to move around an external dictionary easily.</span></p>
+            <p><span style="font-size:16px;color:#000000;">4) The <span style="font-weight:bold;">Concatenate Data</span> tool and the <span style="font-weight:bold;">fileconcat</span> function now maintain entry-specific information like notes and partial save statuses.</span></p>
+            <p><span style="font-size:16px;color:#000000;">5) You can clear any saved settings using the <span style="font-weight:bold;">savesetting(clear)</span> function call.</span></p>
+            <p><span style="font-size:16px;color:#000000;">6) Using the Data Sources options for a data entry application, you can disable the creation of listing and operator statistics log files.</span></p>
+            <p><span style="font-size:16px;color:#000000;">7) You can use the <span style="font-weight:bold;">setfile</span> function to change the input source in the middle of a data entry program.</span></p>
+            <p><span style="font-size:16px;color:#000000;">8) Portuguese language strings were added to CSEntry on Android.</span></p>
+            
+        helpText:
+          ENG: |
+            
+...

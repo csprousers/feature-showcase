@@ -1,9 +1,9 @@
 ﻿[Run Information]
-Version=CSPro 7.0
+Version=CSPro 8.0
 AppType=Entry
+ShowInApplicationListing=Never
 
 [DataEntryInit]
-ShowInApplicationListing=Never
 StartMode=Add
 
 [Files]

@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 7.0
+Version=CSPro 8.0
 Name=NFS7_20170105_FF
 Label=CSPro New Features Showcase 7.0 (2017-01-05)
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -41,7 +41,6 @@ Required=Yes
 Name=NFS7_20170105_FORM
 Label=CSPro New Features Showcase 7.0 Form
 Form=1
-LogicControl=No
 Max=1
   
 [Field]

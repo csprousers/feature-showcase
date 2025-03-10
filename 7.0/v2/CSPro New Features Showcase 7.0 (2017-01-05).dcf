@@ -1,192 +1,392 @@
-﻿[Dictionary]
-Version=CSPro 7.0
-Label=CSPro New Features Showcase 7 (2017-01-05) Dictionray
-Name=NFS7_20170105_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-
-[Level]
-Label=CSPro New Features Showcase 7 (2017-01-05) Level
-Name=NFS7_20170105_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Unused ID Item
-Name=UNUSED_ID_ITEM
-Start=2
-Len=1
-
-[Record]
-Label=CSPro New Features Showcase 7 (2017-01-05) Record
-Name=NFS7_20170105_DICU
-RecordTypeValue='1'
-RecordLen=79
-
-[Item]
-Label=Menu
-Name=MENU
-Start=3
-Len=2
-
-[ValueSet]
-Label=Menu
-Name=MENU_VS1
-Value=1;Learn about the newly improved Excel to CSPro tool
-Value=2;Learn about the new Data Viewer tool
-Value=3;Learn about the new TimeStamp function
-Value=4;Learn about the new KeyList function
-Value=5;Learn about the new compression functions (Compress + Decompress)
-Value=6;Learn about the new ForCase looping statement
-Value=7;Learn about the new auto-increment field property
-Value=8;Learn about the new diagnostics function
-Value=9;Learn about other new features
-Value=-9;Quit
-
-[Item]
-Label=Excel to CSPro Menu
-Name=EXCEL_TO_CSPRO_MENU
-Start=5
-Len=2
-
-[ValueSet]
-Label=Excel to CSPro Menu
-Name=EXCEL_TO_CSPRO_MENU_VS1
-Value=1;Open the Excel to CSPro specifications file
-Value=2;Convert the Excel file to a text data file
-Value=3;Convert the Excel file to a CSPro DB data file
-Value=-9;Return to the main menu
-
-[Item]
-Label=Data Viewer Menu
-Name=DATA_VIEWER_MENU
-Start=7
-Len=2
-
-[ValueSet]
-Label=Data Viewer Menu
-Name=DATA_VIEWER_MENU_VS1
-Value=1;Open the Data Viewer
-Value=2;Open the Popstan Examples data in the Data Viewer
-Value=3;Open the IDB data in the Data Viewer
-Value=-9;Return to the main menu
-
-[Item]
-Label=TimeStamp Menu
-Name=TIMESTAMP_MENU
-Start=9
-Len=2
-
-[ValueSet]
-Label=TimeStamp Menu
-Name=TIMESTAMP_MENU_VS1
-Value=1;Calculate time to open and iterate 10 times through the text data file cases
-Value=2;Calculate time to open and iterate 10 times through the CSPro DB data file cases
-Value=-9;Return to the main menu
-
-[Item]
-Label=KeyList Menu
-Name=KEYLIST_MENU
-Start=11
-Len=2
-
-[ValueSet]
-Label=KeyList Menu
-Name=KEYLIST_MENU_VS1
-Value=-9;Return to the main menu
-
-[Item]
-Label=Compression Menu
-Name=COMPRESSION_MENU
-Start=13
-Len=2
-
-[ValueSet]
-Label=Compression Menu
-Name=COMPRESSION_MENU_VS1
-Value=1;Compress the text data file
-Value=2;Compress the CSPro DB data file
-Value=3;Compress both data files
-Value=4;Decompress the last created zip file
-Value=-9;Return to the main menu
-
-[Item]
-Label=ForCase Menu
-Name=FORCASE_MENU
-Start=15
-Len=2
-
-[ValueSet]
-Label=ForCase Menu
-Name=FORCASE_MENU_VS1
-Value=1;Filter countries
-Value=2;Filter age
-Value=3;Filter year
-Value=-9;Return to the main menu
-
-[Item]
-Label=ForCase Country Filter
-Name=FORCASE_COUNTRY_FILTER
-Start=17
-Len=50
-DataType=Alpha
-
-[Item]
-Label=ForCase Age Filter
-Name=FORCASE_AGE_FILTER
-Start=67
-Len=3
-
-[ValueSet]
-Label=ForCase Age Filter
-Name=FORCASE_AGE_FILTER_VS1
-Value=-1;All Ages
-Value=0:100;Ages
-
-[Item]
-Label=ForCase Year Filter
-Name=FORCASE_YEAR_FILTER
-Start=70
-Len=4
-
-[ValueSet]
-Label=ForCase Year Filter
-Name=FORCASE_YEAR_FILTER_VS1
-Value=1950:2050;Years
-
-[Item]
-Label=Auto-Increment Menu
-Name=AUTO_INCREMENT_MENU
-Start=74
-Len=2
-
-[ValueSet]
-Label=Auto-Increment Menu
-Name=AUTO_INCREMENT_MENU_VS1
-Value=1;Launch program
-Value=-9;Return to the main menu
-
-[Item]
-Label=Diagnostics Menu
-Name=DIAGNOSTICS_MENU
-Start=76
-Len=2
-
-[ValueSet]
-Label=Diagnostics Menu
-Name=DIAGNOSTICS_MENU_VS1
-Value=-9;Return to the main menu
-
-[Item]
-Label=Other Features Menu
-Name=OTHER_FEATURES_MENU
-Start=78
-Len=2
-
-[ValueSet]
-Label=Other Features Menu
-Name=OTHER_FEATURES_MENU_VS1
-Value=-9;Return to the main menu
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "NFS7_20170105_DICT", 
+  "labels": [ { "text": "CSPro New Features Showcase 7 (2017-01-05) Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": false, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "b3f8532ccda97822bca434d317a8433e029600653de118782f0abd6bbc6c5ee5"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "NFS7_20170105_LEVEL", 
+      "labels": [ { "text": "CSPro New Features Showcase 7 (2017-01-05) Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "UNUSED_ID_ITEM", 
+            "labels": [ { "text": "Unused ID Item" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "NFS7_20170105_DICU", 
+          "labels": [ { "text": "CSPro New Features Showcase 7 (2017-01-05) Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "MENU", 
+              "labels": [ { "text": "Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "MENU_VS1", 
+                  "labels": [ { "text": "Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Learn about the newly improved Excel to CSPro tool" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new Data Viewer tool" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new TimeStamp function" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new KeyList function" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new compression functions (Compress + Decompress)" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new ForCase looping statement" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new auto-increment field property" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about the new diagnostics function" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Learn about other new features" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Quit" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "EXCEL_TO_CSPRO_MENU", 
+              "labels": [ { "text": "Excel to CSPro Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "EXCEL_TO_CSPRO_MENU_VS1", 
+                  "labels": [ { "text": "Excel to CSPro Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Open the Excel to CSPro specifications file" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Convert the Excel file to a text data file" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Convert the Excel file to a CSPro DB data file" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "DATA_VIEWER_MENU", 
+              "labels": [ { "text": "Data Viewer Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "DATA_VIEWER_MENU_VS1", 
+                  "labels": [ { "text": "Data Viewer Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Open the Data Viewer" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Open the Popstan Examples data in the Data Viewer" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Open the IDB data in the Data Viewer" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "TIMESTAMP_MENU", 
+              "labels": [ { "text": "TimeStamp Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "TIMESTAMP_MENU_VS1", 
+                  "labels": [ { "text": "TimeStamp Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Calculate time to open and iterate 10 times through the text data file cases" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Calculate time to open and iterate 10 times through the CSPro DB data file cases" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "KEYLIST_MENU", 
+              "labels": [ { "text": "KeyList Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "KEYLIST_MENU_VS1", 
+                  "labels": [ { "text": "KeyList Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "COMPRESSION_MENU", 
+              "labels": [ { "text": "Compression Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "COMPRESSION_MENU_VS1", 
+                  "labels": [ { "text": "Compression Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Compress the text data file" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Compress the CSPro DB data file" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Compress both data files" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Decompress the last created zip file" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "FORCASE_MENU", 
+              "labels": [ { "text": "ForCase Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "FORCASE_MENU_VS1", 
+                  "labels": [ { "text": "ForCase Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Filter countries" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Filter age" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Filter year" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "FORCASE_COUNTRY_FILTER", 
+              "labels": [ { "text": "ForCase Country Filter" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "FORCASE_AGE_FILTER", 
+              "labels": [ { "text": "ForCase Age Filter" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "FORCASE_AGE_FILTER_VS1", 
+                  "labels": [ { "text": "ForCase Age Filter" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "All Ages" } ], 
+                      "pairs": [ { "value": "-1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ages" } ], 
+                      "pairs": [ { "range": [ "0", "100" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "FORCASE_YEAR_FILTER", 
+              "labels": [ { "text": "ForCase Year Filter" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "FORCASE_YEAR_FILTER_VS1", 
+                  "labels": [ { "text": "ForCase Year Filter" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Years" } ], 
+                      "pairs": [ { "range": [ "1950", "2050" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "AUTO_INCREMENT_MENU", 
+              "labels": [ { "text": "Auto-Increment Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "AUTO_INCREMENT_MENU_VS1", 
+                  "labels": [ { "text": "Auto-Increment Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Launch program" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "DIAGNOSTICS_MENU", 
+              "labels": [ { "text": "Diagnostics Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "DIAGNOSTICS_MENU_VS1", 
+                  "labels": [ { "text": "Diagnostics Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "OTHER_FEATURES_MENU", 
+              "labels": [ { "text": "Other Features Menu" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": false, 
+              "valueSets": [
+                {
+                  "name": "OTHER_FEATURES_MENU_VS1", 
+                  "labels": [ { "text": "Other Features Menu" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Return to the main menu" } ], 
+                      "pairs": [ { "value": "-9" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

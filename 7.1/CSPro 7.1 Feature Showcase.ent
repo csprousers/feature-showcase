@@ -1,35 +1,85 @@
-﻿[CSPro Application]
-Version=CSPro 7.1
-Label=CSPRO_7_1_FEATURE_SHOWCASE
-Name=CSPRO_7_1_FEATURE_SHOWCASE
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
-CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
-CAPIFont1Color=0
-CAPIFont2Color=16711680
-CaseTree=Never
-CreateListing=No
-CreateLog=No
-AutoAdvanceOnSelection=Yes
-ShowErrorMessageNumbers=No
-ParadataCollection=AllEvents
-ParadataRecordValues=Yes
-ParadataDeviceStateMinutes=5
-[External Dictionaries]
-File=.\CSPro 7.1 Feature Showcase.ent.wrk.dcf
-[AppCode]
-File=.\CSPro 7.1 Feature Showcase.ent.apc
-[Message]
-File=.\CSPro 7.1 Feature Showcase.ent.mgf
-Include=.\CSProRuntime.mgf
-[Help]
-File=.\CSPro 7.1 Feature Showcase.ent.qsf
-[Forms]
-File=.\CSPro 7.1 Feature Showcase.fmf
-[Resources]
-Folder=.\Reports
-[Dictionary Types]
-Dict-Type=.\CSPro 7.1 Feature Showcase.dcf,Input,.\CSPro 7.1 Feature Showcase.fmf
-Dict-Type=.\CSPro 7.1 Feature Showcase.ent.wrk.dcf,Working
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "CSPRO_7_1_FEATURE_SHOWCASE", 
+  "label": "CSPRO_7_1_FEATURE_SHOWCASE", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "path": "CSPro 7.1 Feature Showcase.dcf", 
+      "parent": "CSPro 7.1 Feature Showcase.fmf"
+    }, 
+    {
+      "type": "working", 
+      "path": "CSPro 7.1 Feature Showcase.ent.wrk.dcf"
+    }
+  ], 
+  "forms": [
+    "CSPro 7.1 Feature Showcase.fmf"
+  ], 
+  "questionText": [
+    "CSPro 7.1 Feature Showcase.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "path": "CSPro 7.1 Feature Showcase.ent.apc"
+    }
+  ], 
+  "messages": [
+    "CSPro 7.1 Feature Showcase.ent.mgf", 
+    "CSProRuntime.mgf"
+  ], 
+  "resources": [
+    "Reports"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": true, 
+    "caseTree": "off", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "all", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": true, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": true, 
+      "deviceStateIntervalMinutes": 5
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
+  }
+}

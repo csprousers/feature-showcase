@@ -1,75 +1,96 @@
-﻿[CAPI QUESTIONS]
-Version=CSPro 7.1
-
-[LANGUAGES]
-EN=English
-
-[QUESTION]
-Field=CSPRO71_DICT.ACTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 Welcome to the CSPro 7.1 Feature Showcase. This showcase highlights some new functionality, but be sure to look at the readme and in the helps for the \b What's New in CSPro 7.1?\b0  topic, which lists the new features in detail.\par
-EN=\par
-EN=Select an option to see a new feature in action.\par
-EN=}
-
-[QUESTION]
-Field=CSPRO71_DICT.EXTERNAL_MESSAGE_FILES
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs24 You can now associate multiple message files with a CSPro application (as you previously could with logic files). This means that you can share a grouping of messages across several applications. It also makes it easy to include separate message files for each language when using multiple languages.\par
-EN=\par
-EN=You can also override the system runtime messages by including a file with the name CSProRuntime.mgf. As an example of this, try to go to the next field without selecting a response and you will see that the "out of range" message has been overriden.\par
-EN=}
-
-[QUESTION]
-Field=CSPRO71_DICT.MULTIPLE_LANGUAGE_MESSAGES
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You can define messages in multiple languages, either through numbered messages or with string literals and the \b tr\b0  function. Select an option to see what happens when executing this code:\par
-EN=\par
-EN=errmsg(71,tr("United States"),2020);\par
-EN=}
-
-[QUESTION]
-Field=CSPRO71_DICT.PARADATA_COLLECTION
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.16299}\viewkind4\uc1
-EN=\pard\cf1\fs24 You can now turn on paradata collection for your application. Paradata, as defined by Wikipedia, is "data about the process by which the survey data [was] collected." In CSPro this includes information about fields and values entered, error messages encountered, and the state of the data collection device. The paradata log is a SQLite file that you can query outside of CSPro. There is a tool, Paradata Viewer, that allows you to look at the contents of the log, and you can combine logs from several devices using the Paradata Concatenator tool.\par
-EN=\par
-EN=You can also query the paradata log from within CSPro using the \b paradata\b0  or \b sqlquery\b0  functions. The following values come from the device_info table showing information about your device.\par
-EN=\par
-EN=Username: \b %USERNAME%\b0\par
-EN=RAM: \b %MEMORY_RAM% bytes\b0\par
-EN=Device model: \b %DEVICE_MODEL%\b0\par
-EN=\par
-EN=In this version of CSPro, question text fills can also call functions. This will be demonstrated, using paradata, to calculate how long you have been running this program: \b %SecondsRunningProgram% seconds\b0 .\par
-EN=}
-
-[QUESTION]
-Field=CSPRO71_DICT.QUERYING_SQLITE_FILES
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs24 You can execute queries into SQLite files with the new \b sqlquery\b0  function. This functionality is intended for advanced users. You can query:\par
-EN=\par
-EN=1) Paradata logs\par
-EN=2) CSPro DB data files\par
-EN=3) The index of text data files\par
-EN=4) Other SQLite files\par
-EN=\par
-EN=The results of the queries can be stored in a variety of formats. Select an option to see examples of querying the paradata log.\par
-EN=}
-
-[QUESTION]
-Field=CSPRO71_DICT.TEMPLATED_REPORTS
-EN={\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-EN={\colortbl ;\red0\green0\blue0;}
-EN={\*\generator Riched20 10.0.15063}\viewkind4\uc1
-EN=\pard\cf1\fs24 With the \b report\b0  and \b setreportdata\b0  functions, you can create HTML-templated reports. Select an option for an example of this, dynamically filling a report with information from the paradata log.\par
-EN=}
-
+﻿---
+fileType: Question Text
+version: CSPro 8.0
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: CSPRO71_DICT.ACTION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">Welcome to the CSPro 7.1 Feature Showcase. This showcase highlights some new functionality, but be sure to look at the readme and in the helps for the <span style="font-weight:bold;">What's New in CSPro 7.1?</span> topic, which lists the new features in detail.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Select an option to see a new feature in action.&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: CSPRO71_DICT.MULTIPLE_LANGUAGE_MESSAGES
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">You can define messages in multiple languages, either through numbered messages or with string literals and the <span style="font-weight:bold;">tr</span> function. Select an option to see what happens when executing this code:&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">errmsg(71, tr("United States"), 2020);&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: CSPRO71_DICT.EXTERNAL_MESSAGE_FILES
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">You can now associate multiple message files with a CSPro application (as you previously could with logic files). This means that you can share a grouping of messages across several applications. It also makes it easy to include separate message files for each language when using multiple languages.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">You can also override the system runtime messages by including a file with the name CSProRuntime.mgf. As an example of this, try to go to the next field without selecting a response and you will see that the "out of range" message has been overriden.&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: CSPRO71_DICT.PARADATA_COLLECTION
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">You can now turn on paradata collection for your application. Paradata, as defined by Wikipedia, is "data about the process by which the survey data [was] collected." In CSPro this includes information about fields and values entered, error messages encountered, and the state of the data collection device. The paradata log is a SQLite file that you can query outside of CSPro. There is a tool, Paradata Viewer, that allows you to look at the contents of the log, and you can combine logs from several devices using the Paradata Concatenator tool.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">You can also query the paradata log from within CSPro using the <span style="font-weight:bold;">paradata</span> or <span style="font-weight:bold;">sqlquery</span> functions. The following values come from the device_info table showing information about your device.&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">Username: <span style="font-weight:bold;">~~USERNAME~~&nbsp;</span></span></p>
+            <p><span style="font-size:16px;color:#000000;">RAM: <span style="font-weight:bold;">~~MEMORY_RAM~~ bytes&nbsp;</span></span></p>
+            <p><span style="font-size:16px;color:#000000;">Device model: <span style="font-weight:bold;">~~DEVICE_MODEL~~&nbsp;</span></span></p>
+            <p><span style="font-size:16px;color:#000000;">In this version of CSPro, question text fills can also call functions. This will be demonstrated, using paradata, to calculate how long you have been running this program: <span style="font-weight:bold;">~~SecondsRunningProgram()~~ seconds</span>.&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: CSPRO71_DICT.QUERYING_SQLITE_FILES
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">You can execute queries into SQLite files with the new <span style="font-weight:bold;">sqlquery</span> function. This functionality is intended for advanced users. You can query:&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">1) Paradata logs&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">2) CSPro DB data files&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">3) The index of text data files&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">4) Other SQLite files&nbsp;</span></p>
+            <p><span style="font-size:16px;color:#000000;">The results of the queries can be stored in a variety of formats. Select an option to see examples of querying the paradata log.&nbsp;</span></p>
+            
+        helpText:
+          EN: |
+            
+  - name: CSPRO71_DICT.TEMPLATED_REPORTS
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size:16px;color:#000000;">With the <span style="font-weight:bold;">report</span> and <span style="font-weight:bold;">setreportdata</span> functions, you can create HTML-templated reports. Select an option for an example of this, dynamically filling a report with information from the paradata log.</span></p>
+            
+        helpText:
+          EN: |
+            
+...

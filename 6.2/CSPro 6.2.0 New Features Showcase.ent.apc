@@ -2,7 +2,7 @@
 
 
 function OnStop()
-	stop(1);
+    stop(1);
 end;
 
 numeric ctr;
@@ -13,23 +13,16 @@ string capiTextConnection,capiTextConnectionWifi,capiTextConnectionMobile;
 
 function string GenerateConnectionCapiText(availability)
 
-	if availability then	GenerateConnectionCapiText = "available";
-	else					GenerateConnectionCapiText = "not available";
-	endif;
+    if availability then    GenerateConnectionCapiText = "available";
+    else                    GenerateConnectionCapiText = "not available";
+    endif;
 
 end;
 
 
 string capiTextPrompt;
-
-
-string capiTextPresident1,capiTextPresident2;
-
-
-array vsCodes(100);
-array string vsLabels(100);
-array string vsImages(100);
-numeric vsItr;
+string capiTextPresident1;
+string capiTextPresident2;
 
 
 
@@ -37,123 +30,115 @@ PROC SHOWCASE_FF
 
 preproc
 
-	// make sure that the images exist (by testing for the existence of one image)
-	if not fileexist(getimage(VALUE_SET_IMAGES_VS1,1)) then
-		errmsg("The value set images do not exist. Make sure that you copy over the Images folder before running this program.");
-		stop(1);
-	endif;
+    // make sure that the images exist (by testing for the existence of one image)
+    if not fileexist(getimage(VALUE_SET_IMAGES_VS1, 1)) then
+        errmsg("The value set images do not exist. Make sure that you copy over the Images folder before running this program.");
+        stop(1);
+    endif;
 
-	setfont(valuesets,"Calibri",20);
+    setfont(valuesets, "Calibri", 20);
 
 
 PROC CONNECTION_FUNCTION
 
 onfocus
 
-	capiTextConnection = GenerateConnectionCapiText(connection());
-	capiTextConnectionWifi = GenerateConnectionCapiText(connection(wifi));
-	capiTextConnectionMobile = GenerateConnectionCapiText(connection(mobile));
+    capiTextConnection = GenerateConnectionCapiText(connection());
+    capiTextConnectionWifi = GenerateConnectionCapiText(connection(wifi));
+    capiTextConnectionMobile = GenerateConnectionCapiText(connection(mobile));
 
 
 PROC PROMPT_FUNCTION
 
 preproc
 
-	capiTextPrompt = "";
+    capiTextPrompt = "";
 
 postproc
 
-	if PROMPT_FUNCTION in 1:3 then
+    if PROMPT_FUNCTION in 1:3 then
 
-		if PROMPT_FUNCTION = 1 then		capiTextPrompt = prompt("Enter a password:",password);
-		elseif PROMPT_FUNCTION = 2 then	capiTextPrompt = prompt("Enter a number:",numeric);
-		else							capiTextPrompt = prompt("Enter multiline text:",multiline);
-		endif;
+        if PROMPT_FUNCTION = 1 then     capiTextPrompt = prompt("Enter a password:", password);
+        elseif PROMPT_FUNCTION = 2 then capiTextPrompt = prompt("Enter a number:", numeric);
+        else                            capiTextPrompt = prompt("Enter multiline text:", multiline);
+        endif;
 
-		capiTextPrompt = "You entered: " + capiTextPrompt;
-		reenter;
+        capiTextPrompt = "You entered: " + capiTextPrompt;
+        reenter;
 
-	endif;
+    endif;
 
 
 PROC ENHANCED_EXTENDED_CONTROLS
 
 preproc
 
-	// only display this on Windows
-	if getos() in 20:29 then
-		skip to VALUE_SET_IMAGES;
-	endif;
+    // only display this on Windows
+    if getos() in 20:29 then
+        skip to VALUE_SET_IMAGES;
+    endif;
 
 
 PROC DYNAMIC_IMAGE_VALUE_SET
 
 preproc
 
-	// add Obama
-	vsCodes(1) = 1;
-	vsLabels(1) = getlabel(DYNAMIC_IMAGE_VALUE_SET_VS1,1);
-	vsImages(1) = getimage(DYNAMIC_IMAGE_VALUE_SET_VS1,1);
+    ValueSet vs;
 
-	// add the selection from the previous question
-	vsCodes(2) = 2;
-	vsLabels(2) = getlabel(VALUE_SET_IMAGES,VALUE_SET_IMAGES);
-	vsImages(2) = getimage(VALUE_SET_IMAGES,VALUE_SET_IMAGES);
+    // add Obama
+    vs.add(getlabel(DYNAMIC_IMAGE_VALUE_SET_VS1, 1), 1, image := getimage(DYNAMIC_IMAGE_VALUE_SET_VS1, 1));
 
-	vsCodes(3) = notappl; // end the value set
+    // add the selection from the previous question
+    vs.add(getlabel(VALUE_SET_IMAGES, VALUE_SET_IMAGES), 2, image := getimage(VALUE_SET_IMAGES, VALUE_SET_IMAGES));
 
-	setvalueset(DYNAMIC_IMAGE_VALUE_SET,vsCodes,vsLabels,vsImages);
+    setvalueset(DYNAMIC_IMAGE_VALUE_SET, vs);
 
-	capiTextPresident1 = vsLabels(1);
-	capiTextPresident2 = vsLabels(2);
+    capiTextPresident1 = vs.labels(1);
+    capiTextPresident2 = vs.labels(2);
 
 
 PROC MULTIPLE_LANGUAGES
 
 onfocus
 
-	// create a value set that allows the users to change languages but doesn't show the currently selected language
-	numeric excludeIndex;
+    // create a value set that allows the users to change languages but doesn't show the currently selected language
+    numeric excludeIndex;
 
-	if getlanguage() = "EN" then		excludeIndex = 1;
-	elseif getlanguage() = "FR" then	excludeIndex = 2;
-	else								excludeIndex = 3;
-	endif;
+    if getlanguage() = "EN" then        excludeIndex = 1;
+    elseif getlanguage() = "FR" then    excludeIndex = 2;
+    else                                excludeIndex = 3;
+    endif;
 
-	vsItr = 1;
+    ValueSet vs;
 
-	do ctr = minvalue(MULTIPLE_LANGUAGES_VS1) while ctr <= maxvalue(MULTIPLE_LANGUAGES_VS1)
+    do ctr = minvalue(MULTIPLE_LANGUAGES_VS1) while ctr <= maxvalue(MULTIPLE_LANGUAGES_VS1)
 
-		if ctr <> excludeIndex then
-			vsCodes(vsItr) = ctr;
-			vsLabels(vsItr) = getlabel(MULTIPLE_LANGUAGES_VS1,ctr);
-			inc(vsItr);
-		endif;
+        if ctr <> excludeIndex then
+            vs.add(getlabel(MULTIPLE_LANGUAGES_VS1, ctr), ctr);
+        endif;
 
-	enddo;
+    enddo;
 
-	vsCodes(vsItr) = notappl; // end the value set
-
-	setvalueset(MULTIPLE_LANGUAGES,vsCodes,vsLabels);
+    setvalueset(MULTIPLE_LANGUAGES, vs);
 
 postproc
 
-	if MULTIPLE_LANGUAGES = 1 then
-		setlanguage("EN");
-		reenter;
+    if MULTIPLE_LANGUAGES = 1 then
+        setlanguage("EN");
+        reenter;
 
-	elseif MULTIPLE_LANGUAGES = 2 then
-		setlanguage("FR");
-		reenter;
+    elseif MULTIPLE_LANGUAGES = 2 then
+        setlanguage("FR");
+        reenter;
 
-	elseif MULTIPLE_LANGUAGES = 3 then
-		setlanguage("JP");
-		reenter;
+    elseif MULTIPLE_LANGUAGES = 3 then
+        setlanguage("JP");
+        reenter;
 
-	elseif MULTIPLE_LANGUAGES = 4 then
-		reenter CONNECTION_FUNCTION;
+    elseif MULTIPLE_LANGUAGES = 4 then
+        reenter CONNECTION_FUNCTION;
 
-	else
-		stop(1);
+    else
+        stop(1);
 
-	endif;
+    endif;

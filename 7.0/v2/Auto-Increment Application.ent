@@ -1,23 +1,76 @@
-﻿[CSPro Application]
-Version=CSPro 7.0
-Label=AUTO_INCREMENT_APPLICATION
-Name=AUTO_INCREMENT_APPLICATION
-AppType=DataEntry
-OperatorID=No
-CAPI=Yes
-CAPIFont1=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
-CAPIFont2=-016 0000 0000 0000 0400 0000 0000 0000 0000 0000 0000 0000 0000 Arial
-CAPIFont1Color=0
-CAPIFont2Color=16711680
-CreateListing=No
-CreateLog=No
-[AppCode]
-File=.\Auto-Increment Application.ent.apc
-[Message]
-File=.\Auto-Increment Application.ent.mgf
-[Help]
-File=.\Auto-Increment Application.ent.qsf
-[Forms]
-File=.\Auto-Increment Application.fmf
-[Dictionary Types]
-Dict-Type=.\Auto-Increment Application.dcf,Input,.\Auto-Increment Application.fmf
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "AUTO_INCREMENT_APPLICATION", 
+  "label": "AUTO_INCREMENT_APPLICATION", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "path": "Auto-Increment Application.dcf", 
+      "parent": "Auto-Increment Application.fmf"
+    }
+  ], 
+  "forms": [
+    "Auto-Increment Application.fmf"
+  ], 
+  "questionText": [
+    "Auto-Increment Application.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "path": "Auto-Increment Application.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Auto-Increment Application.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": false, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": false
+    }, 
+    "showEndCaseMessage": true, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": true, 
+    "showErrorMessageNumbers": true, 
+    "showQuestionText": true, 
+    "showRefusals": true, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "none", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": true, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
+  }
+}

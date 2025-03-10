@@ -1,81 +1,113 @@
-﻿[Dictionary]
-Version=CSPro 7.1
-Label=Working Storage Dictionary
-Name=WS_DICT
-RecordTypeStart=1
-RecordTypeLen=1
-Positions=Relative
-ZeroFill=No
-DecimalChar=Yes
-
-[Level]
-Label=Working Storage Level
-Name=WS_LEVEL
-
-[IdItems]
-
-[Item]
-Label=Dummy ID
-Name=DUMMY_ID
-Start=2
-Len=1
-
-[Record]
-Label=Paradata Query Record
-Name=PARADATA_QUERY_REC
-RecordTypeValue='1'
-RecordLen=117
-
-[Item]
-Label=Username
-Name=USERNAME
-Start=3
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Memory RAM
-Name=MEMORY_RAM
-Start=53
-Len=15
-
-[Item]
-Label=Device Model
-Name=DEVICE_MODEL
-Start=68
-Len=50
-DataType=Alpha
-
-[Record]
-Label=Entered Fields Record
-Name=ENTERED_FIELDS_REC
-RecordTypeValue='2'
-MaxRecords=25
-RecordLen=71
-
-[Item]
-Label=Field Name
-Name=FIELD_NAME
-Start=3
-Len=50
-DataType=Alpha
-
-[Item]
-Label=Date Entered
-Name=DATE_ENTERED
-Start=53
-Len=8
-
-[Item]
-Label=Time Entered
-Name=TIME_ENTERED
-Start=61
-Len=6
-
-[Item]
-Label=Display Duration
-Name=DISPLAY_DURATION
-Start=67
-Len=5
-Decimal=1
-DecimalChar=Yes
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "WS_DICT", 
+  "labels": [ { "text": "Working Storage Dictionary" } ], 
+  "security": {
+    "allowDataViewerModifications": false, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "60dedf42e534942b8f664c83023e53a4bc5c955e888b4943713b141063a4c8cd"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": false
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "WS_LEVEL", 
+      "labels": [ { "text": "Working Storage Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "DUMMY_ID", 
+            "labels": [ { "text": "Dummy ID" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 1, 
+            "zeroFill": false
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "PARADATA_QUERY_REC", 
+          "labels": [ { "text": "Paradata Query Record" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "USERNAME", 
+              "labels": [ { "text": "Username" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "MEMORY_RAM", 
+              "labels": [ { "text": "Memory RAM" } ], 
+              "contentType": "numeric", 
+              "length": 15, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "DEVICE_MODEL", 
+              "labels": [ { "text": "Device Model" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }
+          ]
+        }, 
+        {
+          "name": "ENTERED_FIELDS_REC", 
+          "labels": [ { "text": "Entered Fields Record" } ], 
+          "recordType": "2", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 25
+          }, 
+          "items": [
+            {
+              "name": "FIELD_NAME", 
+              "labels": [ { "text": "Field Name" } ], 
+              "contentType": "alpha", 
+              "length": 50
+            }, 
+            {
+              "name": "DATE_ENTERED", 
+              "labels": [ { "text": "Date Entered" } ], 
+              "contentType": "numeric", 
+              "length": 8, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "TIME_ENTERED", 
+              "labels": [ { "text": "Time Entered" } ], 
+              "contentType": "numeric", 
+              "length": 6, 
+              "zeroFill": false
+            }, 
+            {
+              "name": "DISPLAY_DURATION", 
+              "labels": [ { "text": "Display Duration" } ], 
+              "contentType": "numeric", 
+              "length": 5, 
+              "decimals": 1, 
+              "decimalMark": true, 
+              "zeroFill": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

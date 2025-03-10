@@ -1,5 +1,5 @@
 ﻿[FormFile]
-Version=CSPro 6.2
+Version=CSPro 8.0
 Name=SHOWCASE_FF
 Label=CSPro 6.2.0 New Features Showcase
 DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
@@ -12,7 +12,7 @@ File=.\CSPro 6.2.0 New Features Showcase.dcf
 [Form]
 Name=FORM000
 Label=CSPro 6.2.0 New Features Showcase
-QuestionTextHeight=140
+QuestionTextHeight=244
 Level=1
 Size=352,410
 CapturePos=506,19
@@ -36,7 +36,6 @@ Required=Yes
 Name=SHOWCASE_FORM
 Label=CSPro 6.2.0 New Features Showcase
 Form=1
-LogicControl=No
 Max=1
   
 [Field]
@@ -70,6 +69,7 @@ Name=CUSTOM_ERROR_MESSAGE
 Position=284,118,299,138
 Item=CUSTOM_ERROR_MESSAGE,SHOWCASE_DICT
 FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
 Form=1
   
 [Text]
