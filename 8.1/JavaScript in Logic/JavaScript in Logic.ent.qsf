@@ -1,0 +1,48 @@
+﻿---
+fileType: Question Text
+version: CSPro 8.1
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: JAVASCRIPT_IN_LOGIC_DICT.MENU
+    conditions:
+      - questionText:
+          EN:
+            format: Markdown-Report
+            text: |
+              Select an option to demonstrate interacting with JavaScript from CSPro logic.
+              
+              <?
+              if result <> "" then
+              	QSF.write("The result of the last operation:\n\n**_");
+              	QSF.writeEncoded("%s", result);
+              	QSF.writeLine("_**");
+              endif;
+              
+              if resultImageUrl <> "" then
+              	QSF.writeLine("<br><br>![demo image](%s)", resultImageUrl);
+              endif;
+              ?>
+...

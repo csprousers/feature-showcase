@@ -1,0 +1,172 @@
+﻿PROC GLOBAL
+
+
+// This declaration wraps the JavaScript function greatCircleDistance found in: Included JavaScript.js.
+// Note that this file is evaluated as a global script.
+declare function JS numeric greatCircleDistance(numeric lat1, numeric lon1, numeric lat2, numeric lon2);
+
+// This declaration wraps the JavaScript function createMandelbrotBitmapFile found in: Mandelbrot/Mandelbrot.js.
+// Note that the related files (Mandelbrot.js + Bitmap.js) are evaluated as modules, so look at the bottom of
+// Mandelbrot.js to see how the function is made available to call from CSPro.
+declare function JS createMandelbrotBitmapFile(numeric width, numeric height, string bmpFilePath);
+
+
+// Terminate the program instead of showing the "Stop Adding?" dialog.
+function OnStop()
+    stop(1);
+end;
+
+
+// Variables used in the question text:
+string result;
+string resultImageUrl;
+
+
+PROC JAVASCRIPT_IN_LOGIC_FF
+
+
+PROC MENU
+
+    result = "";
+    resultImageUrl = "";
+
+
+    // calling JavaScript built-in functions using JS.eval
+    if MENU = 1 then
+        result = maketext(
+            "Date evaluation: %s\n\nString manipulation: %s\n\nArray manipulation (sorting): %s",
+            JS.eval("var today = new Date(); today.toString();"),
+            JS.eval("\"THIS TEXT HAS BEEN CONVERTED TO LOWER CASE IN JAVASCRIPT.\".toLocaleLowerCase();"),
+            JS.eval("var values = [ 11, 24, 4, 1 ]; values.sort((a, b) => (a - b));")
+        );
+
+
+    // calling JavaScript functions using JS.eval, JS.invoke, and function wrappers
+    elseif MENU = 2 then
+        numeric CapitolLat = 38.89;
+        numeric CapitolLong = -77.09;
+        numeric IndependenceHallLat = 39.95;
+        numeric IndependenceHallLong = -75.159;
+
+        result = maketext(
+            "Calculating the great-cicle distance (in meters) using:\n\n"
+            "JS.eval: %d\nJS.invoke: %d\nFunction wrapper: %d\ngps (CSPro function): %d",
+            tonumber(JS.eval(maketext("greatCircleDistance(%f, %f, %f, %f);", CapitolLat, CapitolLong, IndependenceHallLat, IndependenceHallLong))),
+            tonumber(JS.invoke("greatCircleDistance", CapitolLat, CapitolLong, IndependenceHallLat, IndependenceHallLong)),
+            greatCircleDistance(CapitolLat, CapitolLong, IndependenceHallLat, IndependenceHallLong),
+            gps(distance, CapitolLat, CapitolLong, IndependenceHallLat, IndependenceHallLong)
+        );
+
+
+    // use of the Action Invoker from JavaScript
+    elseif MENU = 3 then
+        result = JS.invoke("demoActionInvoker");
+
+
+    // CSPro <-> JavaScript value conversions
+    elseif MENU = 4 then
+        result = "The results of the following conversions are shown in JSON:\n";
+
+        result = result + maketext("\nJS.hasValue(\"value\"): %d", JS.hasValue("value"));
+
+        JS.setValue("value", maketext("This is text set in CSPro logic at %s", timestring()));
+        result = result + maketext("\nSet to string: %s", JS.getValueJson("value"));
+
+        result = result + maketext("\nJS.hasValue(\"value\"): %d", JS.hasValue("value"));
+
+        JS.setValue("value", 1.23);
+        result = result + maketext("\nSet to number: %s", JS.getValueJson("value"));
+
+        JS.setValue("value", notappl);
+        result = result + maketext("\nSet to notappl: %s", JS.getValueJson("value"));
+
+        JS.setValue("value", missing);
+        result = result + maketext("\nSet to missing: %s", JS.getValueJson("value"));
+
+        List primes = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29;
+        JS.setValue("value", primes);
+        result = result + maketext("\nSet to List: %s", JS.getValueJson("value"));
+
+        Array string developers(3) = "U.S. Census Bureau", "ICF", "Serpro";
+        JS.setValue("value", developers);
+        result = result + maketext("\nSet to Array: %s", JS.getValueJson("value"));
+
+        HashMap string osDetails;
+        getos(osDetails);
+        JS.setValue("value", osDetails);
+        result = result + maketext("\nSet to HashMap: %s", JS.getValueJson("value"));
+
+        JS.setValueFromJson("value", '{ "version": 8.1, "releaseYear": 2026 }');
+        result = result + maketext("\nSet using JSON: %s", JS.getValueJson("value"));
+
+
+
+    // JavaScript logging
+    elseif MENU = 5 then
+        JS.eval("print(\"The JavaScript function 'print' is being executed from CSPro logic!\");");
+        JS.eval("console.log(\"The JavaScript function 'console.log' is being executed from CSPro logic!\");");
+        result = "The results of the JavaScript logging can be seen in: JavaScript in Logic.lst";
+
+
+    // JavaScript evaluation ending in an exception
+    elseif MENU = 6 then
+        result = JS.eval("throw new Error(\"An exception was thrown from JavaScript and not caught!\");");
+
+
+    // JavaScript vs. CSPro speed test
+    elseif MENU = 7 then
+        numeric Iterations = 500000;
+
+        errmsg("The speed test will take a few seconds to run %d iterations. Do you want to continue?", Iterations)
+        select("Yes", continue, "No", reenter);
+
+        numeric startTime = timestamp();
+        do numeric ctr = 1 while ctr <= Iterations
+            edit("999999", ctr);
+        enddo;
+        numeric csTime = timestamp() - startTime;
+
+        startTime = timestamp();
+        JS.invoke("convertNumberToString", Iterations);
+        numeric jsTime = timestamp() - startTime;
+
+        result = maketext(
+            "Converting a number to a string %d times is %d%% faster in JavaScript:\n\n"
+            "CSPro logic: %0.2f seconds\nJavaScript: %0.2f seconds",
+            Iterations,
+            ( csTime - jsTime ) / csTime * 100,
+            csTime,
+            jsTime
+        );
+
+
+    // create Mandelbrot set image in JavaScript
+    elseif MENU = 8 then
+        numeric width;
+        numeric height;
+        numeric dimensions_result = accept("Select the dimensions of the Mandelbrot set image to create.\n\n"
+                                           "Creating the image will take a few seconds.",
+                                           "320 x 240", "640 x 480", "1000 x 1000");
+
+        if dimensions_result = 1 then
+            width = 320;
+            height = 240;
+        elseif dimensions_result = 2 then
+            width = 640;
+            height = 480;
+        elseif dimensions_result = 3 then
+            width = 1000;
+            height = 1000;
+        else
+            reenter;
+        endif;
+
+        string bmpFilePath = Path.concat(Application, maketext("mandelbrot-set-%d-%d.bmp", width, height));
+        createMandelbrotBitmapFile(width, height, bmpFilePath);
+
+        result = maketext("The Mandelbrot set image, created in JavaScript, is shown below and is saved here: %s", Path.getFileName(bmpFilePath));
+        resultImageUrl = CS.Localhost.mapFile(path := bmpFilePath);
+
+    endif;
+
+    reenter;

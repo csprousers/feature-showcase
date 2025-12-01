@@ -1,0 +1,11 @@
+﻿[Run Information]
+Version=CSPro 8.1
+AppType=Entry
+
+[DataEntryInit]
+StartMode=Add
+FullScreen=Yes
+
+[Files]
+Application=.\JavaScript in Logic.ent
+InputData=|type=None

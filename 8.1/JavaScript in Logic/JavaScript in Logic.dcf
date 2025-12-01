@@ -1,0 +1,101 @@
+{
+  "software": "CSPro",
+  "version": 8.1,
+  "fileType": "dictionary",
+  "name": "JAVASCRIPT_IN_LOGIC_DICT",
+  "labels": [ { "text": "JavaScript in Logic" } ],
+  "security": {
+    "allowDataManagerModifications": true,
+    "allowExport": true,
+    "cachedPasswordMinutes": 0,
+    "settings": "678edc50c396eee5af61404126931a44d0137b40d31340c4df5ee5ca395c1e5bc453158a7c9bacbebdfceefaadd55af0"
+  },
+  "readOptimization": true,
+  "recordType": {
+    "start": 1,
+    "length": 1
+  },
+  "defaults": {
+    "decimalMark": true,
+    "zeroFill": false
+  },
+  "relativePositions": true,
+  "levels": [
+    {
+      "name": "JAVASCRIPT_IN_LOGIC_LEVEL",
+      "labels": [ { "text": "JavaScript in Logic Level" } ],
+      "ids": {
+        "items": [
+          {
+            "name": "ID",
+            "labels": [ { "text": "ID" } ],
+            "contentType": "numeric",
+            "start": 2,
+            "length": 1,
+            "zeroFill": false
+          }
+        ]
+      },
+      "records": [
+        {
+          "name": "JAVASCRIPT_IN_LOGIC_REC",
+          "labels": [ { "text": "JavaScript in Logic Record" } ],
+          "recordType": "1",
+          "occurrences": {
+            "required": true,
+            "maximum": 1
+          },
+          "items": [
+            {
+              "name": "MENU",
+              "labels": [ { "text": "Menu" } ],
+              "contentType": "numeric",
+              "length": 2,
+              "zeroFill": false,
+              "valueSets": [
+                {
+                  "name": "MENU_VS1",
+                  "labels": [ { "text": "Menu" } ],
+                  "values": [
+                    {
+                      "labels": [ { "text": "Calling JavaScript built-in functions using JS.eval" } ],
+                      "pairs": [ { "value": "1" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Calling JavaScript functions using JS.eval, JS.invoke, and function wrappers" } ],
+                      "pairs": [ { "value": "2" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Use of the Action Invoker from JavaScript" } ],
+                      "pairs": [ { "value": "3" } ]
+                    },
+                    {
+                      "labels": [ { "text": "CSPro <-> JavaScript value conversions" } ],
+                      "pairs": [ { "value": "4" } ]
+                    },
+                    {
+                      "labels": [ { "text": "JavaScript logging" } ],
+                      "pairs": [ { "value": "5" } ]
+                    },
+                    {
+                      "labels": [ { "text": "JavaScript evaluation ending in an exception " } ],
+                      "pairs": [ { "value": "6" } ]
+                    },
+                    {
+                      "labels": [ { "text": "JavaScript vs. CSPro speed test" } ],
+                      "pairs": [ { "value": "7" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Create Mandelbrot set image in JavaScript" } ],
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

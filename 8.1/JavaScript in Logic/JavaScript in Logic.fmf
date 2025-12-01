@@ -1,0 +1,46 @@
+﻿[FormFile]
+Version=CSPro 8.1
+Name=JAVASCRIPT_IN_LOGIC_FF
+Label=JavaScript in Logic
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\JavaScript in Logic.dcf
+  
+[Form]
+Name=FORM000
+Label=JavaScript in Logic Level
+QuestionTextHeight=382
+Level=1
+Size=281,96
+  
+Item=MENU
+  
+[EndForm]
+  
+[Level]
+Name=JAVASCRIPT_IN_LOGIC_LEVEL
+Label=JavaScript in Logic Level
+  
+[Group]
+Required=Yes
+Name=JAVASCRIPT_IN_LOGIC_LEVEL_FORM
+Label=JavaScript in Logic Level
+Form=1
+Max=1
+  
+[Field]
+Name=MENU
+Position=135,49,166,71
+Item=MENU,JAVASCRIPT_IN_LOGIC_DICT
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=51,52,86,68
+Text=Menu
+ 
+[EndGroup]
+  
