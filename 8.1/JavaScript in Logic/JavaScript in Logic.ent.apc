@@ -49,7 +49,7 @@ PROC MENU
         numeric IndependenceHallLong = -75.159;
 
         result = maketext(
-            "Calculating the great-cicle distance (in meters) using:\n\n"
+            "Calculating the great-circle distance (in meters) using:\n\n"
             "JS.eval: %d\nJS.invoke: %d\nFunction wrapper: %d\ngps (CSPro function): %d",
             tonumber(JS.eval(maketext("greatCircleDistance(%f, %f, %f, %f);", CapitolLat, CapitolLong, IndependenceHallLat, IndependenceHallLong))),
             tonumber(JS.invoke("greatCircleDistance", CapitolLat, CapitolLong, IndependenceHallLat, IndependenceHallLong)),
