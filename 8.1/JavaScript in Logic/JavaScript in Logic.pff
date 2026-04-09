@@ -1,6 +1,7 @@
 ﻿[Run Information]
 Version=CSPro 8.1
 AppType=Entry
+Description=CSPro 8.1 Feature Showcase - JavaScript in Logic
 
 [DataEntryInit]
 StartMode=Add
