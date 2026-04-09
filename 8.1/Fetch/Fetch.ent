@@ -1,0 +1,90 @@
+{
+  "software": "CSPro",
+  "version": 8.1,
+  "fileType": "application",
+  "type": "entry",
+  "name": "FETCH",
+  "label": "Fetch",
+  "dictionaries": [
+    {
+      "type": "input",
+      "path": "Fetch.dcf",
+      "parent": "Fetch.fmf",
+      "simpleSynchronization": true,
+      "includeValueSetImagesInCompiledApplication": false
+    }
+  ],
+  "forms": [
+    "Fetch.fmf"
+  ],
+  "questionText": [
+    "Fetch.ent.qsf"
+  ],
+  "code": [
+    {
+      "type": "main",
+      "path": "Fetch.ent.apc"
+    },
+    {
+      "type": "JavaScript:global",
+      "path": "Fetch.ent.js"
+    }
+  ],
+  "messages": [
+    "Fetch.ent.mgf"
+  ],
+  "reports": [
+    {
+      "name": "README_REPORT",
+      "encoding": "Markdown",
+      "path": "Readme-Report.md"
+    }
+  ],
+  "logicSettings": {
+    "version": 8.0,
+    "caseSensitive": {
+      "symbols": true
+    },
+    "actionInvoker": {
+      "accessFromExternalCaller": "promptIfNoValidAccessToken",
+      "convertResultsForLogic": true
+    }
+  },
+  "properties": {
+    "askOperatorId": false,
+    "autoAdvanceOnSelection": false,
+    "caseTree": "mobileOnly",
+    "centerForms": false,
+    "createListing": false,
+    "createLog": false,
+    "decimalMark": "dot",
+    "displayCodesAlongsideLabels": false,
+    "notes": {
+      "delete": "all",
+      "edit": "all"
+    },
+    "partialSave": {
+      "operatorEnabled": false
+    },
+    "showEndCaseMessage": true,
+    "showOnlyDiscreteValuesInComboBoxes": true,
+    "showFieldLabels": true,
+    "showErrorMessageNumbers": false,
+    "showQuestionText": true,
+    "showRefusals": true,
+    "verify": {
+      "frequency": 1,
+      "start": 1
+    },
+    "htmlDialogs": true,
+    "paradata": {
+      "collection": "all",
+      "recordCoordinates": false,
+      "recordInitialPropertyValues": false,
+      "recordIteratorLoadCases": false,
+      "recordValues": false,
+      "deviceStateIntervalMinutes": 5
+    },
+    "useHtmlComponentsInsteadOfNativeVersions": false
+  }
+}

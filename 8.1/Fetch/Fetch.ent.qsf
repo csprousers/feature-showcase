@@ -1,0 +1,44 @@
+﻿---
+fileType: Question Text
+version: CSPro 8.1
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: FETCH_DICT.MENU
+    conditions:
+      - questionText:
+          EN:
+            format: Markdown-Report
+            text: |
+              Select an option to demonstrate using the Action Invoker namespace Network to make HTTP requests and handle responses.
+
+              <?
+              if result <> "" then
+              	QSF.write("The result of the last operation:\n\n**_");
+              	QSF.writeEncoded("%s", result);
+              	QSF.writeLine("_**");
+              endif;
+              ?>
+...

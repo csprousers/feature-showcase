@@ -1,0 +1,46 @@
+﻿[FormFile]
+Version=CSPro 8.1
+Name=FETCH_FF
+Label=Fetch
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\Fetch.dcf
+  
+[Form]
+Name=FORM000
+Label=Fetch Level
+QuestionTextHeight=266
+Level=1
+Size=307,112
+  
+Item=MENU
+  
+[EndForm]
+  
+[Level]
+Name=FETCH_LEVEL
+Label=Fetch Level
+  
+[Group]
+Required=Yes
+Name=FETCH_LEVEL_FORM
+Label=Fetch Level
+Form=1
+Max=1
+  
+[Field]
+Name=MENU
+Position=114,30,145,52
+Item=MENU,FETCH_DICT
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=30,33,65,49
+Text=Menu
+ 
+[EndGroup]
+  

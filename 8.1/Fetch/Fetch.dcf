@@ -1,0 +1,113 @@
+{
+  "software": "CSPro",
+  "version": 8.1,
+  "fileType": "dictionary",
+  "name": "FETCH_DICT",
+  "labels": [ { "text": "Fetch" } ],
+  "security": {
+    "allowDataManagerModifications": true,
+    "allowExport": true,
+    "cachedPasswordMinutes": 0,
+    "settings": "39846a61efdf6b8deacf3db22efd5f774634fe16f74af815a72b037fff2fc2c0"
+  },
+  "readOptimization": true,
+  "recordType": {
+    "start": 1,
+    "length": 1
+  },
+  "defaults": {
+    "decimalMark": true,
+    "zeroFill": false
+  },
+  "relativePositions": true,
+  "levels": [
+    {
+      "name": "FETCH_LEVEL",
+      "labels": [ { "text": "Fetch Level" } ],
+      "ids": {
+        "items": [
+          {
+            "name": "ID",
+            "labels": [ { "text": "ID" } ],
+            "contentType": "numeric",
+            "start": 2,
+            "length": 1,
+            "zeroFill": false
+          }
+        ]
+      },
+      "records": [
+        {
+          "name": "FETCH_REC",
+          "labels": [ { "text": "Fetch Record" } ],
+          "recordType": "1",
+          "occurrences": {
+            "required": true,
+            "maximum": 1
+          },
+          "items": [
+            {
+              "name": "MENU",
+              "labels": [ { "text": "Menu" } ],
+              "contentType": "numeric",
+              "length": 2,
+              "zeroFill": false,
+              "valueSets": [
+                {
+                  "name": "MENU_VS1",
+                  "labels": [ { "text": "Menu" } ],
+                  "values": [
+                    {
+                      "labels": [ { "text": "Fetch text (CSPro logic)" } ],
+                      "pairs": [ { "value": "1" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch Markdown as text and display in a report (CSPro logic)" } ],
+                      "pairs": [ { "value": "2" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch JSON (CSPro logic)" } ],
+                      "pairs": [ { "value": "3" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch JSON using request headers (JavaScript)" } ],
+                      "pairs": [ { "value": "4" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch JSON with POST, adding a body and showing the response headers (JavaScript)" } ],
+                      "pairs": [ { "value": "5" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch to a file (CSPro logic)" } ],
+                      "pairs": [ { "value": "6" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch bytes using binary data caching (CSPro logic)" } ],
+                      "pairs": [ { "value": "7" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch unsuccessfully using Network.fetchText (CSPro logic)" } ],
+                      "pairs": [ { "value": "8" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch unsuccessfully using Network.fetch (CSPro logic)" } ],
+                      "pairs": [ { "value": "9" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch successfully and retrieve body as JSON (JavaScript)" } ],
+                      "pairs": [ { "value": "10" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Fetch and conditionally retrieve the body as JSON (JavaScript)" } ],
+                      "pairs": [ { "value": "11" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

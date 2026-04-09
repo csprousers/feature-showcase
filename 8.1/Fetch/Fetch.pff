@@ -1,0 +1,12 @@
+﻿[Run Information]
+Version=CSPro 8.1
+AppType=Entry
+Description=CSPro 8.1 Feature Showcase - Fetch
+
+[DataEntryInit]
+StartMode=Add
+FullScreen=Yes
+
+[Files]
+Application=.\Fetch.ent
+InputData=|type=None

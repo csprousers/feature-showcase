@@ -1,0 +1,137 @@
+﻿PROC GLOBAL
+
+
+// Declarations wrapping JavaScript functions found in Fetch.ent.js:
+declare function JS string jsDemoFetchJsonRequestHeaders();
+declare function JS string jsDemoFetchJsonResponseHeadersAndBody(string time);
+declare function JS string jsDemoFetchRetrieveBodyAsJson();
+declare function JS string jsDemoFetchRetrieveBodyConditionally(function(string heading, List string options));
+
+
+// Terminate the program instead of showing the "Stop Adding?" dialog.
+function OnStop()
+    stop(1);
+end;
+
+
+// Variables used in the question text:
+string result;
+
+
+// A function, used in JavaScript, to display a message with a series of choices.
+function ShowAccept(string heading, List string options)
+    exit accept(heading, options);
+end;
+
+
+PROC FETCH_FF
+
+
+PROC MENU
+
+    result = "";
+
+
+    // Fetch text (CSPro logic)
+    if MENU = 1 then
+        // use the Bacon Ipsum JSON API to generate two paragraphs of text
+        result = CS.Network.fetchText(
+            url := "https://baconipsum.com/api/?type=meat-and-filler&paras=2&format=text"
+        );
+
+
+    // Fetch Markdown as text and display in a report (CSPro logic)
+    elseif MENU = 2 then
+        README_REPORT.view();
+
+
+    // Fetch JSON (CSPro logic)
+    elseif MENU = 3 then
+        // query IPinfo for details on our IP address
+        string ipResultJson = CS.Network.fetchJson(
+            url := "https://ipinfo.io/json"
+        );
+
+        // use a CSPro HashMap to parse the JSON
+        HashMap string ipMap default("<not defined>");
+        ipMap.setValueFromJson(ipResultJson);
+
+        result = maketext(
+            "Some results from IPInfo:\n\nIP: %s\nCity %s\nRegion: %s\nTimezone: %s",
+            ipMap("ip"),
+            ipMap("city"),
+            ipMap("region"),
+            ipMap("timezone")
+        );
+
+
+    // Fetch JSON using request headers (JavaScript)
+    elseif MENU = 4 then
+        result = jsDemoFetchJsonRequestHeaders();
+
+
+    // Fetch JSON with POST, adding a body and showing the response headers (JavaScript)
+    elseif MENU = 5 then
+        result = jsDemoFetchJsonResponseHeadersAndBody(timestring());
+
+
+    // Fetch to a file (CSPro logic)
+    elseif MENU = 6 then
+        // save Versioning.h from the CSPro open source repository as a text file
+        result = maketext("CSPro versioning source code downloaded to: %s",
+            CS.Network.fetchFile(
+                url := "https://raw.githubusercontent.com/csprousers/cspro/refs/heads/dev/cspro/zUtilO/Versioning.h",
+                path := maketext("Versioning-header-%d.txt", timestamp())
+            )
+        );
+
+
+    // Fetch bytes using binary data caching (CSPro logic)
+    elseif MENU = 7 then
+        // retrieve an image from the CSPro open source repository, caching the content
+        // rather than receiving the bytes in the default form (as a data URL)
+        string cacheKey = CS.Network.fetchBytes(
+            url := "https://raw.githubusercontent.com/csprousers/cspro/refs/heads/dev/cspro/html/images/cspro-logo-medium.png",
+            responseBodyFormat := "cache"
+        );
+
+        result = "Image fetched with the bytes cached using the key: " + cacheKey;
+
+        // use the cached content to update an Image object
+        Image logo;
+        logo.setValueFromJson(maketext('{ "content": { "url": %s } }', encode(JsonString, cacheKey)));
+
+        // show the image
+        logo.view();
+
+
+    // Fetch unsuccessfully using Network.fetchText (CSPro logic)
+    elseif MENU = 8 then
+        result = "The fetch convenience methods, like Network.fetchText, cannot process HTTP status codes "
+                 "outside of the range 200 - 299 and you just saw the text of the exception. "
+                 "Use Network.fetch to process responses with such codes.";
+
+        CS.Network.fetchText(url := "https://httpbin.org/status/404");
+
+
+    // Fetch unsuccessfully using Network.fetch (CSPro logic)
+    elseif MENU = 9 then
+        result = "Unlike the fetch convenience methods, Network.fetch returns response details for "
+                 "all requests, even those with HTTP status codes outside of the range 200 - 299. "
+                 "The key \"ok\" indicates if the response was in that range. "
+                 "The response contained the following details:\n\n" +
+                 CS.Network.fetch(url := "https://httpbin.org/status/404");
+
+
+    // Fetch successfully and retrieve body as JSON (JavaScript)
+    elseif MENU = 10 then
+        result = jsDemoFetchRetrieveBodyAsJson();
+
+
+    // Fetch and conditionally retrieve the body as JSON (JavaScript)
+    elseif MENU = 11 then
+        result = jsDemoFetchRetrieveBodyConditionally(ShowAccept);
+
+    endif;
+
+    reenter;
