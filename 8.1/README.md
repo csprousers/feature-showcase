@@ -1,6 +1,6 @@
 ## CSPro 8.1 Feature Showcases
 
-This branch of the [repository](https://github.com/csprousers/feature-showcase) contains "feature showcases" for CSPro 8.1 and is available to download: [feature-showcase-8.1.zip](https://github.com/csprousers/feature-showcase/archive/refs/tags/v8.1.zip).
+This branch of the [repository](https://github.com/csprousers/feature-showcase) contains "feature showcases" for CSPro 8.1 and is available to download: [feature-showcase-8.1.zip](https://github.com/csprousers/feature-showcase/archive/refs/heads/8.1.zip).
 
 
 ### JavaScript in Logic
