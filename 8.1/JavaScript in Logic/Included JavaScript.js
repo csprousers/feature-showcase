@@ -28,11 +28,11 @@ function demoActionInvoker() {
 
     if (dialogResult) {
         return dialogResult.textInput
-            .replace('a', 'A')
-            .replace('e', 'E')
-            .replace('i', 'I')
-            .replace('o', 'O')
-            .replace('u', 'U');
+            .replaceAll('a', 'A')
+            .replaceAll('e', 'E')
+            .replaceAll('i', 'I')
+            .replaceAll('o', 'O')
+            .replaceAll('u', 'U');
     }
 }
 
