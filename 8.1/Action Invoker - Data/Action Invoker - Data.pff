@@ -1,0 +1,16 @@
+﻿[Run Information]
+Version=CSPro 8.1
+AppType=Entry
+Description=CSPro 8.1 Feature Showcase - Action Invoker - Data
+
+[DataEntryInit]
+StartMode=Add
+FullScreen=Yes
+
+[Files]
+Application=.\Action Invoker - Data.ent
+InputData=|type=None
+CommonStore=.\Settings.db
+
+[ExternalFiles]
+NST_EST2025_DICT=.\NST_EST2025\NST_EST2025.json

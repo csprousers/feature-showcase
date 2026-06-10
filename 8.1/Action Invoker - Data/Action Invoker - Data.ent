@@ -1,0 +1,117 @@
+{
+  "software": "CSPro",
+  "version": 8.1,
+  "fileType": "application",
+  "type": "entry",
+  "name": "ACTION_INVOKER_DATA",
+  "label": "Action Invoker - Data",
+  "dictionaries": [
+    {
+      "type": "input",
+      "path": "Action Invoker - Data.dcf",
+      "parent": "Action Invoker - Data.fmf",
+      "simpleSynchronization": true,
+      "includeValueSetImagesInCompiledApplication": false
+    },
+    {
+      "type": "external",
+      "path": "NST_EST2025/NST_EST2025.dcf",
+      "simpleSynchronization": false,
+      "includeValueSetImagesInCompiledApplication": false
+    },
+    {
+      "type": "external",
+      "path": "Random-Numbers/Random-Numbers.dcf",
+      "simpleSynchronization": false,
+      "includeValueSetImagesInCompiledApplication": false
+    }
+  ],
+  "forms": [
+    "Action Invoker - Data.fmf"
+  ],
+  "questionText": [
+    "Action Invoker - Data.ent.qsf"
+  ],
+  "code": [
+    {
+      "type": "main",
+      "path": "Action Invoker - Data.ent.apc"
+    },
+    {
+      "type": "JavaScript:global",
+      "path": "Action Invoker - Data.js"
+    }
+  ],
+  "messages": [
+    "Action Invoker - Data.ent.mgf"
+  ],
+  "reports": [
+    {
+      "name": "POPULATION_ESTIMATES_REPORT",
+      "encoding": "HTML",
+      "path": "Report-Population-Estimates.html"
+    },
+    {
+      "name": "DYNAMIC_MARKDOWN_REPORT",
+      "encoding": "Markdown",
+      "path": "Report-Dynamic-Markdown.md"
+    }
+  ],
+  "resources": [
+    {
+      "path": "Report-Population-Estimates.css",
+      "includeInCompiledApplication": true
+    },
+    {
+      "path": "NST_EST2025/NST_EST2025.json",
+      "includeInCompiledApplication": true
+    }
+  ],
+  "logicSettings": {
+    "version": 8.0,
+    "caseSensitive": {
+      "symbols": true
+    },
+    "actionInvoker": {
+      "accessFromExternalCaller": "promptIfNoValidAccessToken",
+      "convertResultsForLogic": true
+    }
+  },
+  "properties": {
+    "askOperatorId": false,
+    "autoAdvanceOnSelection": false,
+    "caseTree": "mobileOnly",
+    "centerForms": false,
+    "createListing": false,
+    "createLog": false,
+    "decimalMark": "dot",
+    "displayCodesAlongsideLabels": false,
+    "notes": {
+      "delete": "all",
+      "edit": "all"
+    },
+    "partialSave": {
+      "operatorEnabled": false
+    },
+    "showEndCaseMessage": true,
+    "showOnlyDiscreteValuesInComboBoxes": true,
+    "showFieldLabels": true,
+    "showErrorMessageNumbers": false,
+    "showQuestionText": true,
+    "showRefusals": true,
+    "verify": {
+      "frequency": 1,
+      "start": 1
+    },
+    "htmlDialogs": true,
+    "paradata": {
+      "collection": "all",
+      "recordCoordinates": false,
+      "recordInitialPropertyValues": false,
+      "recordIteratorLoadCases": false,
+      "recordValues": false,
+      "deviceStateIntervalMinutes": 5
+    },
+    "useHtmlComponentsInsteadOfNativeVersions": false
+  }
+}

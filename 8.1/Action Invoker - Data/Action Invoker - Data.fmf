@@ -1,0 +1,46 @@
+﻿[FormFile]
+Version=CSPro 8.1
+Name=ACTION_INVOKER_DATA_FF
+Label=Action Invoker - Data
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=.\Action Invoker - Data.dcf
+  
+[Form]
+Name=FORM000
+Label=Action Invoker - Data Level
+QuestionTextHeight=346
+Level=1
+Size=128,87
+  
+Item=MENU
+  
+[EndForm]
+  
+[Level]
+Name=ACTION_INVOKER_DATA_LEVEL
+Label=Action Invoker - Data Level
+  
+[Group]
+Required=Yes
+Name=ACTION_INVOKER_DATA_LEVEL_FORM
+Label=Action Invoker - Data Level
+Form=1
+Max=1
+  
+[Field]
+Name=MENU
+Position=86,40,117,62
+Item=MENU,ACTION_INVOKER_DATA_DICT
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=37,43,72,59
+Text=Menu
+ 
+[EndGroup]
+  

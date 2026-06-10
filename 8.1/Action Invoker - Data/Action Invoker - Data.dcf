@@ -1,0 +1,105 @@
+{
+  "software": "CSPro",
+  "version": 8.1,
+  "fileType": "dictionary",
+  "name": "ACTION_INVOKER_DATA_DICT",
+  "labels": [ { "text": "Action Invoker - Data" } ],
+  "security": {
+    "allowDataManagerModifications": true,
+    "allowExport": true,
+    "cachedPasswordMinutes": 0,
+    "settings": "28167e30a12df48fe7012ea1556ef8f7ba555a4ad6b0f80dbfc14ef13824f8e9e51cd8da29632e6cf5408daf41533525"
+  },
+  "readOptimization": true,
+  "recordType": {
+    "start": 1,
+    "length": 1
+  },
+  "defaults": {
+    "decimalMark": true,
+    "zeroFill": false
+  },
+  "relativePositions": true,
+  "levels": [
+    {
+      "name": "ACTION_INVOKER_DATA_LEVEL",
+      "labels": [ { "text": "Action Invoker - Data Level" } ],
+      "ids": {
+        "items": [
+          {
+            "name": "ACTION_INVOKER_DATA_ID",
+            "labels": [ { "text": "Action Invoker - Data Identification" } ],
+            "contentType": "numeric",
+            "start": 2,
+            "length": 1,
+            "zeroFill": false
+          }
+        ]
+      },
+      "records": [
+        {
+          "name": "ACTION_INVOKER_DATA_REC",
+          "labels": [ { "text": "Action Invoker - Data Record" } ],
+          "recordType": "1",
+          "occurrences": {
+            "required": true,
+            "maximum": 1
+          },
+          "items": [
+            {
+              "name": "MENU",
+              "labels": [ { "text": "Menu" } ],
+              "contentType": "numeric",
+              "length": 2,
+              "zeroFill": false,
+              "valueSets": [
+                {
+                  "name": "MENU_VS1",
+                  "labels": [ { "text": "Menu" } ],
+                  "values": [
+                    {
+                      "labels": [ { "text": "View U.S. Population Estimates (2020 - 2025)" } ],
+                      "pairs": [ { "value": "1" } ]
+                    },
+                    {
+                      "labels": [ { "text": "------------------------------------" } ],
+                      "pairs": [ { "value": "0" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Create new random numbers file" } ],
+                      "pairs": [ { "value": "11" } ]
+                    },
+                    {
+                      "labels": [ { "text": "View random numbers in Data Manager" } ],
+                      "pairs": [ { "value": "12" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Create random numbers" } ],
+                      "pairs": [ { "value": "13" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Read and view random number case" } ],
+                      "pairs": [ { "value": "14" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Modify random number case" } ],
+                      "pairs": [ { "value": "15" } ]
+                    },
+                    {
+                      "labels": [ { "text": "Delete random number case" } ],
+                      "pairs": [ { "value": "16" } ]
+                    },
+                    {
+                      "labels": [ { "text": "View random number case summary" } ],
+                      "pairs": [ { "value": "17" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

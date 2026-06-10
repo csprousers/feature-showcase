@@ -1,0 +1,130 @@
+﻿PROC GLOBAL
+
+
+function OnStop()
+    stop(1);
+end;
+
+
+// JavaScript functions defined in Action Invoker - Data.js
+declare function JS string jsGetRandomNumberKeysText();
+declare function JS numeric jsCreateRandomNumbers(numeric creationTime, numeric numbersToAdd);
+declare function JS numeric jsReadViewRandomNumberCase();
+declare function JS numeric jsModifyRandomNumberCase();
+declare function JS numeric jsDeleteRandomNumberCase();
+declare function JS string jsCreateRandomNumberCaseSummaryMarkdown();
+
+
+persistent string randomNumbersFilePath;
+
+function string GetRandomNumbersFilePath()
+    exit randomNumbersFilePath;
+end;
+
+function CreateNewRandomNumbersFilePath(string extension)
+    randomNumbersFilePath = Path.concat(
+        Application,
+        maketext("Random-Numbers/RN-%d.%s", timestamp(), extension)
+    );
+end;
+
+
+// used by DYNAMIC_MARKDOWN_REPORT to display Markdown
+string dynamicMarkdown;
+
+
+
+PROC ACTION_INVOKER_DATA_FF
+
+preproc
+
+    // the logic function GetRandomNumbersFilePath will be available
+    // in JavaScript using the function name csGetRandomNumbersFilePath,
+    JS.setValue("csGetRandomNumbersFilePath", GetRandomNumbersFilePath);
+
+    // on the first run of the program, default to using a JSON data source
+    if randomNumbersFilePath = "" then
+        CreateNewRandomNumbersFilePath("json");
+    endif;
+
+
+PROC MENU
+
+preproc
+
+    // because Data Manager only exists on Windows, remove it in the other environments
+    if getos() <> 10 then
+        ValueSet vs = MENU_VS1;
+        vs.remove(12);
+        setvalueset(MENU, vs);
+    endif;
+
+postproc
+
+    // View U.S. Population Estimates (2020 - 2025)
+    if MENU = 1 then
+        POPULATION_ESTIMATES_REPORT.view();
+
+
+    // Create new random numbers file
+    elseif MENU = 11 then
+        string extension;
+
+        when accept("What kind of file would you like to create?", "CSPro DB", "Text", "JSON");
+            1 -> extension = "csdb";
+            2 -> extension = "dat";
+            3 -> extension = "json";
+              -> reenter;
+        endwhen;
+
+        CreateNewRandomNumbersFilePath(extension);
+
+
+    // View random numbers in Data Manager
+    elseif MENU = 12 then
+        // add the path to the dictionary so that Data Manager does not ask for a dictionary
+        // when opening non-CSPro DB files (which don't have an embedded dictionary)
+        string argument = randomNumbersFilePath + "|dictionaryPath=Random-Numbers.dcf";
+        string exe = Path.concat(CSPro, "DataManager.exe");
+        execsystem(maketext("%s \"%s\"", exe, argument));
+
+
+    // Create random numbers
+    elseif MENU = 13 then
+        numeric numbersToAdd = tonumber(prompt("How many numbers would you like to add?", numeric));
+
+        if numbersToAdd > 0 then
+            // prevent the accidental creation of a huge number of cases
+            if numbersToAdd > 1000 then
+                numbersToAdd = 1000;
+                errmsg("Only %d cases will be added.", numbersToAdd);
+            endif;
+
+            jsCreateRandomNumbers(timestamp(), numbersToAdd);
+        endif;
+
+
+    // Read and view random number case
+    elseif MENU = 14 then
+        jsReadViewRandomNumberCase();
+
+
+    // Modify random number case
+    elseif MENU = 15 then
+        jsModifyRandomNumberCase();
+
+
+    // Delete random number case
+    elseif MENU = 16 then
+        jsDeleteRandomNumberCase();
+
+
+    // View random number case summary
+    elseif MENU = 17 then
+        dynamicMarkdown = jsCreateRandomNumberCaseSummaryMarkdown();
+        DYNAMIC_MARKDOWN_REPORT.view();
+
+
+    endif;
+
+    reenter;

@@ -1,0 +1,47 @@
+﻿---
+fileType: Question Text
+version: CSPro 8.1
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: ACTION_INVOKER_DATA_DICT.MENU
+    conditions:
+      - questionText:
+          EN:
+            format: Markdown-Report
+            text: |
+              This feature showcase has features:
+
+              * **U.S. Population Estimates**: An HTML report that uses JavaScript to interact with a data source attached to the application.
+              * **Random Numbers**: Demonstrations of using JavaScript to open, interact with, and close data sources.
+
+              ---
+
+              The *random numbers* file is currently: ~~randomNumbersFilePath~~
+
+              The file contains these keys:
+
+              ~~jsGetRandomNumberKeysText()~~
+...

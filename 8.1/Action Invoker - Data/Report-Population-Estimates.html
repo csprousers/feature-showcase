@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>U.S. Population Estimates (2020 - 2025)</title>
+
+    <link rel="stylesheet" href="./Report-Population-Estimates.css">
+
+    <!-- Action Invoker -->
+    <script src="/action-invoker.js"></script>
+
+    <!-- Chart.js -->
+    <script src="/external/chartjs/chart.umd.js"></script>
+
+</head>
+
+<body>
+    <div class="page">
+
+    <header class="section">
+        <h1>U.S. Population Estimates (2020 - 2025)</h1>
+
+        <p>Source: U.S. Census Bureau (<a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html#v2025">NST-EST2025-ALLDATA</a>)</p>
+
+        <label for="levelSelector">Geography</label>
+
+        <select id="levelSelector">
+            <option value="">-- Select a Summary Level --</option>
+<?
+// use the SUMLEV value set to populate the options
+do numeric ctr = 1 while ctr <= SUMLEV_VS1.codes.length()
+    $.write(
+        "<option value=\"%d\">%s</option>",
+        SUMLEV_VS1.codes(ctr),
+        encode(SUMLEV_VS1.labels(ctr))
+    );
+enddo;
+?>
+        </select>
+
+        <select id="geographySelector" style="display: none;">
+        </select>
+
+    </header>
+
+
+    <div id="reportSection" style="display: none;">
+
+        <div class="section">
+
+            <h3>Estimates</h3>
+
+            <table id="estimatesTable">
+                <thead>
+                    <tr><th>Estimate</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="section">
+
+            <h3>Resident Total Population</h3>
+
+            <div class="chart-card">
+                <div class="chart-container">
+                    <canvas id="populationChartCanvas"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+<?
+// during report generation, create a random Action Invoker access token and
+// register it so that we can use the Action Invoker when viewing this report
+string aiAccessToken = uuid();
+CS.registerAccessToken(accessToken := aiAccessToken);
+
+// the Action Invoker Data namespace will access NST_EST2025_DICT via the data source connected
+// to the application, but because it isn't otherwise used in the application, we must disable
+// the optimizations that would prevent all case data from being read
+#setProperty(NST_EST2025_DICT, "readOptimization", false);
+?>
+        const CS = new CSProActionInvoker("~~aiAccessToken~~");
+
+        const levelSelector = document.getElementById("levelSelector");
+        let selectedLevel;
+
+        const geographySelector = document.getElementById("geographySelector");
+
+        const reportSection = document.getElementById("reportSection");
+
+        const estimatesTable = document.getElementById("estimatesTable");
+        const populationChartCanvas = document.getElementById("populationChartCanvas");
+        let populationChart;
+
+        const years = [ 2020, 2021, 2022, 2023, 2024, 2025 ];
+
+
+        levelSelector.addEventListener("change", () => {
+            // if this if the first selection, remove the "Select a Summary Level" option
+            // and unhide the geography selector and the report section
+            if (selectedLevel === undefined) {
+                levelSelector.remove(0);
+                geographySelector.style.display = "inline";
+                reportSection.style.display = "inline";
+            }
+
+            selectedLevel = levelSelector.value;
+            updateGeography();
+        });
+
+
+        geographySelector.addEventListener("change", () => {
+            updateReports(geographySelector.value);
+        });
+
+
+        function updateGeography() {
+            // process the lightweight case summaries, not the entire case data,
+            // as we only need the key and case label
+            CS.Data.queryAsync({
+                dataId: "NST_EST2025_DICT",
+                content: "summaries",
+                filter: {
+                    operator: "startswith",
+                    value: selectedLevel
+                }
+            })
+            .then(summaries => {
+                // sort alphabetically by case label (which is the geography name)
+                summaries.sort((s1, s2) =>
+                    s1.label.localeCompare(s2.label)
+                );
+
+                // add these options to the geography selector
+                geographySelector.innerHTML = "";
+                summaries.forEach(summary => {
+                    geographySelector.add(new Option(summary.label, summary.key));
+                });
+
+                // display the reports for first option
+                geographySelector.dispatchEvent(new Event("change"));
+            });
+        }
+
+
+        function updateReports(key) {
+            // read the case
+            CS.Data.readCaseAsync({
+                dataId: "NST_EST2025_DICT",
+                key
+            })
+            .then(dataCase => {
+                const estimatesRec = dataCase.NST_EST2025_LEVEL.NST_EST2025_REC[0];
+
+                // update the estimates table and the population chart
+                updateTable(estimatesRec);
+                updateChart(estimatesRec);
+            });
+        }
+
+
+        function updateTable(estimatesRec) {
+            const tbody = estimatesTable.querySelector("tbody");
+            tbody.replaceChildren();
+
+            function addRow(itemPrefix, label) {
+                const tr = document.createElement("tr");
+
+                function addCell(text) {
+                    const td = document.createElement("td");
+                    td.textContent = text;
+                    tr.appendChild(td);
+                }
+
+                addCell(label);
+
+                // this will process POPESTIMATE2020, POPESTIMATE2021, etc.
+                // and then BIRTHS2020, BIRTHS2021, etc.
+                years.forEach(year => {
+                    addCell(estimatesRec[itemPrefix + year].code.toLocaleString());
+                });
+
+                tbody.appendChild(tr);
+            }
+
+            addRow("POPESTIMATE", "Resident total population");
+            addRow("BIRTHS", "Births");
+            addRow("DEATHS", "Deaths");
+            addRow("INTERNATIONALMIG", "Net international migration");
+            addRow("DOMESTICMIG", "Net domestic migration");
+            addRow("NETMIG", "Net migration");
+        }
+
+
+        function updateChart(estimatesRec) {
+            const popEstimates = years.map(year =>
+                estimatesRec["POPESTIMATE" + year].code
+            );
+
+            // create a line chart using Chart.js
+            if (populationChart === undefined) {
+                populationChart = new Chart(populationChartCanvas.getContext("2d"), {
+                    type: "line",
+                    data: {
+                        labels: years,
+                        datasets: [{
+                            label: "Population Estimate",
+                            data: popEstimates
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                grace: "25%",
+                                ticks: {
+                                    // format the scale using thousands separators
+                                    callback: (v) => v.toLocaleString()
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // or update the chart if already created
+            else {
+                populationChart.data.datasets[0].data = popEstimates;
+                populationChart.update();
+            }
+        }
+
+    </script>
+</body>
+
+</html>

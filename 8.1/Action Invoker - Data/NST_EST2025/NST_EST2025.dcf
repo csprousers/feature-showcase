@@ -1,0 +1,880 @@
+{
+  "software": "CSPro",
+  "version": 8.1,
+  "fileType": "dictionary",
+  "name": "NST_EST2025_DICT",
+  "labels": [ { "text": "National and State Population Estimates (2025) Dictionary" } ],
+  "note": "Data from: https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html#v2025",
+  "security": {
+    "allowDataManagerModifications": true,
+    "allowExport": true,
+    "cachedPasswordMinutes": 0,
+    "settings": "720e099cc53d1b0fd8d987b4de01db10408e00f3b133ea5de24e803f1c1e79c3"
+  },
+  "readOptimization": true,
+  "recordType": {
+    "start": 0,
+    "length": 0
+  },
+  "defaults": {
+    "decimalMark": false,
+    "zeroFill": true
+  },
+  "relativePositions": true,
+  "levels": [
+    {
+      "name": "NST_EST2025_LEVEL",
+      "labels": [ { "text": "National and State Population Estimates (2025) Level" } ],
+      "ids": {
+        "items": [
+          {
+            "name": "SUMLEV",
+            "labels": [ { "text": "Geographic summary level" } ],
+            "contentType": "numeric",
+            "start": 1,
+            "length": 2,
+            "zeroFill": true,
+            "valueSets": [
+              {
+                "name": "SUMLEV_VS1",
+                "labels": [ { "text": "Geographic summary level" } ],
+                "values": [
+                  {
+                    "labels": [ { "text": "Nation" } ],
+                    "pairs": [ { "value": "10" } ]
+                  },
+                  {
+                    "labels": [ { "text": "Region" } ],
+                    "pairs": [ { "value": "20" } ]
+                  },
+                  {
+                    "labels": [ { "text": "Division" } ],
+                    "pairs": [ { "value": "30" } ]
+                  },
+                  {
+                    "labels": [ { "text": "State and/or Statistical Equivalent" } ],
+                    "pairs": [ { "value": "40" } ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "REGION",
+            "labels": [ { "text": "Census Region code" } ],
+            "contentType": "numeric",
+            "start": 3,
+            "length": 1,
+            "zeroFill": true,
+            "valueSets": [
+              {
+                "name": "REGION_VS1",
+                "labels": [ { "text": "Census Region code" } ],
+                "values": [
+                  {
+                    "labels": [ { "text": "Northeast" } ],
+                    "pairs": [ { "value": "1" } ]
+                  },
+                  {
+                    "labels": [ { "text": "Midwest" } ],
+                    "pairs": [ { "value": "2" } ]
+                  },
+                  {
+                    "labels": [ { "text": "South" } ],
+                    "pairs": [ { "value": "3" } ]
+                  },
+                  {
+                    "labels": [ { "text": "West" } ],
+                    "pairs": [ { "value": "4" } ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DIVISION",
+            "labels": [ { "text": "Census Division code" } ],
+            "contentType": "numeric",
+            "start": 4,
+            "length": 1,
+            "zeroFill": true,
+            "valueSets": [
+              {
+                "name": "DIVISION_VS1",
+                "labels": [ { "text": "Census Division code" } ],
+                "values": [
+                  {
+                    "labels": [ { "text": "New England" } ],
+                    "pairs": [ { "value": "1" } ]
+                  },
+                  {
+                    "labels": [ { "text": "Middle Atlantic" } ],
+                    "pairs": [ { "value": "2" } ]
+                  },
+                  {
+                    "labels": [ { "text": "East North Central" } ],
+                    "pairs": [ { "value": "3" } ]
+                  },
+                  {
+                    "labels": [ { "text": "West North Central" } ],
+                    "pairs": [ { "value": "4" } ]
+                  },
+                  {
+                    "labels": [ { "text": "South Atlantic" } ],
+                    "pairs": [ { "value": "5" } ]
+                  },
+                  {
+                    "labels": [ { "text": "East South Central" } ],
+                    "pairs": [ { "value": "6" } ]
+                  },
+                  {
+                    "labels": [ { "text": "West South Central" } ],
+                    "pairs": [ { "value": "7" } ]
+                  },
+                  {
+                    "labels": [ { "text": "Mountain" } ],
+                    "pairs": [ { "value": "8" } ]
+                  },
+                  {
+                    "labels": [ { "text": "Pacific" } ],
+                    "pairs": [ { "value": "9" } ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "STATE",
+            "labels": [ { "text": "State FIPS code" } ],
+            "contentType": "numeric",
+            "start": 5,
+            "length": 2,
+            "zeroFill": true
+          }
+        ]
+      },
+      "records": [
+        {
+          "name": "NST_EST2025_REC",
+          "labels": [ { "text": "National and State Population Estimates (2025) Record" } ],
+          "occurrences": {
+            "required": true,
+            "maximum": 1
+          },
+          "items": [
+            {
+              "name": "NAME",
+              "labels": [ { "text": "State name" } ],
+              "contentType": "alpha",
+              "length": 20
+            },
+            {
+              "name": "ESTIMATESBASE2020",
+              "labels": [ { "text": "4/1/2020 resident total population estimates base" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "POPESTIMATE2020",
+              "labels": [ { "text": "7/1/2020 resident total population estimate" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "POPESTIMATE2021",
+              "labels": [ { "text": "7/1/2021 resident total population estimate" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "POPESTIMATE2022",
+              "labels": [ { "text": "7/1/2022 resident total population estimate" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "POPESTIMATE2023",
+              "labels": [ { "text": "7/1/2023 resident total population estimate" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "POPESTIMATE2024",
+              "labels": [ { "text": "7/1/2024 resident total population estimate" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "POPESTIMATE2025",
+              "labels": [ { "text": "7/1/2025 resident total population estimate" } ],
+              "contentType": "numeric",
+              "length": 9,
+              "zeroFill": true
+            },
+            {
+              "name": "NPOPCHG_2020",
+              "labels": [ { "text": "Numeric change in resident total population 4/1/2020 to 7/1/2020" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NPOPCHG_2021",
+              "labels": [ { "text": "Numeric change in resident total population 7/1/2020 to 7/1/2021" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NPOPCHG_2022",
+              "labels": [ { "text": "Numeric change in resident total population 7/1/2021 to 7/1/2022" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NPOPCHG_2023",
+              "labels": [ { "text": "Numeric change in resident total population 7/1/2022 to 7/1/2023" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NPOPCHG_2024",
+              "labels": [ { "text": "Numeric change in resident total population 7/1/2023 to 7/1/2024" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NPOPCHG_2025",
+              "labels": [ { "text": "Numeric change in resident total population 7/1/2024 to 7/1/2025" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "BIRTHS2020",
+              "labels": [ { "text": "Births in period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "BIRTHS2021",
+              "labels": [ { "text": "Births in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "BIRTHS2022",
+              "labels": [ { "text": "Births in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "BIRTHS2023",
+              "labels": [ { "text": "Births in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "BIRTHS2024",
+              "labels": [ { "text": "Births in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "BIRTHS2025",
+              "labels": [ { "text": "Births in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DEATHS2020",
+              "labels": [ { "text": "Deaths in period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "DEATHS2021",
+              "labels": [ { "text": "Deaths in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DEATHS2022",
+              "labels": [ { "text": "Deaths in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DEATHS2023",
+              "labels": [ { "text": "Deaths in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DEATHS2024",
+              "labels": [ { "text": "Deaths in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DEATHS2025",
+              "labels": [ { "text": "Deaths in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NATURALCHG2020",
+              "labels": [ { "text": "Natural change in period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "NATURALCHG2021",
+              "labels": [ { "text": "Natural change in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "NATURALCHG2022",
+              "labels": [ { "text": "Natural change in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "NATURALCHG2023",
+              "labels": [ { "text": "Natural change in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "NATURALCHG2024",
+              "labels": [ { "text": "Natural change in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "NATURALCHG2025",
+              "labels": [ { "text": "Natural change in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "INTERNATIONALMIG2020",
+              "labels": [ { "text": "Net international migration in period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 5,
+              "zeroFill": true
+            },
+            {
+              "name": "INTERNATIONALMIG2021",
+              "labels": [ { "text": "Net international migration in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "INTERNATIONALMIG2022",
+              "labels": [ { "text": "Net international migration in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "INTERNATIONALMIG2023",
+              "labels": [ { "text": "Net international migration in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "INTERNATIONALMIG2024",
+              "labels": [ { "text": "Net international migration in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "INTERNATIONALMIG2025",
+              "labels": [ { "text": "Net international migration in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DOMESTICMIG2020",
+              "labels": [ { "text": "Net domestic migration in period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DOMESTICMIG2021",
+              "labels": [ { "text": "Net domestic migration in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DOMESTICMIG2022",
+              "labels": [ { "text": "Net domestic migration in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DOMESTICMIG2023",
+              "labels": [ { "text": "Net domestic migration in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DOMESTICMIG2024",
+              "labels": [ { "text": "Net domestic migration in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "DOMESTICMIG2025",
+              "labels": [ { "text": "Net domestic migration in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NETMIG2020",
+              "labels": [ { "text": "Net migration in period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NETMIG2021",
+              "labels": [ { "text": "Net migration in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NETMIG2022",
+              "labels": [ { "text": "Net migration in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NETMIG2023",
+              "labels": [ { "text": "Net migration in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NETMIG2024",
+              "labels": [ { "text": "Net migration in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "NETMIG2025",
+              "labels": [ { "text": "Net migration in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "RESIDUAL2020",
+              "labels": [ { "text": "Residual for period 4/1/2020 to 6/30/2020" } ],
+              "contentType": "numeric",
+              "length": 5,
+              "zeroFill": true
+            },
+            {
+              "name": "RESIDUAL2021",
+              "labels": [ { "text": "Residual for period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "RESIDUAL2022",
+              "labels": [ { "text": "Residual for period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 6,
+              "zeroFill": true
+            },
+            {
+              "name": "RESIDUAL2023",
+              "labels": [ { "text": "Residual for period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 5,
+              "zeroFill": true
+            },
+            {
+              "name": "RESIDUAL2024",
+              "labels": [ { "text": "Residual for period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 5,
+              "zeroFill": true
+            },
+            {
+              "name": "RESIDUAL2025",
+              "labels": [ { "text": "Residual for period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 5,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATESBASE2020",
+              "labels": [ { "text": "4/1/2020 Group quarters total population estimates base" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATES2020",
+              "labels": [ { "text": "7/1/2020 Group quarters total population estimate" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATES2021",
+              "labels": [ { "text": "7/1/2021 Group quarters total population estimate" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATES2022",
+              "labels": [ { "text": "7/1/2022 Group quarters total population estimate" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATES2023",
+              "labels": [ { "text": "7/1/2023 Group quarters total population estimate" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATES2024",
+              "labels": [ { "text": "7/1/2024 Group quarters total population estimate" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "GQESTIMATES2025",
+              "labels": [ { "text": "7/1/2025 Group quarters total population estimate" } ],
+              "contentType": "numeric",
+              "length": 7,
+              "zeroFill": true
+            },
+            {
+              "name": "RBIRTH2021",
+              "labels": [ { "text": "Birth rate in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RBIRTH2022",
+              "labels": [ { "text": "Birth rate in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RBIRTH2023",
+              "labels": [ { "text": "Birth rate in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RBIRTH2024",
+              "labels": [ { "text": "Birth rate in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RBIRTH2025",
+              "labels": [ { "text": "Birth rate in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDEATH2021",
+              "labels": [ { "text": "Death rate in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDEATH2022",
+              "labels": [ { "text": "Death rate in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDEATH2023",
+              "labels": [ { "text": "Death rate in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDEATH2024",
+              "labels": [ { "text": "Death rate in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDEATH2025",
+              "labels": [ { "text": "Death rate in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNATURALCHG2021",
+              "labels": [ { "text": "Natural change rate in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNATURALCHG2022",
+              "labels": [ { "text": "Natural change rate in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNATURALCHG2023",
+              "labels": [ { "text": "Natural change rate in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNATURALCHG2024",
+              "labels": [ { "text": "Natural change rate in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNATURALCHG2025",
+              "labels": [ { "text": "Natural change rate in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RINTERNATIONALMIG2021",
+              "labels": [ { "text": "Net international migration rate in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RINTERNATIONALMIG2022",
+              "labels": [ { "text": "Net international migration rate in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RINTERNATIONALMIG2023",
+              "labels": [ { "text": "Net international migration rate in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RINTERNATIONALMIG2024",
+              "labels": [ { "text": "Net international migration rate in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RINTERNATIONALMIG2025",
+              "labels": [ { "text": "Net international migration rate in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDOMESTICMIG2021",
+              "labels": [ { "text": "Net domestic migration rate in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDOMESTICMIG2022",
+              "labels": [ { "text": "Net domestic migration rate in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDOMESTICMIG2023",
+              "labels": [ { "text": "Net domestic migration rate in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDOMESTICMIG2024",
+              "labels": [ { "text": "Net domestic migration rate in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RDOMESTICMIG2025",
+              "labels": [ { "text": "Net domestic migration rate in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNETMIG2021",
+              "labels": [ { "text": "Net migration rate in period 7/1/2020 to 6/30/2021" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNETMIG2022",
+              "labels": [ { "text": "Net migration rate in period 7/1/2021 to 6/30/2022" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNETMIG2023",
+              "labels": [ { "text": "Net migration rate in period 7/1/2022 to 6/30/2023" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNETMIG2024",
+              "labels": [ { "text": "Net migration rate in period 7/1/2023 to 6/30/2024" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            },
+            {
+              "name": "RNETMIG2025",
+              "labels": [ { "text": "Net migration rate in period 7/1/2024 to 6/30/2025" } ],
+              "contentType": "numeric",
+              "length": 12,
+              "decimals": 9,
+              "decimalMark": false,
+              "zeroFill": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

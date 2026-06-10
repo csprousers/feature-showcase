@@ -1,0 +1,157 @@
+/* CSS created by Copilot */
+
+/* =========
+   Theme & base
+   ========= */
+:root {
+  --text: #222;
+  --muted: #667085;
+  --bg: #fff;
+  --card: #f9fafb;
+  --border: #d0d5dd;
+  --accent: #2a6fdb;
+  --accent-soft: rgba(42, 111, 219, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+  margin: 24px;
+}
+
+/* =========
+   Headings & text
+   ========= */
+h1, h2, h3, h4 {
+  margin: 0.8em 0 0.35em;
+  font-weight: 650;
+  color: #333;
+}
+
+p { margin: 0.6em 0; color: var(--muted); }
+
+/* =========
+   Layout helpers
+   ========= */
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+/* =========
+   Controls (selects)
+   ========= */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+label {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  min-width: 180px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* =========
+   Table
+   ========= */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden; /* rounds header corners */
+}
+
+/* Header row */
+thead th {
+  background: #e8eaef; /* slightly darker for contrast */
+  color: #333;
+  text-align: center;  /* center header text */
+  font-weight: 600;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Body cells */
+tbody td {
+  padding: 6px 10px;
+  border-top: 1px solid var(--border);
+  text-align: center; /* center-align by default */
+}
+
+/* Shade alternating rows */
+tbody tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover { background: #f0f7ff; }
+
+/* First column left-aligned (override center) */
+tbody td:first-child,
+thead th:first-child {
+  text-align: left;
+}
+
+
+/* =========
+   Chart container (for Chart.js)
+   ========= */
+.chart-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.chart-container {
+  /* Controls the canvas area */
+  width: 100%;
+  max-width: 100%;
+  height: 250px;              /* Chart height; tweak as needed */
+  position: relative;         /* Chart.js positions canvas absolute if needed */
+}
+
+/* Ensure Chart.js canvas fills its container */
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* =========
+   Responsive tweaks
+   ========= */
+@media (max-width: 640px) {
+  body { margin: 16px; }
+  select { min-width: 140px; }
+  .chart-container { height: 200px; }
+}
